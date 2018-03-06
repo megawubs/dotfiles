@@ -1,99 +1,165 @@
-# Taps
-tap 'caskroom/cask'
-tap 'caskroom/eid'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-tap 'homebrew/dupes'
-tap 'homebrew/php'
-
-# Install ZSH
-brew 'zsh'
-brew 'zsh-completions'
-
-# Install GNU core utilities (those that come with macOS are outdated)
-brew 'coreutils'
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew 'findutils'
-
-# Install Bash 4
-brew 'bash'
-
-# Install more recent versions of some macOS tools
-brew 'homebrew/dupes/grep'
-
-# Install Binaries
-brew 'awscli'
-brew 'git'
-brew 'hub'
-brew 'tree'
-brew 'mackup'
-brew 'mas'
-brew 'node'
-brew 'trash'
-brew 'wget'
-
-# Development
-brew 'php72'
-brew 'php72-intl'
-brew 'php72-imagick'
-brew 'mysql'
-
-# Apps
-cask 'aerial'
-cask 'alfred'
-cask 'caffeine'
-cask 'docker'
-cask 'eid-be'
-cask 'eid-be-viewer'
-cask 'firefox'
-cask 'google-backup-and-sync'
-cask 'google-chrome'
-cask 'gpgtools'
-cask 'insomnia'
-cask 'iterm2'
-cask 'java'
-cask 'mysqlworkbench'
-cask 'now'
-cask 'phpstorm'
-cask 'quip'
-cask 'sequel-pro'
-cask 'shuttle'
-cask 'slack'
-cask 'sublime-text'
-cask 'torbrowser'
-cask 'tower'
-cask 'transmit'
-cask 'vagrant'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
-cask 'vlc'
-cask 'zoomus'
-
-# Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlstephen'
-
-# Fonts
-cask 'font-source-code-pro-for-powerline'
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
-
-# Install Mac App Store apps
-mas '1Password', id: 443987910
-mas 'Byword', id: 420212497
-mas 'Deckset', id: 847496013
-mas 'Gapplin', id: 768053424
-mas 'Giphy Capture', id: 668208984
-mas 'Paw', id: 584653203
-mas 'Sip', id: 507257563
-mas 'Sketch', id: 402476602
-mas 'Spark', id: 1176895641
-mas 'Things', id: 904280696
-mas 'Tweetbot', id: 557168941
-mas 'Unsplash Wallpapers', id: 1284863847
+tap "eugenmayer/dockersync"
+tap "homebrew/dupes"
+tap "homebrew/core"
+tap "homebrew/php"
+tap "homebrew/versions"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "go-delve/delve"
+tap "caskroom/drivers"
+tap "caskroom/fonts"
+tap "caskroom/cask"
+tap "vitorgalvao/tiny-scripts"
+cask "java"
+brew "android-platform-tools", link: false
+brew "antigen"
+brew "asciinema"
+brew "aspell", args: ["with-lang-nl"]
+brew "autoconf"
+brew "gettext"
+brew "libffi"
+brew "cairo"
+brew "go"
+brew "dep"
+brew "dnsmasq", restart_service: true
+brew "docker-machine", link: false
+brew "doxygen"
+brew "emacs"
+brew "fswatch"
+brew "gd"
+brew "ghostscript"
+brew "git"
+brew "gobject-introspection"
+brew "libtool"
+brew "graphviz"
+brew "highlight"
+brew "hr"
+brew "httpie"
+brew "hub"
+brew "imagemagick", args: ["with-ghostscript"]
+brew "libevent"
+brew "libgit2"
+brew "libxml2"
+brew "libyaml"
+brew "mackup"
+brew "mas"
+brew "maven"
+brew "mhash"
+brew "mcrypt"
+brew "mono"
+brew "mysql"
+brew "nginx", restart_service: true
+brew "nmap"
+brew "node"
+brew "openjpeg"
+brew "poppler"
+brew "pdf2svg"
+brew "unixodbc"
+brew "php", link: false
+brew "plantuml"
+brew "reattach-to-user-namespace"
+brew "redis", restart_service: true
+brew "rsync"
+brew "ruby"
+brew "ssh-copy-id"
+brew "tmux"
+brew "tree"
+brew "unison"
+brew "utf8proc"
+brew "watch"
+brew "yarn"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-completions"
+brew "eugenmayer/dockersync/unox"
+brew "go-delve/delve/delve"
+brew "homebrew/php/composer"
+brew "homebrew/php/php55", link: false
+brew "homebrew/php/php56", link: false
+brew "homebrew/php/php70", link: false
+brew "homebrew/php/php70-gmp"
+brew "homebrew/php/php70-mcrypt"
+brew "homebrew/php/php70-xdebug"
+brew "homebrew/php/php71-gmp"
+brew "homebrew/php/php71-imagick"
+brew "homebrew/php/php71-xdebug"
+brew "homebrew/php/php72-imagick"
+brew "homebrew/php/php72-xdebug"
+brew "homebrew/php/phpunit"
+brew "vitorgalvao/tiny-scripts/cask-repair"
+cask "1password"
+cask "alfred"
+cask "android-studio"
+cask "battle-net"
+cask "betterzipql"
+cask "brave"
+cask "calibre"
+cask "cleanmymac"
+cask "dash"
+cask "docker"
+cask "dotnet"
+cask "dropbox"
+cask "firefox"
+cask "fluid"
+cask "flux"
+cask "font-droid-sans-mono"
+cask "forklift"
+cask "freac"
+cask "ghost"
+cask "google-chrome"
+cask "google-drive"
+cask "hyper"
+cask "iterm2"
+cask "jetbrains-toolbox"
+cask "launchcontrol"
+cask "microsoft-office"
+cask "mysqlworkbench"
+cask "navicat-for-mysql"
+cask "ngrok"
+cask "nylas-mail"
+cask "nylas-n1"
+cask "origin"
+cask "paw"
+cask "phpstorm"
+cask "qlcolorcode"
+cask "qlimagesize"
+cask "qlmarkdown"
+cask "qlprettypatch"
+cask "qlstephen"
+cask "qlvideo"
+cask "quicklook-csv"
+cask "quicklook-json"
+cask "quicklookase"
+cask "reggy"
+cask "sequel-pro"
+cask "sketch"
+cask "skype"
+cask "slack"
+cask "soundflower"
+cask "spotify"
+cask "steam"
+cask "stretchly"
+cask "sublime-text"
+cask "teamviewer"
+cask "telegram"
+cask "toggldesktop"
+cask "vagrant"
+cask "virtualbox"
+cask "vnc-viewer"
+cask "webpquicklook"
+cask "whatsapp"
+cask "zeplin"
+cask "caskroom/fonts/font-fira-code"
+cask "caskroom/fonts/font-fontawesome"
+cask "caskroom/fonts/font-hack"
+cask "caskroom/fonts/font-lato"
+cask "caskroom/fonts/font-roboto"
+cask "caskroom/fonts/font-ubuntu"
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "OneDrive", id: 823766827
+mas "Pages", id: 409201541
+mas "Pixelmator", id: 407963104
+mas "Wunderlist", id: 410628904
+mas "Xcode", id: 497799835
+mas "Yoink", id: 457622435
