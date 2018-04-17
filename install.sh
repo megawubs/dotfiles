@@ -2,9 +2,6 @@
 
 echo "Setting up your Mac..."
 
-# Add zsh already as availble shell, will be installed later on
-sudo echo "/usr/local/bin/zsh" >> /etc/shells
-
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
