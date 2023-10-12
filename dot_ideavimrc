@@ -1,0 +1,346 @@
+""" Map leader to space ---------------------
+
+
+let mapleader = " "
+""" Plugins  --------------------------------
+""" set number
+" Do incremental searching.
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+""" Needed for which-key pluginset which-key
+set which-key
+" disable the timeout option
+set notimeout
+
+" highlight yanked text
+set highlightedyank
+
+set surround
+set multiple-cursors
+set sneak
+set quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's']
+" provides a text-object for 'gc' commenting
+set commentary
+" provides a text-object 'a' (argument)
+set argtextobj
+
+" provides a text-object e (entire buffer)
+set textobj-entire
+
+" provides a text-object for i (indentation level)
+set textobj-indent
+
+set ReplaceWithRegister
+set nerdtree
+""" plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+""" common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+set clipboard+=unnamed
+""" idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
+" Popup navigation
+ map <c-j> <Action>(PopupMenu-selectnext)
+ map <c-k> <Action>(PopupMenu-selectprev)
+
+" Tab navigation
+nnoremap <A-n> gt
+nnoremap <A-p> gT
+
+""" matchit.vim
+set matchit
+" show a few lines of conteXt around the cursor. note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+let g:WhichKey_ShowVimActions = "true"
+" edit ideavim config
+nnoremap \e :e ~/.ideavimrc<CR>
+map \r <Action>(IdeaVim.ReloadVimRc.reload)
+
+map <buffer>gd <Action>(GotoDeclaration)
+map <buffer>gy <Action>(GotoTypeDeclaration)
+nmap <buffer> ge <Action>(EditorCodeBlockEnd)
+nmap <buffer> gI <Action>(GotoImplementation)
+nmap <buffer> gn <Action>(MethodDown)
+nmap <buffer> gp <Action>(MethodUp)
+map <buffer> gs <Action>(GotoSuperMethod)
+
+map zc <Action>(CollapseRegion)
+map zo <Action>(ExpandRegion)
+
+""" window splitting & navigation
+map <c-o> <Action>(Back)
+map <c-i> <Action>(Forward)
+map <c-\> <Action>(SplitVertically)
+map <c--> <Action>(SplitHorizontally)
+map <c-=> <Action>(Unsplit)
+map <c-m> <Action>(MoveEditorToOppositeTabGroup)
+
+" sethandler <c-j> a:vim
+" sethandler <c-k> a:vim
+ nnoremap <c-h> <c-w>h
+ nnoremap <c-l> <c-w>l
+ nnoremap <c-j> <c-w>j
+ nnoremap <c-k> <c-w>k
+
+""" abcdefghijklmnopqrstvwxyz
+""" Action
+map <leader>a <Action>(ShowIntentionActions)
+let g:WhichKeyDesc_actions = "<leader>a Show Intentions"
+
+""" Bookmarks
+let g:WhichKeyDesc_bookmarks = "<leader>b Bookmarks"
+map <leader>bb <Action>(ToggleBookmark)
+let g:WhichKeyDesc_bookmarks_toggle_bookmark = "<leader>bb Toggle Bookmark"
+map <leader>be <Action>(EditBookmark)
+let g:WhichKeyDesc_bookmarks_edit = "<leader>be Edit Bookmark"
+map <leader>bt <Action>(ActivateBookmarksToolWindow)
+let g:WhichKeyDesc_bookmarks_tool = "<leader>bt Bookmark Tool"
+map <leader>bm <Action>(Bookmarks)
+let g:WhichKeyDesc_bookmarks_menu = "<leader>bm Bookmark Menu"
+map <leader>bn <Action>(GotoNextBookmark)
+let g:WhichKeyDesc_bookmarks_next = "<leader>bn Next Bookmark"
+map <leader>bp <Action>(GotoPreviousBookmark)
+let g:WhichKeyDesc_bookmarks_prev = "<leader>bp Previous Bookmark"
+map <leader>bs <Action>(ShowBookmarks)
+let g:WhichKeyDesc_bookmarks_show = "<leader>bs Show Bookmarks"
+
+""" Debugging
+let g:WhichKeyDesc_debugging = "<leader>d Debugging"
+map <leader>dd <Action>(ToggleLineBreakpoint)
+let g:WhichKeyDesc_debugging_toggle_breakpoint = "<leader>dd Toggle Break Point"
+map <leader>dt <Action>(ActivateDebugToolWindow)
+let g:WhichKeyDesc_debugging_tool = "<leader>dt Tool"
+map <leader>de <Action>(EditBreakpoint)
+let g:WhichKeyDesc_debugging_edit_breakpoint = "<leader>de Edit Breakpoint"
+map <leader>ds <Action>(PhpListenDebugAction)
+let g:WhichKeyDesc_debugging_listen = "<leader>ds Start Listening"
+map <leader>do <Action>(StepOver)
+let g:WhichKeyDesc_debugging_step_over = "<leader>do Step Over"
+map <leader>di <Action>(StepInto)
+let g:WhichKeyDesc_debugging_step_into = "<leader>di Step Into"
+map <leader>dr <Action>(EvaluateExpression)
+let g:WhichKeyDesc_debugging_repl = "<leader>dr Repl (Evaluate)"
+map <leader>dC <Action>(RunToCursor)
+let g:WhichKeyDesc_debugging_run_to_cursor = "<leader>dC Run To Cursor"
+map <leader>dc <Action>(Resume)
+let g:WhichKeyDesc_debugging_resume = "<leader>dc Resume"
+map <leader>dm <Action>(XDebugger.MuteBreakpoints)
+let g:WhichKeyDesc_debugging_mute = "<leader>dm Mute"
+" map <leader>dc <Action>(ChooseDebugConfiguration)
+" let g:WhichKeyDesc_debugging_resume = "<leader>dc Debug Configuration"
+
+""" Diff & Merge -> does not work, see: https://youtrack.jetbrains.com/issue/VIM-1611/actions-related-to-resolving-conflicts-doesnt-seem-to-work
+let g:WhichKeyDesc_mering = "<leader>D Diff & Merge"
+map <leader>DR <Action>(Diff.MagicResolveConflicts)
+let g:WhichKeyDesc_diff_merge_resolve_conflicts = "<leader>DR Resolve Conflicts"
+map <leader>DN <Action>(NextDiff)
+let g:WhichKeyDesc_diff_merge_next_diff = "<leader>DN
+map <leader>DP <Action>(PreviousDiff
+let g:WhichKeyDesc_diff_merge_previous_diff = "<leader>DP Previous Diff"
+
+""" Git
+let g:WhichKeyDesc_git = "<leader>g Git"
+map <leader>gg <Action>(CheckinProject)
+let g:WhichKeyDesc_git_checkin = "<leader>gg Checkin"
+map <leader>gc <Action>(Git.Branches)
+let g:WhichKeyDesc_git_branches = "<leader>gc Branches"
+map <leader>gp <Action>(Git.Commit.And.Push.Executor)
+let g:WhichKeyDesc_git_commit_and_push = "<leader>gp Commit & Push"
+map <leader>gP <Action>(Vcs.Push)
+let g:WhichKeyDesc_git_push = "<leader>gP Push"
+map <leader>gm <Action>(VcsGroups)
+let g:WhichKeyDesc_git_menu = "<leader>gm Menu"
+map <leader>gf <Action>(Git.Fetch)
+let g:WhichKeyDesc_git_fetch = "<leader>gf Fetch"
+map <leader>ga <Action>(Annotate)
+let g:WhichKeyDesc_git_annotate = "<leader>ga Annotate"
+map <leader>gl <Action>(ActivateVersionControlToolWindow)
+let g:WhichKeyDesc_git_log = "<leader>gl Log"
+map <leader>gt <Action>(ActivateVersionControlToolWindow)
+let g:WhichKeyDesc_git_tool = "<leader>gt Tool"
+" Git Settings
+let g:WhichKeyDesc_git_settings = "<leader>gs Settings"
+map <leader>gsa <Action>(Vcs.ToggleAmendCommitMode)
+let g:WhichKeyDesc_git_settings_amend = "<leader>gsa Toggle Ammend"
+" Git File
+let g:WhichKeyDesc_git_file= "<leader>gf File"
+map <leader>gfh <Action>(Vcs.ShowTabbedFileHistory)
+
+""" Language
+let g:WhichKeyDesc_language = "<leader>l Language"
+map <leader>lm <Action>(Refactorings.QuickListPopupAction)
+let g:WhichKeyDesc_language_menu = "<leader>lm Menu"
+map <leader>lr <Action>(RenameElement)
+let g:WhichKeyDesc_language_rename = "<leader>lr Rename"
+map <leader>lc <Action>(ChangeSignature)
+let g:WhichKeyDesc_language_change_signature = "<leader>lc Change Signature"
+map <leader>lv <Action>(IntroduceVariable)
+let g:WhichKeyDesc_language_introduce_variable = "<leader>lv Introduce Variable"
+map <leader>li <Action>(Inline)
+let g:WhichKeyDesc_language_inline = "<leader>li Inline"
+map <leader>lf <Action>(ReformatCode)<Action>(SilentCodeCleanup)
+let g:WhichKeyDesc_language_reformat = "<leader>lf Format"
+
+""" Overview
+map <leader>o <Action>(FileStructurePopup)
+let g:WhichKeyDesc_file_structure = "<leader>o Structure"
+
+""" Navigation
+let g:WhichKeyDesc_navigation = "<leader>n Navigation"
+map <leader>ne <Action>(GotoNextError)
+let g:WhichKeyDesc_navigation_next_error = "<leader>ne Next Error"
+map <leader>no <Action>(NextOccurence)
+let g:WhichKeyDesc_navigation_next_occurence = "<leader>no Next Occurrence"
+map <leader>ns <Action>(NewScratchFile)
+let g:WhichKeyDesc_navigation_new_scratch_file = "<leader>ns New Scratch File"
+map <leader>nf <Action>(ShowNavBar)
+let g:WhichKeyDesc_navigation_files = "<leader>nf Navigate files"
+
+""" PHP Related
+let g:WhichKeyDesc_php = "<leader>p PHP"
+map <leader>pt <Action>(nl.deschepers.laraveltinker.action.SmartAction)
+let g:WhichKeyDesc_php_tinker_smart_action = "<leader>pt Laravel Tinker"
+
+""" Run
+let g:WhichKeyDesc_run = "<leader>r Run"
+map <leader>rn <Action>(RunClass)
+let g:WhichKeyDesc_run_class = "<leader>rn Run Class"
+map <leader>rc <Action>(ChooseRunConfiguration)
+let g:WhichKeyDesc_run_choose_configuration = "<leader>rc Run Configuration"
+map <leader>rs <Action>(Stop)
+let g:WhichKeyDesc_run_stop = "<leader>rs Stop"
+map <leader>rr <Action>(Rerun)
+let g:WhichKeyDesc_run_rerun = "<leader>rr Rerun"
+map <leader>rd <Action>(DebugClass)
+let g:WhichKeyDesc_run_debug = "<leader>rd Debug Nearest"
+map <leader>rh <Action>(ImportTests)
+let g:WhichKeyDesc_run_import_tests = "<leader>rh Test History"
+map <leader>rm <Action>(RunMenu)
+let g:WhichKeyDesc_run_menu = "<leader>rm Menu"
+map <leader>rf <Action>(RerunFailedTests)
+let g:WhichKeyDesc_run_failed = "<leader>rf Rerun Failed"
+map <leader>rt <Action>(ActivateRunToolWindow)
+let g:WhichKeyDesc_run_tool = "<leader>rf Tool"
+
+""" Tool Windows
+let g:WhichKeyDesc_tools = "<leader>t Tools"
+map <leader>tm <Action>(ToolWindowsGroup)
+let g:WhichKeyDesc_tools_menu = "<leader>tm Menu"
+map <leader>tb <Action>(ActivateBookmarksToolWindow)
+let g:WhichKeyDesc_tools_bookmarks = "<leader>tb Bookmark Tool"
+map <leader>tr <Action>(ActivateRunToolWindow)
+let g:WhichKeyDesc_tools_run = "<leader>tr Run"
+map <leader>tf <Action>(ActivateFindToolWindow)
+let g:WhichKeyDesc_tools_find = "<leader>tf Find"
+map <leader>tc <Action>(ActivateCommitToolWindow)
+let g:WhichKeyDesc_tools_commit = "<leader>tc Commit"
+map <leader>td <Action>(ActivateDebugToolWindow)
+let g:WhichKeyDesc_tools_debug = "<leader>td Debug"
+map <leader>tg <Action>(ActivateVersionControlToolWindow)
+let g:WhichKeyDesc_tools_git = "<leader>tg Git"
+map <leader>tp <Action>(ActivateProblemsViewToolWindow)
+let g:WhichKeyDesc_tools_problems = "<leader>tp Problems"
+map <leader>tT <Action>(ActivateTODOToolWindow)
+let g:WhichKeyDesc_tools_todos = "<leader>tT Todo's"
+map <leader>tt <Action>(ActivateTerminalToolWindow)
+let g:WhichKeyDesc_tools_terminal = "<leader>tt Terminal"
+map <leader>tj <Action>(JsonPathEvaluateAction)
+let g:WhichKeyDesc_tools_json_path = "<leader>tj Json Path Eval"
+
+""" Search
+let g:WhichKeyDesc_search = "<leader>s Search"
+map <leader>se <Action>(SearchEverywhere)
+let g:WhichKeyDesc_search_everywhere = "<leader>se Everywhere"
+map <leader>sr <Action>(RecentFiles)
+let g:WhichKeyDesc_search_recent_files = "<leader>sr Recent Files"
+map <leader>sc <Action>(GotoClass)
+let g:WhichKeyDesc_search_class = "<leader>sc Class"
+map <leader>sf <Action>(GotoFile)
+let g:WhichKeyDesc_search_files = "<leader>sf Files"
+map <leader>ss <Action>(GotoSymbol)
+let g:WhichKeyDesc_search_symbols = "<leader>ss Symbols"
+map <leader>sa <Action>(GotoAction)
+let g:WhichKeyDesc_search_action = "<leader>sa Action"
+map <leader>st <Action>(FindInPath)
+let g:WhichKeyDesc_search_in_path = "<leader>st In Path"
+map <leader>su <Action>(FindUsages)
+let g:WhichKeyDesc_search_usages = "<leader>suUsages"
+map <leader>sp <Action>(RecentProjectListGroup)
+let g:WhichKeyDesc_search_projects = "<leader>sp Usages"
+map <leader>sR <Action>(ReplaceInPath)
+let g:WhichKeyDesc_search_replace = "<leader>sR Replace"
+map <leader>f <Action>(SearchEverywhere)
+
+""" View
+let g:WhichKeyDesc_view = "<leader>v View"
+map <leader>vl <Action>(SplitVertically)
+let g:WhichKeyDesc_view_split_vertically = "<leader>vl Split Vertically"
+map <leader>vj <Action>(SplitHorizontally)
+let g:WhichKeyDesc_view_split_down = "<leader>vj Split Down
+map <leader>vx <Action>(Unsplit)
+let g:WhichKeyDesc_view_unsplit = "<leader>vx Unsplit"
+map <leader>vO <Action>(UnsplitAll)
+let g:WhichKeyDesc_view_unsplit_all = "<leader>vx UnsplitAll"
+map <leader>vm <Action>(ViewMenu)
+let g:WhichKeyDesc_view_menu = "<leader>vm Menu"
+map <leader>vb <Action>(ViewToolButtons)
+let g:WhichKeyDesc_view_buttons = "<leader>vb Tool Buttons"
+map <leader>vM <Action>(MaximizeEditorInSplit)
+let g:WhichKeyDesc_view_maximize = "<leader>vM Maximize"
+
+""" Niceties
+map <leader>' <Action>(JumpToLastWindow)
+let g:WhichKeyDesc_jump_to_last = "<leader>; Last Window"
+map <leader>; <Action>(HideAllWindows)
+let g:WhichKeyDesc_hide_all_windows = "<leader>; Hide All"
+map <leader>q <Action>(CloseContent)
+let g:WhichKeyDesc_close = "<leader>q Close Window"
+map <leader>w <Action>(SaveAll)
+let g:WhichKeyDesc_save_all = "<leader>w Save All"
+map <leader>e <Action>(ActivateProjectToolWindow)
+let g:WhichKeyDesc_explorer = "<leader>e Explorer"
+map <C-z> <Action>(ToggleDistractionFreeMode)
+let g:WhichKeyDesc_distraction_free = "<C-z> Toggle Distraction Free Mode"
+map <leader>a <Action>(ShowIntentionActions)
+let g:WhichKeyDesc_actions = "<leader>a Show Intentions"
+map <leader>E <Action>(EditSource)
+let g:WhichKeyDesc_edit_source = "<leader>E Edit Source"
+
+map <leader>h :noh<CR>
+let g:WhichKeyDesc_no_highlight = "<leader>h No Highlight"
+
+
+" Composer
+let g:WhichKeyDesc_php_composer = "<leader>pc Composer"
+map <leader>pci <Action>(ComposerInstallAction)
+let g:WhichKeyDesc_php_composer_install = "<leader>pci Composer Install"
+map <leader>pcu <Action>(ComposerUpdateAction)
+let g:WhichKeyDesc_php_composer_update = "<leader>pcu Composer Update"
+
+"Config
+let g:WhichKeyDesc_config = "<leader>, Config"
+let g:WhichKeyDesc_config_vim = "<leader>,v Vim"
+map <leader>,va <Action>(VimFindActionIdAction)
+let g:WhichKeyDesc_config_vim_actions = "<leader>,va Vim Toggle Action Id's"
+map <leader>,vv <Action>(VimPluginToggle)
+let g:WhichKeyDesc_config_vim_toggle = "<leader>,vv Toggle Vim"
+
+
+""" Ideas:
+""" prefix+m is always the menu
+""" prefix+char is shortcut in the menu
+
