@@ -1,2 +1,4 @@
+export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
