@@ -21,7 +21,7 @@ brew "helix"
 brew "imagemagick"
 brew "mackup"
 brew "mailpit"
-brew "mariadb"
+brew "mariadb", restart_service: true
 brew "neovim"
 brew "nginx"
 brew "node"
