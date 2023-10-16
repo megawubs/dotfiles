@@ -32,6 +32,7 @@ brew "python@3.11"
 brew "virtualenv"
 brew "pre-commit"
 brew "redis", restart_service: true
+brew "tmux"
 brew "zoxide"
 cask "1password"
 cask "1password-cli"
