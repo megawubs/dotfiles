@@ -21,7 +21,7 @@ brew "helix"
 brew "imagemagick"
 brew "mackup"
 brew "mailpit"
-brew "mysql", link: false
+brew "mariadb"
 brew "neovim"
 brew "nginx"
 brew "node"
