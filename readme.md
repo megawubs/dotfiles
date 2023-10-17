@@ -1,4 +1,5 @@
 Dotfiles
 
 
-Install with: chezmoi init --apply git@github.com:megawubs/dotfiles.git
+Install with: `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:megawubs/dotfiles.git`
+
