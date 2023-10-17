@@ -56,4 +56,5 @@ cask "rustrover"
 cask "slack"
 cask "synology-drive"
 cask "utm"
+cask "whatsapp"
 mas "Numbers", id: 409203825
