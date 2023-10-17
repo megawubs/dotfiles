@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo echo "/opt/homebrew/bin/fish"  >> /etc/shells
+echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
 
 chsh -s /opt/homebrew/bin/fish
 
