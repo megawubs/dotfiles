@@ -235,6 +235,8 @@ map <leader>rf <Action>(RerunFailedTests)
 let g:WhichKeyDesc_run_failed = "<leader>rf Rerun Failed"
 map <leader>rt <Action>(ActivateRunToolWindow)
 let g:WhichKeyDesc_run_tool = "<leader>rf Tool"
+map <leader>ra <Action>(RunAnything)
+let g:WhichKeyDesc_run_tool = "<leader>ra Run Anything..."
 
 """ Tool Windows
 let g:WhichKeyDesc_tools = "<leader>t Tools"
