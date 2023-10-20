@@ -63,3 +63,4 @@ cask "synology-drive"
 cask "utm"
 cask "whatsapp"
 mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
