@@ -1,3 +1,5 @@
+theme = "default"
+
 [editor]
 shell = ["fish", "-c"]
 
