@@ -340,6 +340,8 @@ map <leader>,va <Action>(VimFindActionIdAction)
 let g:WhichKeyDesc_config_vim_actions = "<leader>,va Vim Toggle Action Id's"
 map <leader>,vv <Action>(VimPluginToggle)
 let g:WhichKeyDesc_config_vim_toggle = "<leader>,vv Toggle Vim"
+map <leader>,cc <Action>(ChangeColorScheme)
+let g:WhichKeyDesc_config_change_color_scheme = "<leader>,cc Change Color Scheme"
 
 
 """ Ideas:
