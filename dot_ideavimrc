@@ -97,7 +97,7 @@ map <c-m> <Action>(MoveEditorToOppositeTabGroup)
  nnoremap <c-k> <c-w>k
 
 
-
+map L <Action>(QuickImplementations)
 """ abcdefghijklmnopqrstvwxyz
 """ Action
 map <leader>a <Action>(ShowIntentionActions)
