@@ -37,6 +37,7 @@ brew "virtualenv"
 brew "pre-commit"
 brew "redis", restart_service: true
 brew "tmux"
+brew "wakeonlan"
 brew "zoxide"
 brew "remotemobprogramming/brew/mob"
 cask "1password"
