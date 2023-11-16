@@ -194,7 +194,7 @@ map <leader>lv <Action>(IntroduceVariable)
 let g:WhichKeyDesc_language_introduce_variable = "<leader>lv Introduce Variable"
 map <leader>li <Action>(Inline)
 let g:WhichKeyDesc_language_inline = "<leader>li Inline"
-map <leader>lf <Action>(ReformatCode)
+map <leader>lf <Action>(ReformatCode)<Action>(SilentCodeCleanup)
 let g:WhichKeyDesc_language_reformat = "<leader>lf Format"
 
 """ Overview
