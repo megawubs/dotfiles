@@ -174,6 +174,7 @@ map <leader>gl <Action>(ActivateVersionControlToolWindow)
 let g:WhichKeyDesc_git_log = "<leader>gl Log"
 map <leader>gt <Action>(ActivateVersionControlToolWindow)
 let g:WhichKeyDesc_git_tool = "<leader>gt Tool"
+
 " Git Settings
 let g:WhichKeyDesc_git_settings = "<leader>gs Settings"
 map <leader>gsa <Action>(Vcs.ToggleAmendCommitMode)
@@ -200,6 +201,9 @@ let g:WhichKeyDesc_language_reformat = "<leader>lf Format"
 """ Overview
 map <leader>o <Action>(FileStructurePopup)
 let g:WhichKeyDesc_file_structure = "<leader>o Structure"
+
+"""" Menu
+map <leader>mm <Action>(ShowPopupMenu)
 
 """ Navigation
 let g:WhichKeyDesc_navigation = "<leader>n Navigation"
