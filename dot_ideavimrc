@@ -220,6 +220,8 @@ let g:WhichKeyDesc_navigation_files = "<leader>nf Navigate files"
 let g:WhichKeyDesc_php = "<leader>p PHP"
 map <leader>pt <Action>(nl.deschepers.laraveltinker.action.SmartAction)
 let g:WhichKeyDesc_php_tinker_smart_action = "<leader>pt Laravel Tinker"
+map <leader>ph <Action>(com.laravel_idea.plugin.extension.i.d)
+let g:WhichKeyDesc_php_laravel_idea_code_helper = "<leader>ph Laravel Idea Code Helper"
 
 """ Run
 let g:WhichKeyDesc_run = "<leader>r Run"
