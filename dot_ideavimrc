@@ -146,12 +146,12 @@ let g:WhichKeyDesc_debugging_mute = "<leader>dm Mute"
 " let g:WhichKeyDesc_debugging_resume = "<leader>dc Debug Configuration"
 
 """ Diff & Merge -> does not work, see: https://youtrack.jetbrains.com/issue/VIM-1611/actions-related-to-resolving-conflicts-doesnt-seem-to-work
-let g:WhichKeyDesc_mering = "<leader>D Diff & Merge"
-map <leader>DR <Action>(Diff.MagicResolveConflicts)
+let g:WhichKeyDesc_mering = "<leader>gd Diff & Merge"
+map <leader>gdr <Action>(Diff.MagicResolveConflicts)
 let g:WhichKeyDesc_diff_merge_resolve_conflicts = "<leader>DR Resolve Conflicts"
-map <leader>DN <Action>(NextDiff)
+map <leader>gdn <Action>(NextDiff)
 let g:WhichKeyDesc_diff_merge_next_diff = "<leader>DN
-map <leader>DP <Action>(PreviousDiff
+map <leader>gdp <Action>(PreviousDiff)
 let g:WhichKeyDesc_diff_merge_previous_diff = "<leader>DP Previous Diff"
 
 """ Git
