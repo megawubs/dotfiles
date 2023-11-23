@@ -153,6 +153,8 @@ map <leader>gdn <Action>(NextDiff)
 let g:WhichKeyDesc_diff_merge_next_diff = "<leader>gdn Next Diff"
 map <leader>gdp <Action>(PreviousDiff)
 let g:WhichKeyDesc_diff_merge_previous_diff = "<leader>gdp Previous Diff"
+map <leader>gds <Action>(Diff.ShowDiff)
+let g:WhichKeyDesc_diff_merge_show_diff = "<leader>gds Show Diff"
 
 """ Git
 let g:WhichKeyDesc_git = "<leader>g Git"
