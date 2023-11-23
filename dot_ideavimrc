@@ -217,6 +217,8 @@ map <leader>ns <Action>(NewScratchFile)
 let g:WhichKeyDesc_navigation_new_scratch_file = "<leader>ns New Scratch File"
 map <leader>nf <Action>(ShowNavBar)
 let g:WhichKeyDesc_navigation_files = "<leader>nf Navigate files"
+map <leader>nt <Action>(GotoTest)
+let g:WhichKeyDesc_navigation_test = "<leader>nt Navigate to Test"
 
 """ PHP Related
 let g:WhichKeyDesc_php = "<leader>p PHP"
