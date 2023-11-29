@@ -130,7 +130,9 @@ let g:WhichKeyDesc_bookmarks_show = "<leader>bs Show Bookmarks"
 
 """ Change
 map <leader>cc <Action>(me.laria.code.idea_caseconv.CamelCaseAction)
-map <leader>cm <Action>()
+let g:WhichKeyDesc_change_camel_case = "<leader>cc Change CamelCase"
+map <leader>cm <Action>(me.laria.code.idea_caseconv.convert_case_menu)
+let g:WhichKeyDesc_change_case_menu = "<leader>cm Change Case Menu"
 
 """ Debugging
 let g:WhichKeyDesc_debugging = "<leader>d Debugging"
