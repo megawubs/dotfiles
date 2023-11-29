@@ -53,7 +53,7 @@ set multiple-cursors
 map mc <A-n>
 map mx <A-x>
 map mp <A-p>
-map ma g<A-n>
+map ma <C-n> 
 
 " Easy visual indentation
 vnoremap < <gv
