@@ -48,7 +48,8 @@ set clipboard+=unnamed
 set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
-Plug 'terryma/vim-multiple-cursors'
+set multiple-cursors
+
 map mc <A-n>
 map mx <A-n>
 map mp <A-p>
