@@ -126,6 +126,12 @@ let g:WhichKeyDesc_bookmarks_prev = "<leader>bp Previous Bookmark"
 map <leader>bs <Action>(ShowBookmarks)
 let g:WhichKeyDesc_bookmarks_show = "<leader>bs Show Bookmarks"
 
+""" Requires https://plugins.jetbrains.com/plugin/10985-case-conversion
+
+""" Change
+map <leader>cc <Action>(me.laria.code.idea_caseconv.CamelCaseAction)
+map <leader>cm <Action>()
+
 """ Debugging
 let g:WhichKeyDesc_debugging = "<leader>d Debugging"
 map <leader>dd <Action>(ToggleLineBreakpoint)
