@@ -49,6 +49,9 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 Plug 'terryma/vim-multiple-cursors'
+map mc <A-n>
+map mx <A-n>
+map mp <A-p>
 
 " Easy visual indentation
 vnoremap < <gv
@@ -58,8 +61,8 @@ vnoremap > >gv
  map <c-k> <Action>(PopupMenu-selectprev)
 
 " Tab navigation
-nnoremap <A-n> gt
-nnoremap <A-p> gT
+" nnoremap <A-n> gt
+" nnoremap <A-p> gT
 
 """ matchit.vim
 set matchit
