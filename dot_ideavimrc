@@ -176,6 +176,7 @@ map <leader>gl <Action>(ActivateVersionControlToolWindow)
 let g:WhichKeyDesc_git_log = "<leader>gl Log"
 map <leader>gt <Action>(ActivateVersionControlToolWindow)
 let g:WhichKeyDesc_git_tool = "<leader>gt Tool"
+map <leader>gr <Action>(Vcs.RollbackChangedLines)
 
 " Git Settings
 let g:WhichKeyDesc_git_settings = "<leader>gs Settings"
