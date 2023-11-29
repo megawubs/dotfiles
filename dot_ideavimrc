@@ -48,7 +48,7 @@ set clipboard+=unnamed
 set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
-set multicursor
+Plug 'terryma/vim-multiple-cursors'
 
 " Easy visual indentation
 vnoremap < <gv
