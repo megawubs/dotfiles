@@ -76,9 +76,6 @@ let g:WhichKey_ShowVimActions = "true"
 nnoremap \e :e ~/.ideavimrc<CR>
 map \r <Action>(IdeaVim.ReloadVimRc.reload)
 
-" edit .env
-nnoremap \. :e 
-
 map <buffer>gd <Action>(GotoDeclaration)
 map <buffer>gy <Action>(GotoTypeDeclaration)
 nmap <buffer> ge <Action>(EditorCodeBlockEnd)
