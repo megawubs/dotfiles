@@ -221,6 +221,7 @@ let g:WhichKeyDesc_file_structure = "<leader>o Structure"
 
 """" Menu
 map <leader>mm <Action>(ShowPopupMenu)
+map <C-m> <Action>(ShowPopupMenu)
 
 """ Navigation
 let g:WhichKeyDesc_navigation = "<leader>n Navigation"
