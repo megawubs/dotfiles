@@ -371,7 +371,6 @@ let g:WhichKeyDesc_config_vim_toggle = "<leader>,vv Toggle Vim"
 map <leader>,cc <Action>(ChangeColorScheme)
 let g:WhichKeyDesc_config_change_color_scheme = "<leader>,cc Change Color Scheme"
 
-map <leader>se <Action>(JumpToSource)
 """ Ideas:
 """ prefix+m is always the menu
 """ prefix+char is shortcut in the menu
