@@ -191,6 +191,9 @@ let g:WhichKeyDesc_git_log = "<leader>gl Log"
 map <leader>gt <Action>(ActivateVersionControlToolWindow)
 let g:WhichKeyDesc_git_tool = "<leader>gt Tool"
 map <leader>gr <Action>(Vcs.RollbackChangedLines)
+let g:WhichKeyDesc_git_rollback_changed_lines = "<leader>gr Rollback"
+map <leader>go <Action>(Github.View.Pull.Request)
+let g:WhichKeyDesc_git_open_pull_requests = "<leader>go Open Pull Requests"
 
 " Git Settings
 let g:WhichKeyDesc_git_settings = "<leader>gs Settings"
