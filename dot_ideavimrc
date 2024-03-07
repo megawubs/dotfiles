@@ -356,7 +356,9 @@ let g:WhichKeyDesc_edit_source = "<leader>E Edit Source"
 map <leader>h :noh<CR>
 let g:WhichKeyDesc_no_highlight = "<leader>h No Highlight"
 
+let g:WhichKeyDesc_leader_leader = "<leader><leader> Layer 2"
 map <leader><leader>ds <Action>(Console.Jdbc.ChooseSchema)
+let g:WhichKeyDesc_database = "<leader><leader>d Database"
 let g:WhichKeyDesc_database_schema = "<leader><leader>ds Choose Schema"
 
 " Composer
