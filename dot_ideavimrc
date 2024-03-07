@@ -356,6 +356,8 @@ let g:WhichKeyDesc_edit_source = "<leader>E Edit Source"
 map <leader>h :noh<CR>
 let g:WhichKeyDesc_no_highlight = "<leader>h No Highlight"
 
+map <leader><leader>ds <Action>(Console.Jdbc.ChooseSchema)
+let g:WhichKeyDesc_database_schema = "<leader><leader>ds Choose Schema"
 
 " Composer
 let g:WhichKeyDesc_php_composer = "<leader>pc Composer"
