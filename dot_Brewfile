@@ -49,6 +49,7 @@ brew "redis", restart_service: true
 brew "speedtest-cli"
 brew "tmux"
 brew "wakeonlan"
+brew "youtube-dl"
 brew "zoxide"
 brew "remotemobprogramming/brew/mob"
 cask "1password"
