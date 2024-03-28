@@ -84,5 +84,6 @@ cask "tidal"
 cask "utm"
 cask "whatsapp"
 cask "zoom"
+mas "iMovie", id: 408981434
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
