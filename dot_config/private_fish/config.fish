@@ -6,5 +6,7 @@ set -gx EDITOR nvim
 
 zoxide init fish | source
 op completion fish | source
+pyenv init - | source
 
 [ -f ~/.inshellisense/key-bindings.fish ] && source ~/.inshellisense/key-bindings.fish
+

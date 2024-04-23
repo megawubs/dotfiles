@@ -1,6 +1,5 @@
 """ Map leader to space ---------------------
 
-
 let mapleader = " "
 """ Plugins  --------------------------------
 """ set number
@@ -18,26 +17,20 @@ set notimeout
 set highlightedyank
 
 set surround
-set multiple-cursors
-set sneak
-set quickscope
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's']
+" set sneak
+" set quickscope
+" let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's']
 " provides a text-object for 'gc' commenting
 set commentary
 " provides a text-object 'a' (argument)
 set argtextobj
-
 " provides a text-object e (entire buffer)
-set textobj-entire
-
-" provides a text-object for i (indentation level)
+set textobj-entire " provides a text-object for i (indentation level)
 set textobj-indent
-
 set ReplaceWithRegister
 set nerdtree
 """ plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
-
 """ common settings -------------------------
 set showmode
 set so=5
@@ -49,33 +42,27 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 set multiple-cursors
-
 map mc <A-n>
 map mx <A-x>
 map mp <A-p>
 map ma <C-n>
-
 " Easy visual indentation
-vnoremap < <gv
-vnoremap > >gv
+vnoremap < <gv vnoremap > >gv
 " Popup navigation
- map <c-j> <Action>(PopupMenu-selectnext)
- map <c-k> <Action>(PopupMenu-selectprev)
-
+map <c-j> <Action>(PopupMenu-selectnext)
+map <c-k> <Action>(PopupMenu-selectprev)
 " Tab navigation
 " nnoremap <A-n> gt
 " nnoremap <A-p> gT
-
-""" matchit.vim
-set matchit
+""" matchit.vim set matchit
 " show a few lines of conteXt around the cursor. note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=5
 let g:WhichKey_ShowVimActions = "true"
+
 " edit ideavim config
 nnoremap \e :e ~/.ideavimrc<CR>
 map \r <Action>(IdeaVim.ReloadVimRc.reload)
-
 map <buffer>gd <Action>(GotoDeclaration)
 map <buffer>gy <Action>(GotoTypeDeclaration)
 nmap <buffer> ge <Action>(EditorCodeBlockEnd)
@@ -83,7 +70,6 @@ nmap <buffer> gI <Action>(GotoImplementation)
 nmap <buffer> gn <Action>(MethodDown)
 nmap <buffer> gp <Action>(MethodUp)
 map <buffer> gs <Action>(GotoSuperMethod)
-
 map zc <Action>(CollapseRegion)
 map zo <Action>(ExpandRegion)
 
@@ -97,16 +83,14 @@ map <c-m> <Action>(MoveEditorToOppositeTabGroup)
 
 " sethandler <c-j> a:vim
 " sethandler <c-k> a:vim
- nnoremap <c-h> <c-w>h
- nnoremap <c-l> <c-w>l
- nnoremap <c-j> <c-w>j
- nnoremap <c-k> <c-w>k
-
-
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
 map L <Action>(QuickImplementations)
+
 """ abcdefghijklmnopqrstvwxyz
-""" Action
-map <leader>a <Action>(ShowIntentionActions)
+Action map <leader>a <Action>(ShowIntentionActionsk
 let g:WhichKeyDesc_actions = "<leader>a Show Intentions"
 
 """ Bookmarks
@@ -159,23 +143,40 @@ let g:WhichKeyDesc_debugging_mute = "<leader>dm Mute"
 " map <leader>dc <Action>(ChooseDebugConfiguration)
 " let g:WhichKeyDesc_debugging_resume = "<leader>dc Debug Configuration"
 
-""" Diff & Merge -> does not work, see: https://youtrack.jetbrains.com/issue/VIM-1611/actions-related-to-resolving-conflicts-doesnt-seem-to-work
 let g:WhichKeyDesc_mering = "<leader>gd Diff & Merge"
-map <leader>gdr <Action>(Diff.MagicResolveConflicts)
-let g:WhichKeyDesc_diff_merge_resolve_conflicts = "<leader>gdr Resolve Conflicts"
 map <leader>gdn <Action>(NextDiff)
 let g:WhichKeyDesc_diff_merge_next_diff = "<leader>gdn Next Diff"
 map <leader>gdp <Action>(PreviousDiff)
 let g:WhichKeyDesc_diff_merge_previous_diff = "<leader>gdp Previous Diff"
 map <leader>gds <Action>(Diff.ShowDiff)
 let g:WhichKeyDesc_diff_merge_show_diff = "<leader>gds Show Diff"
+map <leader>gde <Action>(Vcs.Diff.ExcludeChangedLinesFromCommit)
+let g:WhichKeyDesc_diff_merge_exclude_lines = "<leader>gde Exclude Changes"
+map <leader>gdi <Action>(Vcs.Diff.IncludeChangedLinesIntoCommit)
+let g:WhichKeyDesc_diff_merge_include_changes = "<leader>gdi Include Changes"
+map <leader>gds <Action>(Vcs.EditSource)
+let g:WhichKeyDesc_diff_merge_show_diff = "<leader>gds Edit Source"
+map <leader>gdah <Action>(Diff.ApplyLeftSide)
+let g:WhichKeyDesc_diff_merge_apply_left = "<leader>gdah Apply Left"
+map <leader>gdal <Action>(Diff.ApplyRightSide)
+let g:WhichKeyDesc_diff_merge_apply_right = "<leader>gdal Apply Right"
+map <leader>gdih <Action>(Diff.IgnoreLeftSide)
+let g:WhichKeyDesc_diff_merge_ignore_left = "<leader>gdih Ignore Left"
+map <leader>gdil <Action>(Diff.IgnoreRightSide)
+let g:WhichKeyDesc_diff_merge_ignore_right = "<leader>gdil Ignore Left"
+map <leader>gdr <Action>(Git.ResolveConflicts)
+map <leader>gdg <Action>(Diff.EditorGutterPopupMenu)
+map <leader>gdm <Action>(Vcs.Operations.Popup)
+map <leader>gdM <Action>(Diff.MagicResolveConflicts)
+let g:WhichKeyDesc_diff_merge_resolve_conflicts = "<leader>gdM Resolve Conflicts"
+
 
 """ Git
 let g:WhichKeyDesc_git = "<leader>g Git"
 map <leader>gg <Action>(CheckinProject)
 let g:WhichKeyDesc_git_checkin = "<leader>gg Checkin"
-map <leader>gc <Action>(Git.Branches)
-let g:WhichKeyDesc_git_branches = "<leader>gc Branches"
+map <leader>gb <Action>(Git.Branches)
+let g:WhichKeyDesc_git_branches = "<leader>gb Branches"
 map <leader>gp <Action>(Git.Commit.And.Push.Executor)
 let g:WhichKeyDesc_git_commit_and_push = "<leader>gp Commit & Push"
 map <leader>gP <Action>(Vcs.Push)
@@ -194,6 +195,8 @@ map <leader>gr <Action>(Vcs.RollbackChangedLines)
 let g:WhichKeyDesc_git_rollback_changed_lines = "<leader>gr Rollback"
 map <leader>go <Action>(Github.View.Pull.Request)
 let g:WhichKeyDesc_git_open_pull_requests = "<leader>go Open Pull Requests"
+map <leader>gc <Action>(Vcs.Show.Local.Changes)
+let g:WhichKeyDesc_git_local_changes = "<leader>gc Show Local Changes"
 
 " Git Settings
 let g:WhichKeyDesc_git_settings = "<leader>gs Settings"
@@ -202,6 +205,44 @@ let g:WhichKeyDesc_git_settings_amend = "<leader>gsa Toggle Ammend"
 " Git File
 let g:WhichKeyDesc_git_file= "<leader>gf File"
 map <leader>gfh <Action>(Vcs.ShowTabbedFileHistory)
+vmap <leader>gfh <Action>(Vcs.ShowHistoryForBlock)
+"GitHub
+let g:WhichKeyDesc_git_hub = "<leader>gh GitHub"
+map <leader>ghp <Action>(Github.Create.Pull.Request)
+let g:WhichKeyDesc_git_hub_create_pull_request = "<leader>ghp Create Pull Request"
+map <leader>ghm <Action>(GitHub.MainMenu)
+let g:WhichKeyDesc_git_hub_main_menu = "<leader>ghm Main Menu"
+map <leader>ghb <Action>(Github.Pull.Request.Branch.Popup.Actions)
+let g:WhichKeyDesc_git_hub_pull_request_branch_actions = "<leader>ghb Pull Request Branch Actions"
+map <leader>ghu <Action>(Github.Pull.Request.Branch.Update)
+let g:WhichKeyDesc_git_hub_pull_request_branch_update = "<leader>ghu Pull Request Branch Update"
+map <leader>ghe <Action>(Github.Pull.Request.Review.In.Editor.Toggle)
+let g:WhichKeyDesc_git_hub_pull_request_review_mode_toggle = "<leader>ghe Toggle Review Mode"
+map<leader>ghc <Action>(Github.PullRequest.Diff.Comment.Create)
+let g:WhichKeyDesc_git_hub_pull_request_diff_comment_create = "<leader>ghc Create Comment"
+map <leader>ghv <Action>(Github.View.Pull.Request)
+let g:WhichKeyDesc_git_hub_pull_request_view = "<leader>ghv View Pull Request"
+map <leader>ghs <Action>(Github.PullRequest.Review.Submit )
+let g:WhichKeyDesc_git_hub_pull_request_view = "<leader>ghs Sub"
+
+
+" These do not work
+" map <leader>ghc <Action>(GitHub.Copy.Link)
+" let g:WhichKeyDesc_git_hub_copy_link = "<leader>ghc Copy Link"
+" map <leader>ghb <Action>(Github.Open.In.Browser)
+" let g:WhichKeyDesc_git_hub_open_in_browser = "<leader>ghb Open In Browser"
+" map <leader>ghc <Action>(Github.PullRequest.Changes.Popup)
+" let g:WhichKeyDesc_git_hub_pull_request_changes_popup = "<leader>ghc Changes"
+" map <leader>ght <Action>(Github.PullRequest.Changes.Toolbar)
+" let g:WhichKeyDesc_git_hub_pull_request_changes_toolbar = "<leader>ght Toolbar"
+" map <leader>ghl <Action>(Github.PullRequest.Copy.Link)
+" let g:WhichKeyDesc_git_hub_pull_request_copy_link = "<leader>ghl Copy Link"
+" map <leader>ghd <Action>(Github.PullRequest.Details.Popup)
+" let g:WhichKeyDesc_git_hub_pull_request_details = "<leader>ghd PullRequest Request Details"
+" map <leader>ghP <Action>(Github.PullRequest.ToolWindow.List.Popup)
+" let g:WhichKeyDesc_git_hub_pull_popup = "<leader>ghP Popup"
+" map <leader>ghv <Action>(Github.PullRequest.Details.Commit.Tree.ViewOptions)
+" map <leader>ghs <Action>(Github.PullRequest.Show)
 
 """ Language
 let g:WhichKeyDesc_language = "<leader>l Language"
@@ -252,6 +293,8 @@ map <leader>rn <Action>(RunClass)
 let g:WhichKeyDesc_run_class = "<leader>rn Run Class"
 map <leader>rc <Action>(ChooseRunConfiguration)
 let g:WhichKeyDesc_run_choose_configuration = "<leader>rc Run Configuration"
+map <leader>rC <Action>(CreateRunConfiguration)
+let g:WhichKeyDesc_create_run_configuration = "<leader>rC Create Run Configuration"
 map <leader>rs <Action>(Stop)
 let g:WhichKeyDesc_run_stop = "<leader>rs Stop"
 map <leader>rr <Action>(Rerun)
@@ -317,34 +360,42 @@ let g:WhichKeyDesc_search_projects = "<leader>sp Usages"
 map <leader>sR <Action>(ReplaceInPath)
 let g:WhichKeyDesc_search_replace = "<leader>sR Replace"
 map <leader>f <Action>(SearchEverywhere)
+let g:WhichKeyDesc_fast_search = "<leader>f Search Everywhere"
 
 """ View
 let g:WhichKeyDesc_view = "<leader>v View"
 map <leader>vl <Action>(SplitVertically)
 let g:WhichKeyDesc_view_split_vertically = "<leader>vl Split Vertically"
 map <leader>vj <Action>(SplitHorizontally)
-let g:WhichKeyDesc_view_split_down = "<leader>vj Split Down
+let g:WhichKeyDesc_view_split_down = "<leader>vj Split Down"
 map <leader>vx <Action>(Unsplit)
 let g:WhichKeyDesc_view_unsplit = "<leader>vx Unsplit"
 map <leader>vO <Action>(UnsplitAll)
-let g:WhichKeyDesc_view_unsplit_all = "<leader>vx UnsplitAll"
+let g:WhichKeyDesc_view_unsplit_all = "<leader>vO UnsplitAll"
+map <leader>vo <Action>(CloseAllEditorsButActive)
+let g:WhichKeyDesc_view_close_all_editors_but_active = "<leader>vo Close All"
 map <leader>vm <Action>(ViewMenu)
 let g:WhichKeyDesc_view_menu = "<leader>vm Menu"
 map <leader>vb <Action>(ViewToolButtons)
 let g:WhichKeyDesc_view_buttons = "<leader>vb Tool Buttons"
 map <leader>vM <Action>(MaximizeEditorInSplit)
 let g:WhichKeyDesc_view_maximize = "<leader>vM Maximize"
+map <leader>vp <Action>(TogglePresentationMode) <Action>(TogglePresentationAssistantAction)
+let g:WhichKeyDesc_view_presentation_mode = "<leader>Toggle Presentation Mode"
 
 """ Niceties
 map <leader>' <Action>(JumpToLastWindow)
-let g:WhichKeyDesc_jump_to_last = "<leader>; Last Window"
+let g:WhichKeyDesc_jump_to_last = "<leader>' Last Window"
 map <leader>; <Action>(HideAllWindows)
 let g:WhichKeyDesc_hide_all_windows = "<leader>; Hide All"
+map <leader>\ <Action>(ClearAllNotifications)
+let g:WhichKeyDesc_clear_all_notifications = "<leader>\ Clear Notificationj"
 map <leader>q <Action>(CloseContent)
 let g:WhichKeyDesc_close = "<leader>q Close Window"
 map <leader>w <Action>(SaveAll)
 let g:WhichKeyDesc_save_all = "<leader>w Save All"
 map <leader>e <Action>(ActivateProjectToolWindow)
+
 let g:WhichKeyDesc_explorer = "<leader>e Explorer"
 map <C-z> <Action>(ToggleDistractionFreeMode)
 let g:WhichKeyDesc_distraction_free = "<C-z> Toggle Distraction Free Mode"
@@ -377,6 +428,11 @@ map <leader>,vv <Action>(VimPluginToggle)
 let g:WhichKeyDesc_config_vim_toggle = "<leader>,vv Toggle Vim"
 map <leader>,cc <Action>(ChangeColorScheme)
 let g:WhichKeyDesc_config_change_color_scheme = "<leader>,cc Change Color Scheme"
+map <leader>,p <Action>(TogglePresentationAssistantAction)
+let g:WhichKeyDesc_config_toggle_presentation_assistant = "<leader>,cc Change Color Scheme"
+
+" close the popup and don't process formerly typed keys
+" let g:WhichKey_ProcessUnknownMappings = "false"
 
 """ Ideas:
 """ prefix+m is always the menu
