@@ -113,10 +113,23 @@ let g:WhichKeyDesc_bookmarks_show = "<leader>bs Show Bookmarks"
 """ Requires https://plugins.jetbrains.com/plugin/10985-case-conversion
 
 """ Change
-map <leader>cc <Action>(me.laria.code.idea_caseconv.CamelCaseAction)
-let g:WhichKeyDesc_change_camel_case = "<leader>cc Change CamelCase"
-map <leader>cm <Action>(me.laria.code.idea_caseconv.convert_case_menu)
-let g:WhichKeyDesc_change_case_menu = "<leader>cm Change Case Menu"
+let g:WhichKeyDesc_change_camel_case = "ga Casing"
+vmap gam <Action>(me.laria.code.idea_caseconv.convert_case_menu)
+let g:WhichKeyDesc_change_case_menu = "gam Menu"
+vmap gac <Action>(me.laria.code.idea_caseconv.CamelCaseAction)
+let g:WhichKeyDesc_change_camel_case = "gac toCamelCase"
+vmap gad <Action>(me.laria.code.idea_caseconv.DashCaseAction)
+let g:WhichKeyDesc_change_dash_case = "gad to-dash-case"
+vmap gal <Action>(me.laria.code.idea_caseconv.LowerCaseAction)
+let g:WhichKeyDesc_change_lower_case = "gal Convert to lower case"
+vmap gan <Action>(me.laria.code.idea_caseconv.screaming_snake_case_action)
+let g:WhichKeyDesc_change_screaming_snake_case = "gan TO_SCREAMING_SNAKE_CASE"
+vmap gap <Action>(me.laria.code.idea_caseconv.PascalCaseAction)
+let g:WhichKeyDesc_change_pascal_case = "gap ToPascalCase"
+vmap gas <Action>(me.laria.code.idea_caseconv.SnakeCaseAction)
+let g:WhichKeyDesc_change_snake_case = "gas to_snake_case"
+vmap gau <Action>(me.laria.code.idea_caseconv.UpperCaseAction)
+let g:WhichKeyDesc_change_upper_case = "gas TO_UPPER_CASE"
 
 """ Debugging
 let g:WhichKeyDesc_debugging = "<leader>d Debugging"
