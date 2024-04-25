@@ -1,3 +1,10 @@
+ __                           __  _
+/ _\ _ __    __ _   ___  ___ / _\| |_  ___   _ __  _ __ ___
+\ \ | '_ \  / _` | / __|/ _ \\ \ | __|/ _ \ | '__|| '_ ` _ \
+_\ \| |_) || (_| || (__|  __/_\ \| |_| (_) || |   | | | | | |
+\__/| .__/  \__,_| \___|\___|\__/ \__|\___/ |_|   |_| |_| |_|
+    |_|
+
 """ Map leader to space ---------------------
 
 let mapleader = " "
@@ -24,7 +31,7 @@ set surround
 set commentary
 " provides a text-object 'a' (argument)
 set argtextobj
-" provides a text-object e (entire buffer)
+" provides a text-object e (entire )
 set textobj-entire " provides a text-object for i (indentation level)
 set textobj-indent
 set ReplaceWithRegister
@@ -84,18 +91,32 @@ nnoremap \e :e ~/.ideavimrc<CR>
 let g:WhichKeyDesc_edit_config = "\\e Edit Config"
 map \r <Action>(IdeaVim.ReloadVimRc.reload)
 let g:WhichKeyDesc_edit_config = "\\r Reload"
-map <buffer>gd <Action>(GotoDeclaration)
-let g:WhichKeyDesc_go_to_declaration = "gd Go to Declaration"
-map <buffer>gy <Action>(GotoTypeDeclaration)
-let g:WhichKeyDesc_go_to_type_declaration = "gy Go to Type Declaration"
-nmap <buffer> ge <Action>(EditorCodeBlockEnd)
-let g:WhichKeyDesc_go_to_code_block_end = "ge Go to Block End"
-nmap <buffer> gI <Action>(GotoImplementation)
-let g:WhichKeyDesc_go_to_implementation = "gI Go to Implementation"
-nmap <buffer> gn <Action>(MethodDown)
+
+let g:WhichKeyDesc_g = "g General"
+let g:WhichKeyDesc_g_hash = "g# Search Word Backward"
+let g:WhichKeyDesc_g_dollar = "g$ Go To Last Screen Column"
+let g:WhichKeyDesc_g_amp = "g& Repeat Last Find & Replace"
+let g:WhichKeyDesc_g_quote = "g' Go To Mark"
+let g:WhichKeyDesc_g_open_parentheses = "g( Previous Sentence End"
+let g:WhichKeyDesc_g_close_parentheses = "g) Nex Sentence End"
+let g:WhichKeyDesc_g_astrix = "g* Search Forward"
+let g:WhichKeyDesc_g_0 = "g0 Start of Line"
+let g:WhichKeyDesc_g_8 = "g8 Hex (Does not work)"
+let g:WhichKeyDesc_g_c_g = "g<^g> (Does not work)"
+let g:WhichKeyDesc_g_at = "g@ Comment"
+let g:WhichKeyDesc_g_D = "gD Go To Declaration"
+let g:WhichKeyDesc_g_E = "gE Backwards end of WORDS"
+let g:WhichKeyDesc_g_caret = "g^ First Non-blank Char"
+let g:WhichKeyDesc_g_underscore = "g_ Last Non-blank Char"
+
+
 let g:WhichKeyDesc_go_to_next_method = "gn Next Method"
-nmap <buffer> gp <Action>(MethodUp)
-map <buffer> gs <Action>(GotoSuperMethod)
+let g:WhichKeyDesc_go_to_declaration = "gd Go to Declaration"
+let g:WhichKeyDesc_go_to_type_declaration = "gy Go to Type Declaration"
+let g:WhichKeyDesc_go_to_code_block_end = "ge Go to Block End"
+let g:WhichKeyDesc_go_to_implementation = "gI Go to Implementation"
+let g:WhichKeyDesc_go_to_next_method = "gn Next Method"
+map gs <Action>(GotoSuperMethod)
 map zc <Action>(CollapseRegion)
 map zo <Action>(ExpandRegion)
 
