@@ -129,7 +129,15 @@ let g:WhichKeyDesc_change_pascal_case = "gap ToPascalCase"
 vmap gas <Action>(me.laria.code.idea_caseconv.SnakeCaseAction)
 let g:WhichKeyDesc_change_snake_case = "gas to_snake_case"
 vmap gau <Action>(me.laria.code.idea_caseconv.UpperCaseAction)
-let g:WhichKeyDesc_change_upper_case = "gas TO_UPPER_CASE"
+let g:WhichKeyDesc_change_upper_case = "gau TO_UPPER_CASE"
+vmap gaw <Action>(me.laria.code.idea_caseconv.SeparateWordsAction)
+let g:WhichKeyDesc_separate_words = "gaw separate words"
+vmap gat <Action>(me.laria.code.idea_caseconv.TitleCaseAction)
+let g:WhichKeyDesc_title_case = "gat Title Case"
+vmap ga. <Action>(me.laria.code.idea_caseconv.DotCaseAction)
+let g:WhichKeyDesc_dot_case = "ga. dot.case"
+vmap gaS <Action>(me.laria.code.idea_caseconv.SentenceCaseAction)
+let g:WhichKeyDesc_sentence_case = "gaS Sentence case"
 
 """ Debugging
 let g:WhichKeyDesc_debugging = "<leader>d Debugging"
