@@ -42,10 +42,29 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 set multiple-cursors
-map mc <A-n>
-map mx <A-x>
-map mp <A-p>
-map ma <C-n>
+
+" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+let g:WhichKeyDesc_multi_cursor = "m Multiple Cursors"
+map mc <Plug>NextWholeOccurrence
+let g:WhichKeyDesc_multi_cursor_next_normal = "mc Next Word"
+xmap mc <Plug>NextWholeOccurrence
+
+nmap mn <Plug>NextOccurrence
+let g:WhichKeyDesc_multi_cursor_next_normal = "mc Next"
+xmap mn <Plug>NextOccurrence
+
+xmap ms <Plug>SkipOccurrence
+let g:WhichKeyDesc_multi_cursor_skip = "ms Skip Next"
+xmap mr <Plug>RemoveOccurrence
+let g:WhichKeyDesc_multi_cursor_remove = "mr Remove"
+nmap ma <Plug>AllWholeOccurrences
+let g:WhichKeyDesc_multi_cursor_all_words_normal = "ma All Words"
+xmap ma <Plug>AllWholeOccurrences
+nmap mA <Plug>AllOccurrences
+let g:WhichKeyDesc_multi_cursor_all = "mA All"
+xmap mA <Plug>AllOccurrences
+
+
 " Easy visual indentation
 vnoremap < <gv vnoremap > >gv
 " Popup navigation
@@ -62,12 +81,19 @@ let g:WhichKey_ShowVimActions = "true"
 
 " edit ideavim config
 nnoremap \e :e ~/.ideavimrc<CR>
+let g:WhichKeyDesc_edit_config = "\\e Edit Config"
 map \r <Action>(IdeaVim.ReloadVimRc.reload)
+let g:WhichKeyDesc_edit_config = "\\r Reload"
 map <buffer>gd <Action>(GotoDeclaration)
+let g:WhichKeyDesc_go_to_declaration = "gd Go to Declaration"
 map <buffer>gy <Action>(GotoTypeDeclaration)
+let g:WhichKeyDesc_go_to_type_declaration = "gy Go to Type Declaration"
 nmap <buffer> ge <Action>(EditorCodeBlockEnd)
+let g:WhichKeyDesc_go_to_code_block_end = "ge Go to Block End"
 nmap <buffer> gI <Action>(GotoImplementation)
+let g:WhichKeyDesc_go_to_implementation = "gI Go to Implementation"
 nmap <buffer> gn <Action>(MethodDown)
+let g:WhichKeyDesc_go_to_next_method = "gn Next Method"
 nmap <buffer> gp <Action>(MethodUp)
 map <buffer> gs <Action>(GotoSuperMethod)
 map zc <Action>(CollapseRegion)
@@ -110,9 +136,9 @@ let g:WhichKeyDesc_bookmarks_prev = "<leader>bp Previous Bookmark"
 map <leader>bs <Action>(ShowBookmarks)
 let g:WhichKeyDesc_bookmarks_show = "<leader>bs Show Bookmarks"
 
-""" Requires https://plugins.jetbrains.com/plugin/10985-case-conversion
 
-""" Change
+""" Casing
+""" Requires https://plugins.jetbrains.com/plugin/10985-case-conversion
 let g:WhichKeyDesc_change_camel_case = "ga Casing"
 vmap gam <Action>(me.laria.code.idea_caseconv.convert_case_menu)
 let g:WhichKeyDesc_change_case_menu = "gam Menu"
@@ -227,6 +253,7 @@ let g:WhichKeyDesc_git_settings_amend = "<leader>gsa Toggle Ammend"
 let g:WhichKeyDesc_git_file= "<leader>gf File"
 map <leader>gfh <Action>(Vcs.ShowTabbedFileHistory)
 vmap <leader>gfh <Action>(Vcs.ShowHistoryForBlock)
+
 "GitHub
 let g:WhichKeyDesc_git_hub = "<leader>gh GitHub"
 map <leader>ghp <Action>(Github.Create.Pull.Request)
@@ -402,7 +429,7 @@ let g:WhichKeyDesc_view_buttons = "<leader>vb Tool Buttons"
 map <leader>vM <Action>(MaximizeEditorInSplit)
 let g:WhichKeyDesc_view_maximize = "<leader>vM Maximize"
 map <leader>vp <Action>(TogglePresentationMode) <Action>(TogglePresentationAssistantAction)
-let g:WhichKeyDesc_view_presentation_mode = "<leader>Toggle Presentation Mode"
+let g:WhichKeyDesc_view_presentation_mode = "<leader>vp Toggle Presentation Mode"
 
 """ Niceties
 map <leader>' <Action>(JumpToLastWindow)
@@ -410,7 +437,7 @@ let g:WhichKeyDesc_jump_to_last = "<leader>' Last Window"
 map <leader>; <Action>(HideAllWindows)
 let g:WhichKeyDesc_hide_all_windows = "<leader>; Hide All"
 map <leader>\ <Action>(ClearAllNotifications)
-let g:WhichKeyDesc_clear_all_notifications = "<leader>\ Clear Notificationj"
+let g:WhichKeyDesc_clear_all_notifications = "<leader>\\ Clear Notifications"
 map <leader>q <Action>(CloseContent)
 let g:WhichKeyDesc_close = "<leader>q Close Window"
 map <leader>w <Action>(SaveAll)
@@ -450,11 +477,10 @@ let g:WhichKeyDesc_config_vim_toggle = "<leader>,vv Toggle Vim"
 map <leader>,cc <Action>(ChangeColorScheme)
 let g:WhichKeyDesc_config_change_color_scheme = "<leader>,cc Change Color Scheme"
 map <leader>,p <Action>(TogglePresentationAssistantAction)
-let g:WhichKeyDesc_config_toggle_presentation_assistant = "<leader>,cc Change Color Scheme"
+let g:WhichKeyDesc_config_toggle_presentation_assistant = "<leader>,p Presentation Assistant"
 
 " close the popup and don't process formerly typed keys
-" let g:WhichKey_ProcessUnknownMappings = "false"
-
+" let g:WhichKey_ProcessUnknownMappings = "false
 """ Ideas:
 """ prefix+m is always the menu
 """ prefix+char is shortcut in the menu
