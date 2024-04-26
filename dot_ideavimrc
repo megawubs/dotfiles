@@ -1,9 +1,9 @@
- __                           __  _
-/ _\ _ __    __ _   ___  ___ / _\| |_  ___   _ __  _ __ ___
-\ \ | '_ \  / _` | / __|/ _ \\ \ | __|/ _ \ | '__|| '_ ` _ \
-_\ \| |_) || (_| || (__|  __/_\ \| |_| (_) || |   | | | | | |
-\__/| .__/  \__,_| \___|\___|\__/ \__|\___/ |_|   |_| |_| |_|
-    |_|
+" __                           __  _
+" / _\ _ __    __ _   ___  ___ / _\| |_  ___   _ __  _ __ ___
+" \ \ | '_ \  / _` | / __|/ _ \\ \ | __|/ _ \ | '__|| '_ ` _ \
+" _\ \| |_) || (_| || (__|  __/_\ \| |_| (_) || |   | | | | | |
+" \__/| .__/  \__,_| \___|\___|\__/ \__|\___/ |_|   |_| |_| |_|
+"     |_|
 
 """ Map leader to space ---------------------
 
@@ -87,10 +87,20 @@ set scrolloff=5
 let g:WhichKey_ShowVimActions = "true"
 
 " edit ideavim config
+let g:WhichKeyDesc_config = "\\ Config"
 nnoremap \e :e ~/.ideavimrc<CR>
 let g:WhichKeyDesc_edit_config = "\\e Edit Config"
 map \r <Action>(IdeaVim.ReloadVimRc.reload)
-let g:WhichKeyDesc_edit_config = "\\r Reload"
+let g:WhichKeyDesc_reload = "\\r Reload"
+let g:WhichKeyDesc_config_vim = "\\v Vim"
+map \va <Action>(VimFindActionIdAction)
+let g:WhichKeyDesc_config_vim_actions = "\\va Vim Toggle Action Id"
+map \vv <Action>(VimPluginToggle\vv
+let g:WhichKeyDesc_config_vim_toggle = "\\vv Toggle Vim"
+map \cc <Action>(ChangeColorScheme)
+let g:WhichKeyDesc_config_change_color_scheme = "\\cc Change Color Scheme"
+map \p <Action>(TogglePresentationAssistantAction)
+let g:WhichKeyDesc_config_toggle_presentation_assistant = "\\p Presentation Assistant"
 
 let g:WhichKeyDesc_g = "g General"
 let g:WhichKeyDesc_g_hash = "g# Search Word Backward"
@@ -487,18 +497,6 @@ map <leader>pci <Action>(ComposerInstallAction)
 let g:WhichKeyDesc_php_composer_install = "<leader>pci Composer Install"
 map <leader>pcu <Action>(ComposerUpdateAction)
 let g:WhichKeyDesc_php_composer_update = "<leader>pcu Composer Update"
-
-"Config
-let g:WhichKeyDesc_config = "<leader>, Config"
-let g:WhichKeyDesc_config_vim = "<leader>,v Vim"
-map <leader>,va <Action>(VimFindActionIdAction)
-let g:WhichKeyDesc_config_vim_actions = "<leader>,va Vim Toggle Action Id's"
-map <leader>,vv <Action>(VimPluginToggle)
-let g:WhichKeyDesc_config_vim_toggle = "<leader>,vv Toggle Vim"
-map <leader>,cc <Action>(ChangeColorScheme)
-let g:WhichKeyDesc_config_change_color_scheme = "<leader>,cc Change Color Scheme"
-map <leader>,p <Action>(TogglePresentationAssistantAction)
-let g:WhichKeyDesc_config_toggle_presentation_assistant = "<leader>,p Presentation Assistant"
 
 " close the popup and don't process formerly typed keys
 " let g:WhichKey_ProcessUnknownMappings = "false
