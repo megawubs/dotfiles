@@ -9,7 +9,7 @@
 
 let mapleader = " "
 """ Plugins  --------------------------------
-""" set number
+set nonumber
 " Do incremental searching.
 set incsearch
 set ignorecase
@@ -49,7 +49,7 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 set multiple-cursors
-
+"
 " Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
 let g:WhichKeyDesc_multi_cursor = "m Multiple Cursors"
 map mc <Plug>NextWholeOccurrence
@@ -101,6 +101,7 @@ map \cc <Action>(ChangeColorScheme)
 let g:WhichKeyDesc_config_change_color_scheme = "\\cc Change Color Scheme"
 map \p <Action>(TogglePresentationAssistantAction)
 let g:WhichKeyDesc_config_toggle_presentation_assistant = "\\p Presentation Assistant"
+map \vs <Action>(VimShortcutKeyAction)
 
 let g:WhichKeyDesc_g = "g General"
 let g:WhichKeyDesc_g_hash = "g# Search Word Backward"
@@ -118,17 +119,62 @@ let g:WhichKeyDesc_g_D = "gD Go To Declaration"
 let g:WhichKeyDesc_g_E = "gE Backwards end of WORDS"
 let g:WhichKeyDesc_g_caret = "g^ First Non-blank Char"
 let g:WhichKeyDesc_g_underscore = "g_ Last Non-blank Char"
-
-
-let g:WhichKeyDesc_go_to_next_method = "gn Next Method"
+let g:WhichKeyDesc_g_backtick = "g` Go to mark"
+let g:WhichKeyDesc_g_c = "gc Comment"
+let g:WhichKeyDesc_g_cc = "gcc Comment Line"
+let g:WhichKeyDesc_g_cu = "gcu Commentary"
 let g:WhichKeyDesc_go_to_declaration = "gd Go to Declaration"
-let g:WhichKeyDesc_go_to_type_declaration = "gy Go to Type Declaration"
 let g:WhichKeyDesc_go_to_code_block_end = "ge Go to Block End"
+let g:WhichKeyDesc_go_to_first_line = "gg Go to First Line"
+let g:WhichKeyDesc_g_h = "gh Select Mode Char"
+let g:WhichKeyDesc_g_i = "gi Insert at Previous Insert Location"
+let g:WhichKeyDesc_g_j = "gj Down Not Linewise"
+let g:WhichKeyDesc_g_k = "gk Up Not Linewise"
+let g:WhichKeyDesc_g_m = "gm Middle Not Linewise"
+let g:WhichKeyDesc_g_m = "gm Middle Not Linewise"
+let g:WhichKeyDesc_go_to_next_method = "gn Next Method"
+let g:WhichKeyDesc_g_o = "go somewhere?"
+let g:WhichKeyDesc_g_p = "gp Paste, Put cursor after"
+let g:WhichKeyDesc_g_q = "gq Format Lines With Motion"
+let g:WhichKeyDesc_g_r = "gr Replace With Register"
+let g:WhichKeyDesc_g_rr = "grr Replace Line With Register"
+let g:WhichKeyDesc_g_t = "gt Next Tab"
+let g:WhichKeyDesc_g_u = "gu Lower Case with Motion"
+let g:WhichKeyDesc_g_v = "gv Visual Mode Last Area"
+let g:WhichKeyDesc_g_v = "gv Visual Mode Last Area"
+let g:WhichKeyDesc_g_tilde = "g~ Change Case with Motion"
+let g:WhichKeyDesc_g_J = "gJ"
+let g:WhichKeyDesc_g_N = "gN Select Previous Search"
+let g:WhichKeyDesc_g_P = "gP Paste, Put Cursor Before"
+let g:WhichKeyDesc_g_T = "gT Previous Tab"
+let g:WhichKeyDesc_g_U = "gU Upper Case with Motion"
+let g:WhichKeyDesc_g_H = "gH"
+let g:WhichKeyDesc_go_to_type_declaration = "gy Go to Type Declaration"
 let g:WhichKeyDesc_go_to_implementation = "gI Go to Implementation"
 let g:WhichKeyDesc_go_to_next_method = "gn Next Method"
+
 map gs <Action>(GotoSuperMethod)
+let g:WhichKeyDesc_go_to_super_method = "gs Go To Super Method"
+let g:WhichKeyDesc_z = "z Zone"
+let g:WhichKeyDesc_z_plus = "z+ Go To Last Line In View"
+let g:WhichKeyDesc_z_minus = "z- Scroll Current Line To Bottom"
+let g:WhichKeyDesc_z_dot = "z. Center Current Line"
+let g:WhichKeyDesc_z_C = "zC Collapse Recursively"
+let g:WhichKeyDesc_z_H = "zH Scroll Half Right"
+let g:WhichKeyDesc_z_L = "zH Scroll Half Left"
+let g:WhichKeyDesc_z_L = "zL Scroll Half Left"
+let g:WhichKeyDesc_z_M = "zM Collapse All"
+let g:WhichKeyDesc_z_O = "zO Expand Recursively"
+let g:WhichKeyDesc_z_R = "zR Expand All"
+let g:WhichKeyDesc_z_caret = "z^"
+let g:WhichKeyDesc_z_b = "zb"
+let g:WhichKeyDesc_z_e = "ze"
+let g:WhichKeyDesc_z_e = "ze"
+
 map zc <Action>(CollapseRegion)
+let g:WhichKeyDesc_zc = "zc Collapse"
 map zo <Action>(ExpandRegion)
+let g:WhichKeyDesc_zo = "zo Expand"
 
 """ window splitting & navigation
 map <c-o> <Action>(Back)
@@ -275,6 +321,8 @@ map <leader>go <Action>(Github.View.Pull.Request)
 let g:WhichKeyDesc_git_open_pull_requests = "<leader>go Open Pull Requests"
 map <leader>gc <Action>(Vcs.Show.Local.Changes)
 let g:WhichKeyDesc_git_local_changes = "<leader>gc Show Local Changes"
+map <leader>gu <Action>(Vcs.UpdateProject)
+let g:WhichKeyDesc_git_update_project = "<leader>gu Update Project"
 
 " Git Settings
 let g:WhichKeyDesc_git_settings = "<leader>gs Settings"
