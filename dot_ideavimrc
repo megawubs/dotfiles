@@ -42,7 +42,6 @@ let g:argtextobj_pairs="[:],(:),<:>"
 set showmode
 set so=5
 set incsearch
-set nu
 set clipboard+=unnamed
 """ idea specific settings ------------------
 set ideajoin
@@ -57,8 +56,13 @@ let g:WhichKeyDesc_multi_cursor_next_normal = "mc Next Word"
 xmap mc <Plug>NextWholeOccurrence
 
 nmap mn <Plug>NextOccurrence
-let g:WhichKeyDesc_multi_cursor_next_normal = "mc Next"
+let g:WhichKeyDesc_multi_cursor_next_normal = "mn Next"
 xmap mn <Plug>NextOccurrence
+let g:WhichKeyDesc_multi_cursor_next_x = "mn Next"
+map me <Action>(EditorSelectWord)
+let g:WhichKeyDesc_multi_cursor_expand = "me Expand"
+map mu <Action>(EditorUnSelectWord)
+let g:WhichKeyDesc_multi_cursor_shrink = "mu Unselect"
 
 xmap ms <Plug>SkipOccurrence
 let g:WhichKeyDesc_multi_cursor_skip = "ms Skip Next"
@@ -85,6 +89,14 @@ map <c-k> <Action>(PopupMenu-selectprev)
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=5
 let g:WhichKey_ShowVimActions = "true"
+
+" Greatest remap EVER!!
+" Let me explain, this remap while in visiual mode
+" will delete what is currently highlighted and replace it
+" with what is in the register BUT it will YANK (delete) it
+" to a VOID register. Meaning I still have what I originally had
+" when I pasted. I don't loose the previous thing I YANKED!
+vnoremap <leader>p "_dP
 
 " edit ideavim config
 let g:WhichKeyDesc_config = "\\ Config"
@@ -297,10 +309,16 @@ let g:WhichKeyDesc_diff_merge_resolve_conflicts = "<leader>gdM Resolve Conflicts
 
 """ Git
 let g:WhichKeyDesc_git = "<leader>g Git"
-map <leader>gg <Action>(CheckinProject)
-let g:WhichKeyDesc_git_checkin = "<leader>gg Checkin"
+map <leader>ga <Action>(Annotate)
+let g:WhichKeyDesc_git_annotate = "<leader>ga Annotate"
 map <leader>gb <Action>(Git.Branches)
 let g:WhichKeyDesc_git_branches = "<leader>gb Branches"
+map <leader>gc <Action>(Vcs.Show.Local.Changes)
+let g:WhichKeyDesc_git_local_changes = "<leader>gc Show Local Changes"
+map <leader>gC <Action>(Git.CompareWithBranch)
+let g:WhichKeyDesc_git_local_changes = "<leader>gC Compare Branch"
+map <leader>gg <Action>(CheckinProject)
+let g:WhichKeyDesc_git_checkin = "<leader>gg Checkin"
 map <leader>gp <Action>(Git.Commit.And.Push.Executor)
 let g:WhichKeyDesc_git_commit_and_push = "<leader>gp Commit & Push"
 map <leader>gP <Action>(Vcs.Push)
@@ -309,8 +327,6 @@ map <leader>gm <Action>(VcsGroups)
 let g:WhichKeyDesc_git_menu = "<leader>gm Menu"
 map <leader>gf <Action>(Git.Fetch)
 let g:WhichKeyDesc_git_fetch = "<leader>gf Fetch"
-map <leader>ga <Action>(Annotate)
-let g:WhichKeyDesc_git_annotate = "<leader>ga Annotate"
 map <leader>gl <Action>(ActivateVersionControlToolWindow)
 let g:WhichKeyDesc_git_log = "<leader>gl Log"
 map <leader>gt <Action>(ActivateVersionControlToolWindow)
@@ -319,8 +335,6 @@ map <leader>gr <Action>(Vcs.RollbackChangedLines)
 let g:WhichKeyDesc_git_rollback_changed_lines = "<leader>gr Rollback"
 map <leader>go <Action>(Github.View.Pull.Request)
 let g:WhichKeyDesc_git_open_pull_requests = "<leader>go Open Pull Requests"
-map <leader>gc <Action>(Vcs.Show.Local.Changes)
-let g:WhichKeyDesc_git_local_changes = "<leader>gc Show Local Changes"
 map <leader>gu <Action>(Vcs.UpdateProject)
 let g:WhichKeyDesc_git_update_project = "<leader>gu Update Project"
 
@@ -391,8 +405,9 @@ map <leader>o <Action>(FileStructurePopup)
 let g:WhichKeyDesc_file_structure = "<leader>o Structure"
 
 """" Menu
-map <leader>mm <Action>(ShowPopupMenu)
-map <C-m> <Action>(ShowPopupMenu)
+nmap <leader>mm <Action>(ShowPopupMenu)
+nmap <C-m> <Action>(ShowPopupMenu)
+nmap <C-S-m> <Action>(ToolWindowsGroup)
 
 """ Navigation
 let g:WhichKeyDesc_navigation = "<leader>n Navigation"
@@ -534,10 +549,33 @@ let g:WhichKeyDesc_edit_source = "<leader>E Edit Source"
 map <leader>h :noh<CR>
 let g:WhichKeyDesc_no_highlight = "<leader>h No Highlight"
 
+let g:WhichKeyDesc_info = "<leader>i Information"
+nmap <leader>ie <Action>(ShowErrorDescription)
+let g:WhichKeyDesc_info_error = "<leader>ie Error Description"
+nmap <leader>it <Action>(ExpressionTypeInfo)
+let g:WhichKeyDesc_info_type = "<leader>it Expression Type"
+nmap <leader>ip <Action>(ParameterInfo)
+let g:WhichKeyDesc_info_parameter = "<leader>ip Parameter Info"
+nmap <leader>ij <Action>(QuickJavaDoc)
+let g:WhichKeyDesc_info_javadoc = "<leader>ij Java Doc"
+nmap <leader>if <Action>(FileStructurePopup)
+let g:WhichKeyDesc_info_file_structure = "<leader>if File Structure"
+nmap <leader>iU <Action>(ShowUmlDiagram)
+let g:WhichKeyDesc_info_uml_diagram = "<leader>iU UML Diagram"
+nmap <leader>ih <Action>(CallHierarchy)
+let g:WhichKeyDesc_info_call_hierarchy = "<leader>ih Call Hierarchy"
+nmap <leader>iu <Action>(ShowUsages)
+let g:WhichKeyDesc_info_show_usages = "<leader>iu Usages"
+nmap <leader>im <Action>(MethodHierarchy)
+let g:WhichKeyDesc_info_method_hierarchy = "<leader>im Method Hierarchy"
+
 let g:WhichKeyDesc_leader_leader = "<leader><leader> Layer 2"
 map <leader><leader>ds <Action>(Console.Jdbc.ChooseSchema)
 let g:WhichKeyDesc_database = "<leader><leader>d Database"
 let g:WhichKeyDesc_database_schema = "<leader><leader>ds Choose Schema"
+ map <leader><leader>dc <Action>(DatabaseViewToolbar)
+"map <leader><leader>dc <Action>(Jdbc.OpenConsole)
+let g:WhichKeyDesc_database_console = "<leader><leader>dc Open Console"
 
 " Composer
 let g:WhichKeyDesc_php_composer = "<leader>pc Composer"

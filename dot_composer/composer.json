@@ -2,6 +2,7 @@
     "require": {
         "laravel/valet": "^4.4",
         "laravel/sail": "^1.25",
-        "laravel/installer": "^5.1"
+        "laravel/installer": "^5.1",
+        "beyondcode/expose": "^2.6"
     }
 }

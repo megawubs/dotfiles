@@ -10,3 +10,10 @@ pyenv init - | source
 
 [ -f ~/.inshellisense/key-bindings.fish ] && source ~/.inshellisense/key-bindings.fish
 
+
+# pnpm
+set -gx PNPM_HOME "/Users/bramwubs/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
