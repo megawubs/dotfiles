@@ -1,0 +1,276 @@
+{
+  "actions" : [
+    {
+      "actions" : [
+        {
+          "key" : "e",
+          "label" : "",
+          "type" : "application",
+          "value" : "/System/Applications/Mail.app"
+        },
+        {
+          "key" : "m",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/Spotify.app"
+        },
+        {
+          "key" : "b",
+          "label" : "",
+          "type" : "application",
+          "value" : "/System/Applications/Messages.app"
+        },
+        {
+          "key" : "s",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/Slack.app"
+        },
+        {
+          "key" : "p",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/PhpStorm.app"
+        },
+        {
+          "key" : "t",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/kitty.app"
+        },
+        {
+          "key" : "w",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/WhatsApp.app"
+        },
+        {
+          "key" : "S",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/Signal.app"
+        },
+        {
+          "key" : "T",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/TablePlus.app"
+        },
+        {
+          "key" : "o",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/1Password.app"
+        },
+        {
+          "key" : "d",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/Docker.app"
+        },
+        {
+          "key" : "f",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/Fantastical.app"
+        },
+        {
+          "key" : "a",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/Arc.app"
+        },
+        {
+          "key" : ",",
+          "label" : "",
+          "type" : "application",
+          "value" : "/System/Applications/System Settings.app"
+        },
+        {
+          "key" : "q",
+          "label" : "",
+          "type" : "application",
+          "value" : "/System/Applications/QuickTime Player.app"
+        },
+        {
+          "key" : "F",
+          "label" : "",
+          "type" : "application",
+          "value" : "/System/Applications/FaceTime.app"
+        },
+        {
+          "key" : "h",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/Homerow.app"
+        },
+        {
+          "key" : "k",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/Keymapp.app"
+        }
+      ],
+      "key" : "a",
+      "label" : "Apps",
+      "type" : "group"
+    },
+    {
+      "key" : "c",
+      "label" : "Clipboard History",
+      "type" : "url",
+      "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "m",
+          "label" : "Maximize",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/maximize"
+        },
+        {
+          "key" : "h",
+          "label" : "Left Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/left-half"
+        },
+        {
+          "key" : "l",
+          "label" : "Right Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/right-half"
+        },
+        {
+          "key" : "g",
+          "label" : "Next Display",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/next-display"
+        },
+        {
+          "key" : "s",
+          "label" : "Previous Display",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/previous-display"
+        }
+      ],
+      "key" : "w",
+      "label" : "Window",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : " ",
+          "label" : "Play/Pause",
+          "type" : "url",
+          "value" : "raycast://extensions/douo/global-media-key/play"
+        },
+        {
+          "key" : "n",
+          "label" : "Next",
+          "type" : "url",
+          "value" : "raycast://extensions/douo/global-media-key/next"
+        },
+        {
+          "key" : "p",
+          "label" : "Previous",
+          "type" : "url",
+          "value" : "raycast://extensions/douo/global-media-key/prev"
+        },
+        {
+          "key" : "d",
+          "label" : "Volume Down",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/turn-volume-down"
+        },
+        {
+          "key" : "u",
+          "label" : "Volume Up",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/turn-volume-up"
+        },
+        {
+          "key" : "s",
+          "label" : "Volume 25",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-25"
+        },
+        {
+          "key" : "h",
+          "label" : "Volume 50 ",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-50"
+        },
+        {
+          "key" : "H",
+          "label" : "volume 75",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-70"
+        }
+      ],
+      "key" : "m",
+      "label" : "Music",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+
+      ],
+      "key" : "s",
+      "label" : "",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "actions" : [
+            {
+              "key" : "l",
+              "label" : "Aangedacht",
+              "type" : "url",
+              "value" : "https://aangedacht.sibi.test"
+            },
+            {
+              "key" : "c",
+              "label" : "Central",
+              "type" : "url",
+              "value" : "https://sibi.test"
+            },
+            {
+              "key" : "d",
+              "label" : "Dev",
+              "type" : "url",
+              "value" : "https://app.sibi.dev"
+            },
+            {
+              "key" : "a",
+              "label" : "Accept",
+              "type" : "url",
+              "value" : "https://app.acceptatie.sibi.nl/identiteit/login"
+            },
+            {
+              "key" : "p",
+              "label" : "Prod",
+              "type" : "url",
+              "value" : "https://app.sibi.nl/identiteit/login"
+            }
+          ],
+          "key" : "s",
+          "label" : "Sibi",
+          "type" : "group"
+        }
+      ],
+      "key" : "u",
+      "label" : "Urls",
+      "type" : "group"
+    },
+    {
+      "key" : "e",
+      "label" : "feee",
+      "type" : "url",
+      "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+    }
+  ],
+  "type" : "group"
+}
