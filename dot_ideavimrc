@@ -107,7 +107,7 @@ let g:WhichKeyDesc_reload = "\\r Reload"
 let g:WhichKeyDesc_config_vim = "\\v Vim"
 map \va <Action>(VimFindActionIdAction)
 let g:WhichKeyDesc_config_vim_actions = "\\va Vim Toggle Action Id"
-map \vv <Action>(VimPluginToggle\vv
+map \vv <Action>(VimPluginToggle)
 let g:WhichKeyDesc_config_vim_toggle = "\\vv Toggle Vim"
 map \cc <Action>(ChangeColorScheme)
 let g:WhichKeyDesc_config_change_color_scheme = "\\cc Change Color Scheme"
@@ -162,6 +162,7 @@ let g:WhichKeyDesc_g_T = "gT Previous Tab"
 let g:WhichKeyDesc_g_U = "gU Upper Case with Motion"
 let g:WhichKeyDesc_g_H = "gH"
 let g:WhichKeyDesc_go_to_type_declaration = "gy Go to Type Declaration"
+map gI <Action>(GotoImplementation)
 let g:WhichKeyDesc_go_to_implementation = "gI Go to Implementation"
 let g:WhichKeyDesc_go_to_next_method = "gn Next Method"
 
@@ -415,12 +416,13 @@ map <leader>ne <Action>(GotoNextError)
 let g:WhichKeyDesc_navigation_next_error = "<leader>ne Next Error"
 map <leader>no <Action>(NextOccurence)
 let g:WhichKeyDesc_navigation_next_occurence = "<leader>no Next Occurrence"
-map <leader>ns <Action>(NewScratchFile)
-let g:WhichKeyDesc_navigation_new_scratch_file = "<leader>ns New Scratch File"
+map <leader>ns <Action>(NewScratchFile)et g:WhichKeyDesc_navigation_new_scratch_file = "<leader>ns New Scratch File"
 map <leader>nf <Action>(ShowNavBar)
 let g:WhichKeyDesc_navigation_files = "<leader>nf Navigate files"
 map <leader>nt <Action>(GotoTest)
 let g:WhichKeyDesc_navigation_test = "<leader>nt Navigate to Test"
+map <leader>nm <Action>(NavbarPopupMenu)
+let g:WhichKeyDesc_navigation_test = "<leader>nm Navigation Bar"
 
 """ PHP Related
 let g:WhichKeyDesc_php = "<leader>p PHP"
@@ -428,6 +430,8 @@ map <leader>pt <Action>(nl.deschepers.laraveltinker.action.SmartAction)
 let g:WhichKeyDesc_php_tinker_smart_action = "<leader>pt Laravel Tinker"
 map <leader>ph <Action>(com.laravel_idea.plugin.GenerateHelperCodeAction)
 let g:WhichKeyDesc_php_laravel_idea_code_helper = "<leader>ph Laravel Idea Code Helper"
+map <leader>pu <Action>(com.laravel_idea.plugin.GoToViewUsagesAction)
+let g:WhichKeyDesc_php_laravel_idea_go_to_view_usages_action = "<leader>ph Laravel Ide view usages"
 
 """ Run
 let g:WhichKeyDesc_run = "<leader>r Run"
@@ -480,29 +484,31 @@ map <leader>tj <Action>(JsonPathEvaluateAction)
 let g:WhichKeyDesc_tools_json_path = "<leader>tj Json Path Eval"
 
 """ Search
-let g:WhichKeyDesc_search = "<leader>s Search"
-map <leader>se <Action>(SearchEverywhere)
-let g:WhichKeyDesc_search_everywhere = "<leader>se Everywhere"
-map <leader>sr <Action>(RecentFiles)
-let g:WhichKeyDesc_search_recent_files = "<leader>sr Recent Files"
-map <leader>sc <Action>(GotoClass)
-let g:WhichKeyDesc_search_class = "<leader>sc Class"
-map <leader>sf <Action>(GotoFile)
-let g:WhichKeyDesc_search_files = "<leader>sf Files"
-map <leader>ss <Action>(GotoSymbol)
-let g:WhichKeyDesc_search_symbols = "<leader>ss Symbols"
-map <leader>sa <Action>(GotoAction)
-let g:WhichKeyDesc_search_action = "<leader>sa Action"
-map <leader>st <Action>(FindInPath)
-let g:WhichKeyDesc_search_in_path = "<leader>st In Path"
-map <leader>su <Action>(FindUsages)
-let g:WhichKeyDesc_search_usages = "<leader>suUsages"
-map <leader>sp <Action>(RecentProjectListGroup)
-let g:WhichKeyDesc_search_projects = "<leader>sp Usages"
-map <leader>sR <Action>(ReplaceInPath)
-let g:WhichKeyDesc_search_replace = "<leader>sR Replace"
-map <leader>f <Action>(SearchEverywhere)
-let g:WhichKeyDesc_fast_search = "<leader>f Search Everywhere"
+let g:WhichKeyDesc_search = "<leader>f Search"
+map <leader>fe <Action>(SearchEverywhere)
+let g:WhichKeyDesc_search_everywhere = "<leader>fe Everywhere"
+map <leader>fr <Action>(RecentFiles)
+let g:WhichKeyDesc_search_recent_files = "<leader>fr Recent Files"
+map <leader>fc <Action>(GotoClass)
+let g:WhichKeyDesc_search_class = "<leader>fc Class"
+map <leader>ff <Action>(GotoFile)
+let g:WhichKeyDesc_search_files = "<leader>ff Files"
+map <leader>fs <Action>(GotoSymbol)
+let g:WhichKeyDesc_search_symbols = "<leader>fs Symbols"
+map <leader>fa <Action>(GotoAction)
+let g:WhichKeyDesc_search_action = "<leader>fa Action"
+map <leader>ft <Action>(FindInPath)
+let g:WhichKeyDesc_search_in_path = "<leader>ft In Path"
+map <leader>fu <Action>(FindUsages)
+let g:WhichKeyDesc_search_usages = "<leader>fu Usages"
+map <leader>fp <Action>(RecentProjectListGroup)
+let g:WhichKeyDesc_search_projects = "<leader>fp Usages"
+map <leader>fR <Action>(ReplaceInPath)
+let g:WhichKeyDesc_search_replace = "<leader>fR Replace"
+map <leader>fl <Action>(RecentLocations)
+let g:WhichKeyDesc_recent_locations = "<leader>fl Recent Locations"
+map <leader>s <Action>(SearchEverywhere)
+let g:WhichKeyDesc_fast_search = "<leader>s Search Everywhere"
 
 """ View
 let g:WhichKeyDesc_view = "<leader>v View"

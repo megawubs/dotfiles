@@ -1,2 +1,16 @@
 Host *
 	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+Host sibi-dev-meilisearch
+Hostname app.sibi.dev
+User bram
+SessionType none
+ForkAfterAuthentication yes
+LocalForward 7800 localhost:7700
+
+Host medasqua-prod
+User bram
+LocalForward 3401 localhost:8181
+Hostname app.sibi.nl
+SessionType none
+ForkAfterAuthentication yes
