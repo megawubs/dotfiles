@@ -69,7 +69,7 @@
           "value" : "/Applications/Docker.app"
         },
         {
-          "key" : "f",
+          "key" : "c",
           "label" : "",
           "type" : "application",
           "value" : "/Applications/Fantastical.app"
@@ -109,15 +109,21 @@
           "label" : "",
           "type" : "application",
           "value" : "/Applications/Keymapp.app"
+        },
+        {
+          "key" : "f",
+          "label" : "",
+          "type" : "application",
+          "value" : "/System/Library/CoreServices/Finder.app"
         }
       ],
       "key" : "a",
-      "label" : "Apps",
+      "label" : "🧰",
       "type" : "group"
     },
     {
       "key" : "c",
-      "label" : "Clipboard History",
+      "label" : "📋",
       "type" : "url",
       "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
     },
@@ -142,20 +148,26 @@
           "value" : "raycast://extensions/raycast/window-management/right-half"
         },
         {
-          "key" : "g",
+          "key" : "n",
           "label" : "Next Display",
           "type" : "url",
           "value" : "raycast://extensions/raycast/window-management/next-display"
         },
         {
-          "key" : "s",
+          "key" : "p",
           "label" : "Previous Display",
           "type" : "url",
           "value" : "raycast://extensions/raycast/window-management/previous-display"
+        },
+        {
+          "key" : "s",
+          "label" : "Switch",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/navigation/switch-windows"
         }
       ],
       "key" : "w",
-      "label" : "Window",
+      "label" : "🖥️",
       "type" : "group"
     },
     {
@@ -206,19 +218,17 @@
           "key" : "H",
           "label" : "volume 75",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/system/set-volume-to-70"
+          "value" : "raycast://extensions/raycast/system/set-volume-to-75"
+        },
+        {
+          "key" : "m",
+          "label" : "Mute",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/toggle-mute"
         }
       ],
       "key" : "m",
-      "label" : "Music",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-
-      ],
-      "key" : "s",
-      "label" : "",
+      "label" : "🎧",
       "type" : "group"
     },
     {
@@ -262,14 +272,27 @@
         }
       ],
       "key" : "u",
-      "label" : "Urls",
+      "label" : "🔗",
       "type" : "group"
     },
     {
       "key" : "e",
-      "label" : "feee",
+      "label" : "😎",
       "type" : "url",
       "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "b",
+          "label" : "Bluetooth",
+          "type" : "url",
+          "value" : "raycast://extensions/VladCuciureanu/toothpick/manage-bluetooth-connections"
+        }
+      ],
+      "key" : "r",
+      "label" : "",
+      "type" : "group"
     }
   ],
   "type" : "group"
