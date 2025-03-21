@@ -288,6 +288,12 @@
           "label" : "Bluetooth",
           "type" : "url",
           "value" : "raycast://extensions/VladCuciureanu/toothpick/manage-bluetooth-connections"
+        },
+        {
+          "key" : "s",
+          "label" : "🎧",
+          "type" : "url",
+          "value" : "raycast://extensions/mattisssa/spotify-player/yourLibrary"
         }
       ],
       "key" : "r",
