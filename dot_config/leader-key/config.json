@@ -69,7 +69,7 @@
           "value" : "/Applications/Docker.app"
         },
         {
-          "key" : "c",
+          "key" : "C",
           "label" : "",
           "type" : "application",
           "value" : "/Applications/Fantastical.app"
@@ -115,6 +115,12 @@
           "label" : "",
           "type" : "application",
           "value" : "/System/Library/CoreServices/Finder.app"
+        },
+        {
+          "key" : "c",
+          "label" : null,
+          "type" : "application",
+          "value" : "/Applications/PhpStorm.app"
         }
       ],
       "key" : "a",
