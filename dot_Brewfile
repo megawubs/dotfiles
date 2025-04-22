@@ -27,7 +27,7 @@ brew "fb303"
 brew "edencommon"
 brew "unbound"
 brew "gnutls"
-brew "harfbuzz"
+brew "harfbuzz", link: false
 brew "leptonica"
 brew "libass"
 brew "libmicrohttpd"
