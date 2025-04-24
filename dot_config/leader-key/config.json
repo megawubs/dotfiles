@@ -4,127 +4,106 @@
       "actions" : [
         {
           "key" : "e",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Applications/Mail.app"
         },
         {
           "key" : "m",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Spotify.app"
         },
         {
           "key" : "b",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Applications/Messages.app"
         },
         {
           "key" : "s",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Slack.app"
         },
         {
           "key" : "p",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/PhpStorm.app"
         },
         {
           "key" : "t",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/kitty.app"
         },
         {
           "key" : "w",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/WhatsApp.app"
         },
         {
           "key" : "S",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Signal.app"
         },
         {
           "key" : "T",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/TablePlus.app"
         },
         {
           "key" : "o",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/1Password.app"
         },
         {
           "key" : "d",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Discord.app"
         },
         {
           "key" : "C",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Fantastical.app"
         },
         {
           "key" : "a",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Arc.app"
         },
         {
           "key" : ",",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Applications/System Settings.app"
         },
         {
           "key" : "q",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Applications/QuickTime Player.app"
         },
         {
           "key" : "F",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Applications/FaceTime.app"
         },
         {
           "key" : "h",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Homerow.app"
         },
         {
           "key" : "k",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Keymapp.app"
         },
         {
           "key" : "f",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Library/CoreServices/Finder.app"
         },
         {
           "key" : "c",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/PhpStorm.app"
         },
         {
           "key" : "D",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Docker.app"
         }
@@ -309,7 +288,6 @@
         }
       ],
       "key" : "r",
-      "label" : "",
       "type" : "group"
     }
   ],
