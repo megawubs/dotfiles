@@ -572,21 +572,43 @@
     {
       "name": "get-entities",
       "title": "Get Entities",
-      "description": "Get entities from Home Assistant",
-      "instructions": "Get all entities from Home Assistant.\n\n@returns",
+      "description": "Get a list of all entity IDs and their friendly names from Home Assistant",
+      "instructions": "Get basic entity information (ID and friendly name) from Home Assistant.\nIMPORTANT: This tool should be called ONLY ONCE per conversation.\nEntity list doesn't change during a conversation, so caching the results is recommended.\n\n@returns A list of all entities with their IDs and friendly names",
+      "confirmation": false
+    },
+    {
+      "name": "get-attributes",
+      "title": "Get Entity Attributes",
+      "description": "Get the full state and attributes for specific Home Assistant entities",
+      "instructions": "Get full state and attributes for specific entities from Home Assistant.\nIMPORTANT: Collect ALL needed entity IDs and request them in a SINGLE call.\n\n@param input, ,The arguments containing the entity IDs.\n@param input.entity_ids, ,An array of entity IDs to fetch attributes for.\n@returns",
+      "input": {
+        "type": "object",
+        "properties": {
+          "entity_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The entity IDs to fetch attributes for."
+          }
+        },
+        "required": [
+          "entity_ids"
+        ]
+      },
       "confirmation": false
     },
     {
       "name": "run-service",
       "title": "Run Service",
       "description": "Run a Home Assistant service",
-      "instructions": "Run a Home Assistant service.\n\n@param input, ,The input object containing the service operation\n@returns An empty object if successful, throws an error otherwise\n@example // Turn on multiple air conditioners\n{\n  service: \"turn_on\",\n  data: { entity_id: [\"climate.ac1\", \"climate.ac2\"] }\n}",
+      "instructions": "Run a Home Assistant service.\nIMPORTANT: Each call should only contain entities that need the SAME operation.\nFor different operations (e.g., turn_on and turn_off), make separate calls to this tool.\n\n@param input, ,The input object containing the service operation\n@returns An empty object if successful, throws an error otherwise\n@example // Turn on multiple air conditioners\n{\n  service: \"turn_on\",\n  data: { entity_id: [\"climate.ac1\", \"climate.ac2\"] }\n}\n\n// In a separate call, turn off lights\n{\n  service: \"turn_off\",\n  data: { entity_id: [\"light.living_room\", \"light.bedroom\"] }\n}",
       "input": {
         "type": "object",
         "properties": {
           "service": {
             "type": "string",
-            "description": "The service to call (e.g., 'turn_on', 'turn_off', 'toggle').\nDo not include the domain prefix."
+            "description": "The service to call (e.g., 'turn_on', 'turn_off', 'start', 'stop', 'toggle').\nDo not include the domain prefix."
           },
           "data": {
             "type": "object",
@@ -596,13 +618,13 @@
                 "items": {
                   "type": "string"
                 },
-                "description": "The entity IDs to control. Can include entities from multiple domains"
+                "description": "The entity IDs to control with this service operation.\nAll entities must require the SAME operation (e.g., all need to be turned on, or all need to be turned off).\nFor different operations, make separate calls."
               }
             },
             "required": [
               "entity_id"
             ],
-            "description": "Additional data to pass to the service.\nNote: While only entity_id is typed here,\nyou can pass any service-specific attributes at runtime\n(e.g., temperature, fan_modes, hvac_modes, etc.)"
+            "description": "Additional data to pass to the service.\nIMPORTANT: All entities must require the SAME operation.\nDo NOT mix entities that need different operations (e.g., don't mix 'turn_on' and 'turn_off' entities).\nMake separate calls to run-service for different operations."
           }
         },
         "required": [
@@ -613,107 +635,6 @@
       "confirmation": false
     }
   ],
-  "ai": {
-    "instructions": "Communication Style:\nUse a friendly and approachable tone with emojis to make interactions more engaging.\n\nTo control Home Assistant devices:\n1. First, use get-entities to find the correct entity IDs for the devices the user wants to control.\n2. EXCLUDE from the operation the entities that are already in the desired state, and inform the user that the device will not be controlled (e.g., 'the kitchen light is already on').\n3. If an entity is unique to its type (e.g., a single air conditioner switched on, a single light switched off, etc.), INCLUDE it in the operation without asking for user consent.\n4. If there are multiple entities of the same type (e.g., two lights to turn off or three air conditioners to toggle), ask the user to specify which device they want to control by providing a list of available entities with their current states (e.g., the user tells 'turn on the light' but there are multiple lights switched off).\n5. DO NOT control multiple entities at once without asking for consent, unless the user explicitly indicates that they want to control all entities of the same type (e.g., 'turn off the lights' or 'turn on all lights').\n6. Once you have the user's confirmation, use run-service to execute the operation.",
-    "evals": [
-      {
-        "input": "@homeassistant set the bedroom light to a romantic color and brightness",
-        "mocks": {
-          "run-service": {},
-          "get-entities": {
-            "entities": [
-              {
-                "friendly_name": "Philips Hue",
-                "state": "off",
-                "entity_id": "light.philips_hue",
-                "attributes": {
-                  "min_mireds": 153,
-                  "rgb_color": null,
-                  "color_mode": null,
-                  "min_color_temp_kelvin": 2000,
-                  "hs_color": null,
-                  "max_mireds": 500,
-                  "max_color_temp_kelvin": 6500,
-                  "xy_color": null,
-                  "color_temp": null,
-                  "friendly_name": "Philips Hue",
-                  "supported_features": 0,
-                  "color_temp_kelvin": null,
-                  "brightness": null,
-                  "supported_color_modes": [
-                    "color_temp",
-                    "hs"
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        "expected": [
-          {
-            "callsTool": {
-              "name": "get-entities",
-              "arguments": {}
-            }
-          },
-          {
-            "callsTool": {
-              "name": "run-service",
-              "arguments": {
-                "service": "turn_on",
-                "data.entity_id.0": "light.philips_hue"
-              }
-            }
-          },
-          {
-            "meetsCriteria": "Tells that the light has been set to a romantic color and brightness"
-          }
-        ]
-      },
-      {
-        "input": "@homeassistant how's the temperature and humidity in the living room?",
-        "mocks": {
-          "get-entities": {
-            "entities": [
-              {
-                "friendly_name": "Living Room Climate Sensor Humidity",
-                "state": "70.8",
-                "entity_id": "sensor.living_room_climate_sensor_humidity",
-                "attributes": {
-                  "state_class": "measurement",
-                  "unit_of_measurement": "%",
-                  "device_class": "humidity",
-                  "friendly_name": "Living Room Climate Sensor Humidity"
-                }
-              },
-              {
-                "friendly_name": "Living Room Climate Sensor Temperature",
-                "state": "28.6",
-                "entity_id": "sensor.living_room_climate_sensor_temperature",
-                "attributes": {
-                  "state_class": "measurement",
-                  "unit_of_measurement": "°C",
-                  "device_class": "temperature",
-                  "friendly_name": "Living Room Climate Sensor Temperature"
-                }
-              }
-            ]
-          }
-        },
-        "expected": [
-          {
-            "callsTool": {
-              "name": "get-entities",
-              "arguments": {}
-            }
-          },
-          {
-            "meetsCriteria": "Returns the temperature and humidity in the living room"
-          }
-        ]
-      }
-    ]
-  },
   "preferences": [
     {
       "name": "instance",
@@ -806,8 +727,8 @@
   ],
   "dependencies": {
     "@raycast-community/ui": "^0.1.1",
-    "@raycast/api": "^1.91.1",
-    "@raycast/utils": "^1.18.1",
+    "@raycast/api": "^1.96.1",
+    "@raycast/utils": "^1.19.1",
     "home-assistant-js-websocket": "^8.2.0",
     "javascript-time-ago": "^2.5.11",
     "lodash-es": "^4.17.21",
@@ -821,20 +742,20 @@
     "yaml": "^2.5.1"
   },
   "devDependencies": {
-    "@raycast/eslint-config": "^1.0.11",
+    "@raycast/eslint-config": "^2.0.4",
     "@types/lodash-es": "^4.17.12",
     "@types/multicast-dns": "^7.2.4",
-    "@types/node": "^20.16.5",
+    "@types/node": "^22.13.14",
     "@types/node-fetch": "^2.6.11",
     "@types/ping": "^0.4.4",
     "@types/plist": "^3.0.5",
-    "@types/react": "^18.3.5",
+    "@types/react": "^19.0.12",
     "@types/url-join": "^4.0.3",
     "@types/ws": "^8.5.12",
-    "eslint": "^7.32.0",
-    "prettier": "^3.3.3",
-    "react": "^18.2.0",
-    "typescript": "^4.9.5"
+    "eslint": "^9.23.0",
+    "prettier": "^3.5.3",
+    "react": "^19.1.0",
+    "typescript": "^5.8.2"
   },
   "scripts": {
     "dev": "ray develop",
@@ -842,5 +763,307 @@
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
     "publish": "npx @raycast/api@latest publish"
+  },
+  "ai": {
+    "instructions": "Communication Style:\nUse a friendly and approachable tone with emojis to make interactions more engaging.\n\nTo control Home Assistant devices:\n1. First, use get-entities to find the entity IDs and friendly names for potential devices matching the user's request.\n2. Identify the relevant entity IDs based on the user's request and the results from get-entities.\n3. Use get-attributes with all the relevant entity IDs in a single call to fetch their current state and attributes.\n4. EXCLUDE from the operation the entities that are already in the desired state (based on the attributes), and inform the user (e.g., 'the kitchen light is already on').\n5. If a relevant entity is unique for the requested action (e.g., a single light needs turning off), INCLUDE it in the operation without asking for user consent.\n6. If there are multiple relevant entities for the same action (e.g., two lights to turn off), ask the user to specify which device they want to control by providing a list of these entities with their current states (obtained from get-attributes).\n7. DO NOT control multiple entities at once without asking for consent, unless the user explicitly indicates controlling all relevant entities (e.g., 'turn off the lights' or 'turn on all lights').\n8. Once you have the user's confirmation (if needed), use run-service to execute the operation.\n",
+    "evals": [
+      {
+        "input": "@homeassistant set the bedroom light to a romantic color and brightness",
+        "mocks": {
+          "get-entities": {
+            "entities": [
+              {
+                "friendly_name": "Philips Hue",
+                "entity_id": "light.philips_hue"
+              }
+            ]
+          },
+          "get-attributes": {
+            "entities": [
+              {
+                "friendly_name": "Philips Hue",
+                "state": "off",
+                "entity_id": "light.philips_hue",
+                "attributes": {
+                  "min_mireds": 153,
+                  "rgb_color": null,
+                  "color_mode": null,
+                  "min_color_temp_kelvin": 2000,
+                  "hs_color": null,
+                  "max_mireds": 500,
+                  "max_color_temp_kelvin": 6500,
+                  "xy_color": null,
+                  "color_temp": null,
+                  "friendly_name": "Philips Hue",
+                  "supported_features": 0,
+                  "color_temp_kelvin": null,
+                  "brightness": null,
+                  "supported_color_modes": [
+                    "color_temp",
+                    "hs"
+                  ]
+                }
+              }
+            ]
+          },
+          "run-service": {}
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "name": "get-entities",
+              "arguments": {}
+            }
+          },
+          {
+            "callsTool": {
+              "name": "get-attributes"
+            }
+          },
+          {
+            "callsTool": {
+              "name": "run-service",
+              "arguments": {
+                "service": "turn_on",
+                "data.entity_id.0": "light.philips_hue"
+              }
+            }
+          },
+          {
+            "meetsCriteria": "Tells that the light has been set to a romantic color and brightness"
+          }
+        ]
+      },
+      {
+        "input": "@homeassistant how's the temperature and humidity in the living room?",
+        "mocks": {
+          "get-entities": {
+            "entities": [
+              {
+                "friendly_name": "Living Room Climate Sensor Humidity",
+                "entity_id": "sensor.living_room_climate_sensor_humidity"
+              },
+              {
+                "friendly_name": "Living Room Climate Sensor Temperature",
+                "entity_id": "sensor.living_room_climate_sensor_temperature"
+              }
+            ]
+          },
+          "get-attributes": {
+            "entities": [
+              {
+                "friendly_name": "Living Room Climate Sensor Humidity",
+                "state": "70.8",
+                "entity_id": "sensor.living_room_climate_sensor_humidity",
+                "attributes": {
+                  "state_class": "measurement",
+                  "unit_of_measurement": "%",
+                  "device_class": "humidity",
+                  "friendly_name": "Living Room Climate Sensor Humidity"
+                }
+              },
+              {
+                "friendly_name": "Living Room Climate Sensor Temperature",
+                "state": "28.6",
+                "entity_id": "sensor.living_room_climate_sensor_temperature",
+                "attributes": {
+                  "state_class": "measurement",
+                  "unit_of_measurement": "°C",
+                  "device_class": "temperature",
+                  "friendly_name": "Living Room Climate Sensor Temperature"
+                }
+              }
+            ]
+          }
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "name": "get-entities",
+              "arguments": {}
+            }
+          },
+          {
+            "callsTool": {
+              "name": "get-attributes"
+            }
+          },
+          {
+            "meetsCriteria": "Returns the temperature and humidity in the living room"
+          }
+        ]
+      },
+      {
+        "input": "@homeassistant turn off the air conditioners and clean the house",
+        "mocks": {
+          "get-entities": {
+            "entities": [
+              {
+                "entity_id": "climate.air_conditioner_1",
+                "friendly_name": "Air Conditioner 1"
+              },
+              {
+                "entity_id": "climate.air_conditioner_2",
+                "friendly_name": "Air Conditioner 2"
+              },
+              {
+                "entity_id": "vacuum.roomba",
+                "friendly_name": "Roomba"
+              }
+            ]
+          },
+          "get-attributes": {
+            "entities": [
+              {
+                "entity_id": "climate.air_conditioner_1",
+                "friendly_name": "Air Conditioner 1",
+                "state": "dry",
+                "attributes": {
+                  "current_temperature": 27,
+                  "fan_mode": "low",
+                  "fan_modes": [
+                    "low",
+                    "LOW_MID",
+                    "medium",
+                    "MID_HIGH",
+                    "high",
+                    "diffuse"
+                  ],
+                  "friendly_name": "Air Conditioner 1",
+                  "hvac_modes": [
+                    "off",
+                    "auto",
+                    "dry",
+                    "cool",
+                    "fan_only"
+                  ],
+                  "max_temp": 30,
+                  "min_temp": 16,
+                  "supported_features": 425,
+                  "swing_mode": "Off",
+                  "swing_modes": [
+                    "Off",
+                    "Top",
+                    "MiddleTop1",
+                    "MiddleTop2",
+                    "MiddleBottom2",
+                    "MiddleBottom1",
+                    "Bottom",
+                    "Swing"
+                  ],
+                  "target_temp_step": 1,
+                  "temperature": 25
+                }
+              },
+              {
+                "entity_id": "climate.air_conditioner_2",
+                "friendly_name": "Air Conditioner 2",
+                "state": "fan_only",
+                "attributes": {
+                  "current_temperature": 29,
+                  "fan_mode": "low",
+                  "fan_modes": [
+                    "low",
+                    "LOW_MID",
+                    "medium",
+                    "MID_HIGH",
+                    "high",
+                    "diffuse"
+                  ],
+                  "friendly_name": "Air Conditioner 2",
+                  "hvac_modes": [
+                    "off",
+                    "dry",
+                    "cool",
+                    "fan_only"
+                  ],
+                  "max_temp": 30,
+                  "min_temp": 16,
+                  "supported_features": 425,
+                  "swing_mode": "Off",
+                  "swing_modes": [
+                    "Off",
+                    "Top",
+                    "MiddleTop1",
+                    "MiddleTop2",
+                    "MiddleBottom2",
+                    "MiddleBottom1",
+                    "Bottom",
+                    "Swing"
+                  ],
+                  "target_temp_step": 1,
+                  "temperature": 25
+                }
+              }
+            ]
+          },
+          "run-service": {}
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "arguments": {},
+              "name": "get-entities"
+            }
+          },
+          {
+            "callsTool": {
+              "name": "get-attributes",
+              "arguments": {
+                "entity_ids.0": {
+                  "eq": [
+                    "climate.air_conditioner_1"
+                  ]
+                },
+                "entity_ids.1": {
+                  "eq": [
+                    "climate.air_conditioner_2"
+                  ]
+                },
+                "entity_ids.2": {
+                  "eq": [
+                    "vacuum.roomba"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "callsTool": {
+              "name": "run-service",
+              "arguments": {
+                "data.entity_id.0": {
+                  "eq": [
+                    "climate.air_conditioner_1"
+                  ]
+                },
+                "data.entity_id.1": {
+                  "eq": [
+                    "climate.air_conditioner_2"
+                  ]
+                },
+                "service": "turn_off"
+              }
+            }
+          },
+          {
+            "callsTool": {
+              "name": "run-service",
+              "arguments": {
+                "data.entity_id.0": {
+                  "eq": [
+                    "vacuum.roomba"
+                  ]
+                },
+                "service": "start"
+              }
+            }
+          },
+          {
+            "meetsCriteria": "Turns off the air conditioners and starts the vacuum"
+          }
+        ]
+      }
+    ]
   }
 }
