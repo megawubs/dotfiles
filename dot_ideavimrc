@@ -460,6 +460,8 @@ let g:WhichKeyDesc_run_tool = "<leader>ra Run Anything..."
 
 """ Tool Windows
 let g:WhichKeyDesc_tools = "<leader>t Tools"
+map <leader>ta <Action>(ActivateAIAssistantToolWindow)
+let g:WhichKeyDesc_tools_menu = "<leader>ta AI Assistant"
 map <leader>tm <Action>(ToolWindowsGroup)
 let g:WhichKeyDesc_tools_menu = "<leader>tm Menu"
 map <leader>tb <Action>(ActivateBookmarksToolWindow)
