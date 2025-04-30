@@ -16,6 +16,10 @@
     "olafvanmidden"
   ],
   "license": "MIT",
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
   "commands": [
     {
       "name": "search-documentation",
