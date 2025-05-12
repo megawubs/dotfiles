@@ -33,4 +33,4 @@ ${s}`)}let i=this.tokenResponseParser(await t.json());return Array.isArray(i.sco
       make new tab with properties {URL:"${e}"}
       activate
     end tell
-  `)}var Zd={google:"https://www.google.com/search?q=",duckduckgo:"https://www.duckduckgo.com?q=",bing:"https://www.bing.com/search?q=",yahoo:"https://search.yahoo.com/search?p=",ecosia:"https://www.ecosia.org/search?q=",kagi:"https://kagi.com/search?q="},et=async({url:e})=>{let a=e;if(a){let p=`${Zd[_p.engine]}${encodeURIComponent(a)}`;a=Wd(a)?a:p}else a=_p.url;if(await Kd(a)){let p=/^\S+?:\/\//i.test(a)?a:"https://"+a;await Jd(p)}},at=et;0&&(module.exports={config});
+  `)}var Zd={google:"https://www.google.com/search?q=",duckduckgo:"https://www.duckduckgo.com?q=",bing:"https://www.bing.com/search?q=",yahoo:"https://search.yahoo.com/search?p=",ecosia:"https://www.ecosia.org/search?q=",kagi:"https://kagi.com/search?q=",unduck:"https://unduck.link?q="},et=async({url:e})=>{let a=e;if(a){let p=`${Zd[_p.engine]}${encodeURIComponent(a)}`;a=Wd(a)?a:p}else a=_p.url;if(await Kd(a)){let p=/^\S+?:\/\//i.test(a)?a:"https://"+a;await Jd(p)}},at=et;0&&(module.exports={config});
