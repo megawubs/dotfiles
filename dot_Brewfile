@@ -57,6 +57,7 @@ brew "mackup"
 brew "mailpit"
 brew "mariadb"
 brew "mas"
+brew "meilisearch", restart_service: :changed
 brew "mvfst"
 brew "neovim"
 brew "nginx"
