@@ -34,6 +34,7 @@ set argtextobj
 " provides a text-object e (entire )
 set textobj-entire " provides a text-object for i (indentation level)
 set textobj-indent
+set functiontextob
 set ReplaceWithRegister
 set nerdtree
 """ plugin settings -------------------------
