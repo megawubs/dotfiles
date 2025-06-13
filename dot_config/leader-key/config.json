@@ -289,6 +289,18 @@
       ],
       "key" : "r",
       "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "a",
+          "label" : "addUser.php",
+          "type" : "url",
+          "value" : "jetbrains://php-storm/navigate/reference?project=big-o&path=addUp.php"
+        }
+      ],
+      "key" : "p",
+      "type" : "group"
     }
   ],
   "type" : "group"
