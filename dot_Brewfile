@@ -63,6 +63,7 @@ brew "mvfst"
 brew "neovim"
 brew "nginx"
 brew "node@18"
+brew "node@22", link: true
 brew "numpy"
 brew "openvino"
 brew "pandoc"
