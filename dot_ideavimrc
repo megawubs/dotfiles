@@ -332,7 +332,7 @@ map <leader>ba <Action>(GotoBookmarkA)
 let g:WhichKeyDesc_bookmarks_goto_a = "<leader>ba Go to bookmark a"
 map <leader>bb <Action>(GotoBookmarkB)
 let g:WhichKeyDesc_bookmarks_goto_b = "<leader>bb Go to bookmark b"
-map <leader>bc <Action>(GotoBookmarkC)
+map <leader>bc <Action)(GotoBookmarkC)
 let g:WhichKeyDesc_bookmarks_goto_c = "<leader>bc Go to bookmark c"
 map <leader>bd <Action>(GotoBookmarkD)
 let g:WhichKeyDesc_bookmarks_goto_d = "<leader>bd Go to bookmark d"
@@ -352,6 +352,8 @@ map <leader>bk <Action>(GotoBookmarkK)
 let g:WhichKeyDesc_bookmarks_goto_k = "<leader>bk Go to bookmark k"
 map <leader>bl <Action>(GotoBookmarkL)
 let g:WhichKeyDesc_bookmarks_goto_l = "<leader>bl Go to bookmark l"
+map <leader>bm <Action>(GotoBookmarkM)
+let g:WhichKeyDesc_bookmarks_goto_m = "<leader>bm Go to bookmark m"
 map <leader>bn <Action>(GotoBookmarkN)
 let g:WhichKeyDesc_bookmarks_goto_n = "<leader>bn Go to bookmark n"
 map <leader>bo <Action>(GotoBookmarkO)
