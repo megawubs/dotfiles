@@ -226,7 +226,10 @@ map <leader>bp <Action>(GotoPreviousBookmark)
 let g:WhichKeyDesc_bookmarks_prev = "<leader>bp Previous Bookmark"
 map <leader>bs <Action>(ShowBookmarks)
 let g:WhichKeyDesc_bookmarks_show = "<leader>bs Show Bookmarks"
-map <leader>ba1 <Action>(
+map <leader>ba1 <Action>(ToggleBookmark1)
+let g:WhichKeyDesc_bookmarks_toggle_1 = "<leader>ba1 Toggle Bookmark 1"
+map <leader>b1 <Action>(GotoBookmark1)
+let g:WhichKeyDesc_bookmarks_show = "<leader>ba1 Toggle Bookmark 1"
 
 
 """ Casing
