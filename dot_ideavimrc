@@ -284,32 +284,32 @@ let g:WhichKeyDesc_bookmark_ba8 = "<leader>ba8 Toggle bookmark 8"
 let g:WhichKeyDesc_bookmark_ba9 = "<leader>ba9 Toggle bookmark 9"
 
 " --- Toggle: letters A–Z ---
-let g:WhichKeyDesc_bookmark_baA = "<leader>baA Toggle bookmark A"
-let g:WhichKeyDesc_bookmark_baB = "<leader>baB Toggle bookmark B"
-let g:WhichKeyDesc_bookmark_baC = "<leader>baC Toggle bookmark C"
-let g:WhichKeyDesc_bookmark_baD = "<leader>baD Toggle bookmark D"
-let g:WhichKeyDesc_bookmark_baE = "<leader>baE Toggle bookmark E"
-let g:WhichKeyDesc_bookmark_baF = "<leader>baF Toggle bookmark F"
-let g:WhichKeyDesc_bookmark_baG = "<leader>baG Toggle bookmark G"
-let g:WhichKeyDesc_bookmark_baH = "<leader>baH Toggle bookmark H"
-let g:WhichKeyDesc_bookmark_baI = "<leader>baI Toggle bookmark I"
-let g:WhichKeyDesc_bookmark_baJ = "<leader>baJ Toggle bookmark J"
-let g:WhichKeyDesc_bookmark_baK = "<leader>baK Toggle bookmark K"
-let g:WhichKeyDesc_bookmark_baL = "<leader>baL Toggle bookmark L"
-let g:WhichKeyDesc_bookmark_baM = "<leader>baM Toggle bookmark M"
-let g:WhichKeyDesc_bookmark_baN = "<leader>baN Toggle bookmark N"
-let g:WhichKeyDesc_bookmark_baO = "<leader>baO Toggle bookmark O"
-let g:WhichKeyDesc_bookmark_baP = "<leader>baP Toggle bookmark P"
-let g:WhichKeyDesc_bookmark_baQ = "<leader>baQ Toggle bookmark Q"
-let g:WhichKeyDesc_bookmark_baR = "<leader>baR Toggle bookmark R"
-let g:WhichKeyDesc_bookmark_baS = "<leader>baS Toggle bookmark S"
-let g:WhichKeyDesc_bookmark_baT = "<leader>baT Toggle bookmark T"
-let g:WhichKeyDesc_bookmark_baU = "<leader>baU Toggle bookmark U"
-let g:WhichKeyDesc_bookmark_baV = "<leader>baV Toggle bookmark V"
-let g:WhichKeyDesc_bookmark_baW = "<leader>baW Toggle bookmark W"
-let g:WhichKeyDesc_bookmark_baX = "<leader>baX Toggle bookmark X"
-let g:WhichKeyDesc_bookmark_baY = "<leader>baY Toggle bookmark Y"
-let g:WhichKeyDesc_bookmark_baZ = "<leader>baZ Toggle bookmark Z"
+let g:WhichKeyDesc_bookmark_baA = "<leader>baa Toggle bookmark A"
+let g:WhichKeyDesc_bookmark_baB = "<leader>bab Toggle bookmark B"
+let g:WhichKeyDesc_bookmark_baC = "<leader>bac Toggle bookmark C"
+let g:WhichKeyDesc_bookmark_baD = "<leader>bad Toggle bookmark D"
+let g:WhichKeyDesc_bookmark_baE = "<leader>bae Toggle bookmark E"
+let g:WhichKeyDesc_bookmark_baF = "<leader>baf Toggle bookmark F"
+let g:WhichKeyDesc_bookmark_baG = "<leader>bag Toggle bookmark G"
+let g:WhichKeyDesc_bookmark_baH = "<leader>bah Toggle bookmark H"
+let g:WhichKeyDesc_bookmark_baI = "<leader>bai Toggle bookmark I"
+let g:WhichKeyDesc_bookmark_baJ = "<leader>baj Toggle bookmark J"
+let g:WhichKeyDesc_bookmark_baK = "<leader>bak Toggle bookmark K"
+let g:WhichKeyDesc_bookmark_baL = "<leader>bal Toggle bookmark L"
+let g:WhichKeyDesc_bookmark_baM = "<leader>bam Toggle bookmark M"
+let g:WhichKeyDesc_bookmark_baN = "<leader>ban Toggle bookmark N"
+let g:WhichKeyDesc_bookmark_baO = "<leader>bao Toggle bookmark O"
+let g:WhichKeyDesc_bookmark_baP = "<leader>bap Toggle bookmark P"
+let g:WhichKeyDesc_bookmark_baQ = "<leader>baq Toggle bookmark Q"
+let g:WhichKeyDesc_bookmark_baR = "<leader>bar Toggle bookmark R"
+let g:WhichKeyDesc_bookmark_baS = "<leader>bas Toggle bookmark S"
+let g:WhichKeyDesc_bookmark_baT = "<leader>bat Toggle bookmark T"
+let g:WhichKeyDesc_bookmark_baU = "<leader>bau Toggle bookmark U"
+let g:WhichKeyDesc_bookmark_baV = "<leader>bav Toggle bookmark V"
+let g:WhichKeyDesc_bookmark_baW = "<leader>baw Toggle bookmark W"
+let g:WhichKeyDesc_bookmark_baX = "<leader>bax Toggle bookmark X"
+let g:WhichKeyDesc_bookmark_baY = "<leader>bay Toggle bookmark Y"
+let g:WhichKeyDesc_bookmark_baZ = "<leader>baz Toggle bookmark Z"
 
 " =================================
 " FAST PATHS (keep these for speed)
@@ -326,34 +326,6 @@ map <leader>b7 <Action>(GotoBookmark7)
 map <leader>b8 <Action>(GotoBookmark8)
 map <leader>b9 <Action>(GotoBookmark9)
 
-" Go to bookmarks (letters A–Z)
-map <leader>bA <Action>(GotoBookmarkA)
-map <leader>bB <Action>(GotoBookmarkB)
-map <leader>bC <Action>(GotoBookmarkC)
-map <leader>bD <Action>(GotoBookmarkD)
-map <leader>bE <Action>(GotoBookmarkE)
-map <leader>bF <Action>(GotoBookmarkF)
-map <leader>bG <Action>(GotoBookmarkG)
-map <leader>bH <Action)(GotoBookmarkH)
-map <leader>bI <Action>(GotoBookmarkI)
-map <leader>bJ <Action>(GotoBookmarkJ)
-map <leader>bK <Action>(GotoBookmarkK)
-map <leader>bL <Action>(GotoBookmarkL)
-map <leader>bM <Action>(GotoBookmarkM)
-map <leader>bN <Action>(GotoBookmarkN)
-map <leader>bO <Action>(GotoBookmarkO)
-map <leader>bP <Action>(GotoBookmarkP)
-map <leader>bQ <Action>(GotoBookmarkQ)
-map <leader>bR <Action>(GotoBookmarkR)
-map <leader>bS <Action>(GotoBookmarkS)
-map <leader>bT <Action>(GotoBookmarkT)
-map <leader>bU <Action>(GotoBookmarkU)
-map <leader>bV <Action>(GotoBookmarkV)
-map <leader>bW <Action>(GotoBookmarkW)
-map <leader>bX <Action>(GotoBookmarkX)
-map <leader>bY <Action>(GotoBookmarkY)
-map <leader>bZ <Action>(GotoBookmarkZ)
-
 " Toggle bookmarks (numbers 0–9)
 map <leader>ba0 <Action>(ToggleBookmark0)
 map <leader>ba1 <Action>(ToggleBookmark1)
@@ -367,32 +339,32 @@ map <leader>ba8 <Action>(ToggleBookmark8)
 map <leader>ba9 <Action>(ToggleBookmark9)
 
 " Toggle bookmarks (letters A–Z)
-map <leader>baA <Action>(ToggleBookmarkA)
-map <leader>baB <Action>(ToggleBookmarkB)
-map <leader>baC <Action>(ToggleBookmarkC)
-map <leader>baD <Action>(ToggleBookmarkD)
-map <leader>baE <Action>(ToggleBookmarkE)
-map <leader>baF <Action>(ToggleBookmarkF)
-map <leader>baG <Action>(ToggleBookmarkG)
-map <leader>baH <Action>(ToggleBookmarkH)
-map <leader>baI <Action>(ToggleBookmarkI)
-map <leader>baJ <Action>(ToggleBookmarkJ)
-map <leader>baK <Action>(ToggleBookmarkK)
-map <leader>baL <Action>(ToggleBookmarkL)
-map <leader>baM <Action>(ToggleBookmarkM)
-map <leader>baN <Action>(ToggleBookmarkN)
-map <leader>baO <Action>(ToggleBookmarkO)
-map <leader>baP <Action>(ToggleBookmarkP)
-map <leader>baQ <Action>(ToggleBookmarkQ)
-map <leader>baR <Action>(ToggleBookmarkR)
-map <leader>baS <Action>(ToggleBookmarkS)
-map <leader>baT <Action>(ToggleBookmarkT)
-map <leader>baU <Action>(ToggleBookmarkU)
-map <leader>baV <Action>(ToggleBookmarkV)
-map <leader>baW <Action>(ToggleBookmarkW)
-map <leader>baX <Action>(ToggleBookmarkX)
-map <leader>baY <Action>(ToggleBookmarkY)
-map <leader>baZ <Action>(ToggleBookmarkZ)
+map <leader>baa <Action>(ToggleBookmarkA)
+map <leader>bab <Action>(ToggleBookmarkB)
+map <leader>bac <Action>(ToggleBookmarkC)
+map <leader>bad <Action>(ToggleBookmarkD)
+map <leader>bae <Action>(ToggleBookmarkE)
+map <leader>baf <Action>(ToggleBookmarkF)
+map <leader>bag <Action>(ToggleBookmarkG)
+map <leader>bah <Action>(ToggleBookmarkH)
+map <leader>bai <Action>(ToggleBookmarkI)
+map <leader>baj <Action>(ToggleBookmarkJ)
+map <leader>bak <Action>(ToggleBookmarkK)
+map <leader>bal <Action>(ToggleBookmarkL)
+map <leader>bam <Action>(ToggleBookmarkM)
+map <leader>ban <Action>(ToggleBookmarkN)
+map <leader>bao <Action>(ToggleBookmarkO)
+map <leader>bap <Action>(ToggleBookmarkP)
+map <leader>baq <Action>(ToggleBookmarkQ)
+map <leader>bar <Action>(ToggleBookmarkR)
+map <leader>bas <Action>(ToggleBookmarkS)
+map <leader>bat <Action>(ToggleBookmarkT)
+map <leader>bau <Action>(ToggleBookmarkU)
+map <leader>bav <Action>(ToggleBookmarkV)
+map <leader>baw <Action>(ToggleBookmarkW)
+map <leader>bax <Action>(ToggleBookmarkX)
+map <leader>bay <Action>(ToggleBookmarkY)
+map <leader>baz <Action>(ToggleBookmarkZ)
 
 " ==================================
 " DISCOVERABLE ALIASES (sub-layers)
@@ -411,32 +383,32 @@ map <leader>bg8 <Action>(GotoBookmark8) | let g:WhichKeyDesc_bookmark_bg8 = "<le
 map <leader>bg9 <Action>(GotoBookmark9) | let g:WhichKeyDesc_bookmark_bg9 = "<leader>bg9 Go to 9"
 
 " Letters A–Z (aliases still use uppercase action IDs)
-map <leader>bgA <Action>(GotoBookmarkA) | let g:WhichKeyDesc_bookmark_bgA = "<leader>bgA Go to A"
-map <leader>bgB <Action>(GotoBookmarkB) | let g:WhichKeyDesc_bookmark_bgB = "<leader>bgB Go to B"
-map <leader>bgC <Action>(GotoBookmarkC) | let g:WhichKeyDesc_bookmark_bgC = "<leader>bgC Go to C"
-map <leader>bgD <Action>(GotoBookmarkD) | let g:WhichKeyDesc_bookmark_bgD = "<leader>bgD Go to D"
-map <leader>bgE <Action>(GotoBookmarkE) | let g:WhichKeyDesc_bookmark_bgE = "<leader>bgE Go to E"
-map <leader>bgF <Action>(GotoBookmarkF) | let g:WhichKeyDesc_bookmark_bgF = "<leader>bgF Go to F"
-map <leader>bgG <Action>(GotoBookmarkG) | let g:WhichKeyDesc_bookmark_bgG = "<leader>bgG Go to G"
-map <leader>bgH <Action>(GotoBookmarkH) | let g:WhichKeyDesc_bookmark_bgH = "<leader>bgH Go to H"
-map <leader>bgI <Action>(GotoBookmarkI) | let g:WhichKeyDesc_bookmark_bgI = "<leader>bgI Go to I"
-map <leader>bgJ <Action>(GotoBookmarkJ) | let g:WhichKeyDesc_bookmark_bgJ = "<leader>bgJ Go to J"
-map <leader>bgK <Action>(GotoBookmarkK) | let g:WhichKeyDesc_bookmark_bgK = "<leader>bgK Go to K"
-map <leader>bgL <Action>(GotoBookmarkL) | let g:WhichKeyDesc_bookmark_bgL = "<leader>bgL Go to L"
-map <leader>bgM <Action>(GotoBookmarkM) | let g:WhichKeyDesc_bookmark_bgM = "<leader>bgM Go to M"
-map <leader>bgN <Action>(GotoBookmarkN) | let g:WhichKeyDesc_bookmark_bgN = "<leader>bgN Go to N"
-map <leader>bgO <Action>(GotoBookmarkO) | let g:WhichKeyDesc_bookmark_bgO = "<leader>bgO Go to O"
-map <leader>bgP <Action>(GotoBookmarkP) | let g:WhichKeyDesc_bookmark_bgP = "<leader>bgP Go to P"
-map <leader>bgQ <Action>(GotoBookmarkQ) | let g:WhichKeyDesc_bookmark_bgQ = "<leader>bgQ Go to Q"
-map <leader>bgR <Action>(GotoBookmarkR) | let g:WhichKeyDesc_bookmark_bgR = "<leader>bgR Go to R"
-map <leader>bgS <Action>(GotoBookmarkS) | let g:WhichKeyDesc_bookmark_bgS = "<leader>bgS Go to S"
-map <leader>bgT <Action>(GotoBookmarkT) | let g:WhichKeyDesc_bookmark_bgT = "<leader>bgT Go to T"
-map <leader>bgU <Action>(GotoBookmarkU) | let g:WhichKeyDesc_bookmark_bgU = "<leader>bgU Go to U"
-map <leader>bgV <Action>(GotoBookmarkV) | let g:WhichKeyDesc_bookmark_bgV = "<leader>bgV Go to V"
-map <leader>bgW <Action>(GotoBookmarkW) | let g:WhichKeyDesc_bookmark_bgW = "<leader>bgW Go to W"
-map <leader>bgX <Action>(GotoBookmarkX) | let g:WhichKeyDesc_bookmark_bgX = "<leader>bgX Go to X"
-map <leader>bgY <Action>(GotoBookmarkY) | let g:WhichKeyDesc_bookmark_bgY = "<leader>bgY Go to Y"
-map <leader>bgZ <Action>(GotoBookmarkZ) | let g:WhichKeyDesc_bookmark_bgZ = "<leader>bgZ Go to Z"
+map <leader>bga <Action>(GotoBookmarkA) | let g:WhichKeyDesc_bookmark_bga = "<leader>bga Go to A"
+map <leader>bgb <Action>(GotoBookmarkB) | let g:WhichKeyDesc_bookmark_bgb = "<leader>bgb Go to B"
+map <leader>bgc <Action>(GotoBookmarkC) | let g:WhichKeyDesc_bookmark_bgc = "<leader>bgc Go to C"
+map <leader>bgd <Action>(GotoBookmarkD) | let g:WhichKeyDesc_bookmark_bgd = "<leader>bgd Go to D"
+map <leader>bge <Action>(GotoBookmarkE) | let g:WhichKeyDesc_bookmark_bge = "<leader>bge Go to E"
+map <leader>bgf <Action>(GotoBookmarkF) | let g:WhichKeyDesc_bookmark_bgf = "<leader>bgf Go to F"
+map <leader>bgg <Action>(GotoBookmarkG) | let g:WhichKeyDesc_bookmark_bgg = "<leader>bgg Go to G"
+map <leader>bgh <Action>(GotoBookmarkH) | let g:WhichKeyDesc_bookmark_bgh = "<leader>bgh Go to H"
+map <leader>bgi <Action>(GotoBookmarkI) | let g:WhichKeyDesc_bookmark_bgi = "<leader>bgi Go to I"
+map <leader>bgj <Action>(GotoBookmarkJ) | let g:WhichKeyDesc_bookmark_bgj = "<leader>bgj Go to J"
+map <leader>bgk <Action>(GotoBookmarkK) | let g:WhichKeyDesc_bookmark_bgk = "<leader>bgk Go to K"
+map <leader>bgl <Action>(GotoBookmarkL) | let g:WhichKeyDesc_bookmark_bgl = "<leader>bgl Go to L"
+map <leader>bgm <Action>(GotoBookmarkM) | let g:WhichKeyDesc_bookmark_bgm = "<leader>bgm Go to M"
+map <leader>bgn <Action>(GotoBookmarkN) | let g:WhichKeyDesc_bookmark_bgn = "<leader>bgn Go to N"
+map <leader>bgo <Action>(GotoBookmarkO) | let g:WhichKeyDesc_bookmark_bgo = "<leader>bgo Go to O"
+map <leader>bgp <Action>(GotoBookmarkP) | let g:WhichKeyDesc_bookmark_bgp = "<leader>bgp Go to P"
+map <leader>bgq <Action>(GotoBookmarkQ) | let g:WhichKeyDesc_bookmark_bgq = "<leader>bgq Go to Q"
+map <leader>bgr <Action>(GotoBookmarkR) | let g:WhichKeyDesc_bookmark_bgr = "<leader>bgr Go to R"
+map <leader>bgs <Action>(GotoBookmarkS) | let g:WhichKeyDesc_bookmark_bgs = "<leader>bgs Go to S"
+map <leader>bgt <Action>(GotoBookmarkT) | let g:WhichKeyDesc_bookmark_bgt = "<leader>bgt Go to T"
+map <leader>bgu <Action>(GotoBookmarkU) | let g:WhichKeyDesc_bookmark_bgu = "<leader>bgu Go to U"
+map <leader>bgv <Action>(GotoBookmarkV) | let g:WhichKeyDesc_bookmark_bgv = "<leader>bgv Go to V"
+map <leader>bgw <Action>(GotoBookmarkW) | let g:WhichKeyDesc_bookmark_bgw = "<leader>bgw Go to W"
+map <leader>bgx <Action>(GotoBookmarkX) | let g:WhichKeyDesc_bookmark_bgx = "<leader>bgx Go to X"
+map <leader>bgy <Action>(GotoBookmarkY) | let g:WhichKeyDesc_bookmark_bgy = "<leader>bgy Go to Y"
+map <leader>bgz <Action>(GotoBookmarkZ) | let g:WhichKeyDesc_bookmark_bgz = "<leader>bgz Go to Z"
 
 " Toggle aliases under <leader>bt*
 " Numbers 0–9
