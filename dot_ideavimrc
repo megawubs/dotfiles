@@ -7,7 +7,7 @@
 
 """ Map leader to space ---------------------
 
-let mapleader = " "
+let mapleader = "\<space>"
 """ Plugins  --------------------------------
 set nonumber
 " Do incremental searching.
@@ -737,7 +737,6 @@ nmap <leader>im <Action>(MethodHierarchy)
 let g:WhichKeyDesc_info_method_hierarchy = "<leader>im Method Hierarchy"
 
 let g:WhichKeyDesc_easymotion = "<leader><leader> EasyMotion"
-map <Leader> <Plug>(easymotion-prefix)
 
 " Composer
 let g:WhichKeyDesc_php_composer = "<leader>pc Composer"
