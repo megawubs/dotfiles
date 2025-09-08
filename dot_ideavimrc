@@ -736,7 +736,8 @@ let g:WhichKeyDesc_info_show_usages = "<leader>iu Usages"
 nmap <leader>im <Action>(MethodHierarchy)
 let g:WhichKeyDesc_info_method_hierarchy = "<leader>im Method Hierarchy"
 
-let g:WhichKeyDesc_leader_leader = "<leader><leader> EasyMotion"
+let g:WhichKeyDesc_easymotion = "<leader><leader> EasyMotion"
+let g:EasyMotion_override_acejump = 0
 
 " Composer
 let g:WhichKeyDesc_php_composer = "<leader>pc Composer"
