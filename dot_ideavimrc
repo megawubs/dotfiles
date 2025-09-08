@@ -26,7 +26,6 @@ set highlightedyank
 set surround
 set sneak
 set easymotion
-let g:EasyMotion_override_acejump = 0
 
 " set quickscope
 " let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's']
@@ -736,7 +735,6 @@ nmap <leader>iu <Action>(ShowUsages)
 let g:WhichKeyDesc_info_show_usages = "<leader>iu Usages"
 nmap <leader>im <Action>(MethodHierarchy)
 let g:WhichKeyDesc_info_method_hierarchy = "<leader>im Method Hierarchy"
-
 
 let g:WhichKeyDesc_leader_leader = "<leader><leader> EasyMotion"
 
