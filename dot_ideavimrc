@@ -49,6 +49,7 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 set multiple-cursors
+set ideamarks
 "
 " Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
 let g:WhichKeyDesc_multi_cursor = "m Multiple Cursors"
@@ -78,7 +79,8 @@ xmap mA <Plug>AllOccurrences
 
 
 " Easy visual indentation
-vnoremap < <gv vnoremap > >gv
+vnoremap < <gv
+vnoremap > >gv
 " Popup navigation
 map <c-j> <Action>(PopupMenu-selectnext)
 map <c-k> <Action>(PopupMenu-selectprev)
