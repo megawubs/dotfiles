@@ -24,7 +24,7 @@ set notimeout
 set highlightedyank
 
 set surround
-" set sneak
+set sneak
 " set quickscope
 " let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's']
 " provides a text-object for 'gc' commenting
