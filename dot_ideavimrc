@@ -31,12 +31,9 @@ set easymotion
 " let g:qs_highlight_on_keys = ['f', 'F', 't', 'T', 's']
 " provides a text-object for 'gc' commenting
 set commentary
-" provides a text-object 'a' (argument)
-set argtextobj
-" provides a text-object e (entire )
-set textobj-entire " provides a text-object for i (indentation level)
+" provides useful text objects (q (qoute), o (bracket), d (document), c (comment), i (item), a (argument), f (function), c (class), l (loop))
+set anyobject
 set textobj-indent
-set functiontextobj
 set ReplaceWithRegister
 set nerdtree
 """ plugin settings -------------------------
