@@ -25,7 +25,6 @@ brew "wangle"
 brew "fbthrift"
 brew "fb303"
 brew "edencommon"
-brew "evil-helix", link: false
 brew "unbound"
 brew "gnutls"
 brew "harfbuzz"
@@ -208,3 +207,9 @@ cask "utm"
 cask "whatsapp"
 cask "zoom"
 cask "zulu@17"
+mas "1Password for Safari", id: 1569813296
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
