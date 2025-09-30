@@ -734,7 +734,7 @@ nmap <leader>im <Action>(MethodHierarchy)
 let g:WhichKeyDesc_info_method_hierarchy = "<leader>im Method Hierarchy"
 
 let g:WhichKeyDesc_easymotion = "<leader><leader> EasyMotion"
-map <C-S>s <Plug>(easymotion-prefix)
+map <leader>s <Plug>(easymotion-s)
 
 " Composer
 let g:WhichKeyDesc_php_composer = "<leader>pc Composer"
