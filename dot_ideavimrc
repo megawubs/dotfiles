@@ -572,7 +572,10 @@ map <leader>ne <Action>(GotoNextError)
 let g:WhichKeyDesc_navigation_next_error = "<leader>ne Next Error"
 map <leader>no <Action>(NextOccurence)
 let g:WhichKeyDesc_navigation_next_occurence = "<leader>no Next Occurrence"
-map <leader>ns <Action>(NewScratchFile)et g:WhichKeyDesc_navigation_new_scratch_file = "<leader>ns New Scratch File"
+map <leader>np <Action>(PreviousOccurence)
+let g:WhichKeyDesc_navigation_previous_occurence = "<leader>np Previous Occurrence"
+map <leader>ns <Action>(NewScratchFile)
+let g:WhichKeyDesc_navigation_new_scratch_file = "<leader>ns New Scratch File"
 map <leader>nf <Action>(ShowNavBar)
 let g:WhichKeyDesc_navigation_files = "<leader>nf Navigate files"
 map <leader>nt <Action>(GotoTest)
