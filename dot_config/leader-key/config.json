@@ -3,14 +3,14 @@
     {
       "actions" : [
         {
-          "key" : "e",
+          "key" : ",",
           "type" : "application",
-          "value" : "/System/Applications/Mail.app"
+          "value" : "/System/Applications/System Settings.app"
         },
         {
-          "key" : "m",
+          "key" : "a",
           "type" : "application",
-          "value" : "/Applications/Spotify.app"
+          "value" : "/Applications/Zen.app"
         },
         {
           "key" : "b",
@@ -18,39 +18,14 @@
           "value" : "/System/Applications/Messages.app"
         },
         {
-          "key" : "s",
+          "key" : "C",
           "type" : "application",
-          "value" : "/Applications/Slack.app"
+          "value" : "/Applications/Fantastical.app"
         },
         {
-          "key" : "p",
+          "key" : "c",
           "type" : "application",
           "value" : "/Applications/PhpStorm.app"
-        },
-        {
-          "key" : "t",
-          "type" : "application",
-          "value" : "/Applications/kitty.app"
-        },
-        {
-          "key" : "w",
-          "type" : "application",
-          "value" : "/Applications/WhatsApp.app"
-        },
-        {
-          "key" : "S",
-          "type" : "application",
-          "value" : "/Applications/Signal.app"
-        },
-        {
-          "key" : "T",
-          "type" : "application",
-          "value" : "/Applications/TablePlus.app"
-        },
-        {
-          "key" : "o",
-          "type" : "application",
-          "value" : "/Applications/1Password.app"
         },
         {
           "key" : "d",
@@ -58,29 +33,24 @@
           "value" : "/Applications/Discord.app"
         },
         {
-          "key" : "C",
+          "key" : "D",
           "type" : "application",
-          "value" : "/Applications/Fantastical.app"
+          "value" : "/Applications/Docker.app"
         },
         {
-          "key" : "a",
+          "key" : "e",
           "type" : "application",
-          "value" : "/Applications/Arc.app"
-        },
-        {
-          "key" : ",",
-          "type" : "application",
-          "value" : "/System/Applications/System Settings.app"
-        },
-        {
-          "key" : "q",
-          "type" : "application",
-          "value" : "/System/Applications/QuickTime Player.app"
+          "value" : "/System/Applications/Mail.app"
         },
         {
           "key" : "F",
           "type" : "application",
           "value" : "/System/Applications/FaceTime.app"
+        },
+        {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/System/Library/CoreServices/Finder.app"
         },
         {
           "key" : "h",
@@ -93,19 +63,49 @@
           "value" : "/Applications/Keymapp.app"
         },
         {
-          "key" : "f",
+          "key" : "m",
           "type" : "application",
-          "value" : "/System/Library/CoreServices/Finder.app"
+          "value" : "/Applications/Spotify.app"
         },
         {
-          "key" : "c",
+          "key" : "o",
+          "type" : "application",
+          "value" : "/Applications/1Password.app"
+        },
+        {
+          "key" : "p",
           "type" : "application",
           "value" : "/Applications/PhpStorm.app"
         },
         {
-          "key" : "D",
+          "key" : "q",
           "type" : "application",
-          "value" : "/Applications/Docker.app"
+          "value" : "/System/Applications/QuickTime Player.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Slack.app"
+        },
+        {
+          "key" : "S",
+          "type" : "application",
+          "value" : "/Applications/Signal.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Applications/kitty.app"
+        },
+        {
+          "key" : "T",
+          "type" : "application",
+          "value" : "/Applications/TablePlus.app"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Applications/WhatsApp.app"
         }
       ],
       "key" : "a",
@@ -119,47 +119,10 @@
       "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
     },
     {
-      "actions" : [
-        {
-          "key" : "m",
-          "label" : "Maximize",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/maximize"
-        },
-        {
-          "key" : "h",
-          "label" : "Left Half",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/left-half"
-        },
-        {
-          "key" : "l",
-          "label" : "Right Half",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/right-half"
-        },
-        {
-          "key" : "n",
-          "label" : "Next Display",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/next-display"
-        },
-        {
-          "key" : "p",
-          "label" : "Previous Display",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/previous-display"
-        },
-        {
-          "key" : "s",
-          "label" : "Switch",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/navigation/switch-windows"
-        }
-      ],
-      "key" : "w",
-      "label" : "🖥️",
-      "type" : "group"
+      "key" : "e",
+      "label" : "😎",
+      "type" : "url",
+      "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
     },
     {
       "actions" : [
@@ -170,34 +133,10 @@
           "value" : "raycast://extensions/douo/global-media-key/play"
         },
         {
-          "key" : "n",
-          "label" : "Next",
-          "type" : "url",
-          "value" : "raycast://extensions/douo/global-media-key/next"
-        },
-        {
-          "key" : "p",
-          "label" : "Previous",
-          "type" : "url",
-          "value" : "raycast://extensions/douo/global-media-key/prev"
-        },
-        {
           "key" : "d",
           "label" : "Volume Down",
           "type" : "url",
           "value" : "raycast://extensions/raycast/system/turn-volume-down"
-        },
-        {
-          "key" : "u",
-          "label" : "Volume Up",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/turn-volume-up"
-        },
-        {
-          "key" : "s",
-          "label" : "Volume 25",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/set-volume-to-25"
         },
         {
           "key" : "h",
@@ -216,6 +155,30 @@
           "label" : "Mute",
           "type" : "url",
           "value" : "raycast://extensions/raycast/system/toggle-mute"
+        },
+        {
+          "key" : "n",
+          "label" : "Next",
+          "type" : "url",
+          "value" : "raycast://extensions/douo/global-media-key/next"
+        },
+        {
+          "key" : "p",
+          "label" : "Previous",
+          "type" : "url",
+          "value" : "raycast://extensions/douo/global-media-key/prev"
+        },
+        {
+          "key" : "s",
+          "label" : "Volume 25",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-25"
+        },
+        {
+          "key" : "u",
+          "label" : "Volume Up",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/turn-volume-up"
         }
       ],
       "key" : "m",
@@ -225,52 +188,14 @@
     {
       "actions" : [
         {
-          "actions" : [
-            {
-              "key" : "l",
-              "label" : "Aangedacht",
-              "type" : "url",
-              "value" : "https://aangedacht.sibi.test"
-            },
-            {
-              "key" : "c",
-              "label" : "Central",
-              "type" : "url",
-              "value" : "https://sibi.test"
-            },
-            {
-              "key" : "d",
-              "label" : "Dev",
-              "type" : "url",
-              "value" : "https://app.sibi.dev"
-            },
-            {
-              "key" : "a",
-              "label" : "Accept",
-              "type" : "url",
-              "value" : "https://app.acceptatie.sibi.nl/identiteit/login"
-            },
-            {
-              "key" : "p",
-              "label" : "Prod",
-              "type" : "url",
-              "value" : "https://app.sibi.nl/identiteit/login"
-            }
-          ],
-          "key" : "s",
-          "label" : "Sibi",
-          "type" : "group"
+          "key" : "a",
+          "label" : "addUser.php",
+          "type" : "url",
+          "value" : "jetbrains://php-storm/navigate/reference?project=big-o&path=addUp.php"
         }
       ],
-      "key" : "u",
-      "label" : "🔗",
+      "key" : "p",
       "type" : "group"
-    },
-    {
-      "key" : "e",
-      "label" : "😎",
-      "type" : "url",
-      "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
     },
     {
       "actions" : [
@@ -293,13 +218,88 @@
     {
       "actions" : [
         {
-          "key" : "a",
-          "label" : "addUser.php",
-          "type" : "url",
-          "value" : "jetbrains://php-storm/navigate/reference?project=big-o&path=addUp.php"
+          "actions" : [
+            {
+              "key" : "a",
+              "label" : "Accept",
+              "type" : "url",
+              "value" : "https://app.acceptatie.sibi.nl/identiteit/login"
+            },
+            {
+              "key" : "c",
+              "label" : "Central",
+              "type" : "url",
+              "value" : "https://sibi.test"
+            },
+            {
+              "key" : "d",
+              "label" : "Dev",
+              "type" : "url",
+              "value" : "https://app.sibi.dev"
+            },
+            {
+              "key" : "l",
+              "label" : "Aangedacht",
+              "type" : "url",
+              "value" : "https://aangedacht.sibi.test"
+            },
+            {
+              "key" : "p",
+              "label" : "Prod",
+              "type" : "url",
+              "value" : "https://app.sibi.nl/identiteit/login"
+            }
+          ],
+          "key" : "s",
+          "label" : "Sibi",
+          "type" : "group"
         }
       ],
-      "key" : "p",
+      "key" : "u",
+      "label" : "🔗",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "h",
+          "label" : "Left Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/left-half"
+        },
+        {
+          "key" : "l",
+          "label" : "Right Half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/right-half"
+        },
+        {
+          "key" : "m",
+          "label" : "Maximize",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/maximize"
+        },
+        {
+          "key" : "n",
+          "label" : "Next Display",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/next-display"
+        },
+        {
+          "key" : "p",
+          "label" : "Previous Display",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/previous-display"
+        },
+        {
+          "key" : "s",
+          "label" : "Switch",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/navigation/switch-windows"
+        }
+      ],
+      "key" : "w",
+      "label" : "🖥️",
       "type" : "group"
     }
   ],
