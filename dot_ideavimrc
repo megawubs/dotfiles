@@ -694,7 +694,7 @@ let g:WhichKeyDesc_view_presentation_mode = "<leader>vp Toggle Presentation Mode
 map <leader>vz <Action>(ToggleZenMode)
 let g:WhichKeyDesc_view_zen_mode = "<leader>vz Toggle Zen Mode"
 map <leader>vf <Action>(ToggleFullScreen)
-let g:WhichKeyDesc_view_zen_mode = "<leader>vf Toggle Zen Mode"
+let g:WhichKeyDesc_view_full_screen_mode = "<leader>vf Toggle Full Screen Mode"
 
 """ Niceties
 map <leader>' <Action>(JumpToLastWindow)
