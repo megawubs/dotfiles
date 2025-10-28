@@ -691,6 +691,10 @@ map <leader>vM <Action>(MaximizeEditorInSplit)
 let g:WhichKeyDesc_view_maximize = "<leader>vM Maximize"
 map <leader>vp <Action>(TogglePresentationMode) <Action>(TogglePresentationAssistantAction)
 let g:WhichKeyDesc_view_presentation_mode = "<leader>vp Toggle Presentation Mode"
+map <leader>vz <Action>(ToggleZenMode)
+let g:WhichKeyDesc_view_zen_mode = "<leader>vz Toggle Zen Mode"
+map <leader>vf <Action>(ToggleFullScreen)
+let g:WhichKeyDesc_view_zen_mode = "<leader>vf Toggle Zen Mode"
 
 """ Niceties
 map <leader>' <Action>(JumpToLastWindow)
