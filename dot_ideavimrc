@@ -208,7 +208,7 @@ nnoremap <c-k> <c-w>k
 map L <Action>(QuickImplementations)
 
 """ abcdefghijklmnopqrstvwxyz
-Action map <leader>a <Action>(ShowIntentionActionsk
+Action map <leader>a <Action>(ShowIntentionActions)
 let g:WhichKeyDesc_actions = "<leader>a Show Intentions"
 
 """ Bookmarks
