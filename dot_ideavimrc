@@ -213,6 +213,26 @@ let g:WhichKeyDesc_actions = "<leader>a Show Intentions"
 
 """ Bookmarks
 let g:WhichKeyDesc_bookmarks = "<leader>b Bookmarks"
+
+" Harpoon-style quick access (slots 1-4)
+map <leader>bj <Action>(GotoBookmark1)
+let g:WhichKeyDesc_bookmark_goto_j = "<leader>bj Go to slot 1"
+map <leader>bk <Action>(GotoBookmark2)
+let g:WhichKeyDesc_bookmark_goto_k = "<leader>bk Go to slot 2"
+map <leader>bl <Action>(GotoBookmark3)
+let g:WhichKeyDesc_bookmark_goto_l = "<leader>bl Go to slot 3"
+map <leader>b; <Action>(GotoBookmark4)
+let g:WhichKeyDesc_bookmark_goto_semi = "<leader>b; Go to slot 4"
+
+map <leader>bJ <Action>(ToggleBookmark1)
+let g:WhichKeyDesc_bookmark_toggle_J = "<leader>bJ Set slot 1"
+map <leader>bK <Action>(ToggleBookmark2)
+let g:WhichKeyDesc_bookmark_toggle_K = "<leader>bK Set slot 2"
+map <leader>bL <Action>(ToggleBookmark3)
+let g:WhichKeyDesc_bookmark_toggle_L = "<leader>bL Set slot 3"
+map <leader>b: <Action>(ToggleBookmark4)
+let g:WhichKeyDesc_bookmark_toggle_colon = "<leader>b: Set slot 4"
+
 map <leader>bb <Action>(ToggleBookmark)
 let g:WhichKeyDesc_bookmarks_toggle_bookmark = "<leader>bb Toggle Bookmark"
 map <leader>be <Action>(EditBookmark)
