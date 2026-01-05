@@ -215,23 +215,27 @@ let g:WhichKeyDesc_actions = "<leader>a Show Intentions"
 let g:WhichKeyDesc_bookmarks = "<leader>b Bookmarks"
 
 " Harpoon-style quick access (slots 1-4)
-map <leader>bj <Action>(GotoBookmark1)
-let g:WhichKeyDesc_bookmark_goto_j = "<leader>bj Go to slot 1"
-map <leader>bk <Action>(GotoBookmark2)
-let g:WhichKeyDesc_bookmark_goto_k = "<leader>bk Go to slot 2"
-map <leader>bl <Action>(GotoBookmark3)
-let g:WhichKeyDesc_bookmark_goto_l = "<leader>bl Go to slot 3"
-map <leader>b; <Action>(GotoBookmark4)
-let g:WhichKeyDesc_bookmark_goto_semi = "<leader>b; Go to slot 4"
+map <leader>bh <Action>(GotoBookmark1)
+let g:WhichKeyDesc_bookmark_goto_j = "<leader>bh Go to slot 1"
+map <leader>bj <Action>(GotoBookmark2)
+let g:WhichKeyDesc_bookmark_goto_k = "<leader>bj Go to slot 2"
+map <leader>bk <Action>(GotoBookmark3)
+let g:WhichKeyDesc_bookmark_goto_l = "<leader>bk Go to slot 3"
+map <leader>bl <Action>(GotoBookmark4)
+let g:WhichKeyDesc_bookmark_goto_semi = "<leader>bl Go to slot 4"
+map <leader>b; <Action>(GotoBookmark5)
+let g:WhichKeyDesc_bookmark_goto_semi = "<leader>b; Go to slot 5"
 
-map <leader>bJ <Action>(ToggleBookmark1)
-let g:WhichKeyDesc_bookmark_toggle_J = "<leader>bJ Set slot 1"
-map <leader>bK <Action>(ToggleBookmark2)
-let g:WhichKeyDesc_bookmark_toggle_K = "<leader>bK Set slot 2"
-map <leader>bL <Action>(ToggleBookmark3)
-let g:WhichKeyDesc_bookmark_toggle_L = "<leader>bL Set slot 3"
-map <leader>b: <Action>(ToggleBookmark4)
-let g:WhichKeyDesc_bookmark_toggle_colon = "<leader>b: Set slot 4"
+map <leader>bH <Action>(ToggleBookmark1)
+let g:WhichKeyDesc_bookmark_toggle_J = "<leader>bH Set slot 1"
+map <leader>bJ <Action>(ToggleBookmark2)
+let g:WhichKeyDesc_bookmark_toggle_K = "<leader>bJ Set slot 2"
+map <leader>bK <Action>(ToggleBookmark3)
+let g:WhichKeyDesc_bookmark_toggle_L = "<leader>bK Set slot 3"
+map <leader>bL <Action>(ToggleBookmark4)
+let g:WhichKeyDesc_bookmark_toggle_colon = "<leader>bL Set slot 4"
+map <leader>b4 <Action>(ToggleBookmark5)
+let g:WhichKeyDesc_bookmark_toggle_colon = "<leader>b: Set slot 5"
 
 map <leader>bb <Action>(ToggleBookmark)
 let g:WhichKeyDesc_bookmarks_toggle_bookmark = "<leader>bb Toggle Bookmark"
