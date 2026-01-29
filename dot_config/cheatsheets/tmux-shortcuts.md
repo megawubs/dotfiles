@@ -165,6 +165,20 @@ Indicator: `⚏` in statusbar wanneer actief.
 | `Ctrl-a u`     | Update plugins    |
 | `Ctrl-a Alt-u` | Uninstall plugins |
 
+## Which-Key (Keybinding Menu)
+
+Open popup menu met alle beschikbare keybindings.
+
+| Shortcut       | Actie                          |
+| -------------- | ------------------------------ |
+| `Ctrl-a Space` | Open which-key menu            |
+| `j/k`          | Navigeer in menu               |
+| `Enter`        | Selecteer actie                |
+| `Esc`          | Sluiten                        |
+| `Backspace`    | Terug naar vorig menu          |
+
+Config: `~/.tmux/plugins/tmux-which-key/config.yaml`
+
 ## Statusbar Indicators
 
 | Symbool | Betekenis                    |
