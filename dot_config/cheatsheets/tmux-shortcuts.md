@@ -171,13 +171,14 @@ Open popup menu met alle beschikbare keybindings.
 
 | Shortcut       | Actie                          |
 | -------------- | ------------------------------ |
-| `Ctrl-a Space` | Open which-key menu            |
+| `C-Space`      | Open which-key menu (direct)   |
+| `Ctrl-a Space` | Open which-key menu via prefix |
 | `j/k`          | Navigeer in menu               |
 | `Enter`        | Selecteer actie                |
 | `Esc`          | Sluiten                        |
 | `Backspace`    | Terug naar vorig menu          |
 
-Config: `~/.tmux/plugins/tmux-which-key/config.yaml`
+Config: `~/.config/tmux-which-key/config.yaml`
 
 ## Statusbar Indicators
 
