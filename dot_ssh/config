@@ -23,13 +23,13 @@ Host evcc
     HostName evcc.local
     User admin
 
-Host hassio
-    HostName hassio.local
-    User bram
-
 Host kantoor
     HostName kantoor.local
-    User hassio
+    User root
+
+Host kantoor-os
+    HostName kantoor.local
+    User root
     Port 22222
 
 Host sibi
