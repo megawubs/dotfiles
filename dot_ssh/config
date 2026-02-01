@@ -14,3 +14,32 @@ LocalForward 3401 localhost:8181
 Hostname app.sibi.nl
 SessionType none
 ForkAfterAuthentication yes
+
+Host tardis
+    HostName tardis.local
+    User admin
+
+Host evcc
+    HostName evcc.local
+    User admin
+
+Host hassio
+    HostName hassio.local
+    User bram
+
+Host kantoor
+    HostName kantoor.local
+    User hassio
+    Port 22222
+
+Host sibi
+    HostName sibi.dev
+    User bram
+
+Host maucen
+    HostName maucen.ssh.transip.me
+    User maucenl
+
+Host code14
+    HostName 37.97.227.149
+    User code14
