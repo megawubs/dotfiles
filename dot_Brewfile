@@ -12,6 +12,8 @@ brew "aom"
 brew "pcre2"
 brew "chezmoi"
 brew "cmake"
+brew "ruby", link: true
+brew "cocoapods"
 brew "freetds"
 brew "libavif"
 brew "gd"
@@ -78,7 +80,6 @@ brew "pre-commit"
 brew "pyenv"
 brew "python@3.11"
 brew "redis", restart_service: :changed
-brew "ruby", link: true
 brew "speedtest-cli"
 brew "spotify_player"
 brew "superfile"
