@@ -8,6 +8,9 @@ end
 
 set -gx EDITOR nvim
 
+# Local bin
+fish_add_path ~/.local/bin
+
 zoxide init fish | source
 op completion fish | source
 pyenv init - fish | source
