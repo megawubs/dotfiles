@@ -2,8 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     fish_vi_key_bindings
 
-    # Daily PDE tip (only once per day)
-    pde-tip --auto
 end
 
 set -gx EDITOR nvim
