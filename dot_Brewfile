@@ -84,6 +84,7 @@ brew "redis", restart_service: :changed
 brew "speedtest-cli"
 brew "spotify_player"
 brew "superfile"
+brew "tailscale"
 brew "tmux"
 brew "tmuxinator"
 brew "virtualenv"
