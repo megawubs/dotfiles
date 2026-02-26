@@ -262,40 +262,88 @@
     {
       "actions" : [
         {
-          "key" : "h",
-          "label" : "Left Half",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/left-half"
+          "key" : "t",
+          "label" : "workspace T",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace T"
         },
         {
-          "key" : "l",
-          "label" : "Right Half",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/right-half"
+          "key" : "w",
+          "label" : "workspace W",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace W"
         },
         {
-          "key" : "m",
-          "label" : "Maximize",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/maximize"
-        },
-        {
-          "key" : "n",
-          "label" : "Next Display",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/next-display"
-        },
-        {
-          "key" : "p",
-          "label" : "Previous Display",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/previous-display"
+          "key" : "c",
+          "label" : "workspace C",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace C"
         },
         {
           "key" : "s",
-          "label" : "Switch",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/navigation/switch-windows"
+          "label" : "workspace S",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace S"
+        },
+        {
+          "key" : "e",
+          "label" : "workspace E",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace E"
+        },
+        {
+          "key" : "T",
+          "label" : "move → T",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace T --focus-follows-window"
+        },
+        {
+          "key" : "W",
+          "label" : "move → W",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace W --focus-follows-window"
+        },
+        {
+          "key" : "C",
+          "label" : "move → C",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace C --focus-follows-window"
+        },
+        {
+          "key" : "S",
+          "label" : "move → S",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace S --focus-follows-window"
+        },
+        {
+          "key" : "f",
+          "label" : "float toggle",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace layout floating tiling"
+        },
+        {
+          "key" : "m",
+          "label" : "fullscreen",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace fullscreen"
+        },
+        {
+          "key" : "n",
+          "label" : "next monitor",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-workspace-to-monitor --wrap-around next"
+        },
+        {
+          "key" : "r",
+          "label" : "reload config",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace reload-config"
+        },
+        {
+          "key" : "R",
+          "label" : "reset layout",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace flatten-workspace-tree"
         }
       ],
       "key" : "w",
