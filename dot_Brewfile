@@ -98,7 +98,7 @@ brew "youtube-dl"
 brew "yt-dlp"
 brew "zoxide"
 brew "ejoffe/tap/spr"
-brew "felixkratz/formulae/sketchybar", link: false
+brew "felixkratz/formulae/sketchybar"
 brew "oven-sh/bun/bun"
 brew "remotemobprogramming/brew/mob"
 brew "unhappychoice/tap/gitlogue"
