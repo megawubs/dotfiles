@@ -262,40 +262,94 @@
     {
       "actions" : [
         {
-          "key" : "h",
-          "label" : "Left Half",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/left-half"
+          "command" : "/opt/homebrew/bin/aerospace workspace T",
+          "key" : "t",
+          "label" : "Terminal ws",
+          "type" : "shell"
         },
         {
-          "key" : "l",
-          "label" : "Right Half",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/right-half"
+          "command" : "/opt/homebrew/bin/aerospace workspace W",
+          "key" : "w",
+          "label" : "Web ws",
+          "type" : "shell"
         },
         {
-          "key" : "m",
-          "label" : "Maximize",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/maximize"
+          "command" : "/opt/homebrew/bin/aerospace workspace C",
+          "key" : "c",
+          "label" : "Code ws",
+          "type" : "shell"
         },
         {
-          "key" : "n",
-          "label" : "Next Display",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/next-display"
-        },
-        {
-          "key" : "p",
-          "label" : "Previous Display",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/window-management/previous-display"
-        },
-        {
+          "command" : "/opt/homebrew/bin/aerospace workspace S",
           "key" : "s",
-          "label" : "Switch",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/navigation/switch-windows"
+          "label" : "Slack ws",
+          "type" : "shell"
+        },
+        {
+          "command" : "/opt/homebrew/bin/aerospace workspace E",
+          "key" : "e",
+          "label" : "Extra ws",
+          "type" : "shell"
+        },
+        {
+          "command" : "/opt/homebrew/bin/aerospace move-node-to-workspace T",
+          "key" : "T",
+          "label" : "Move → Terminal",
+          "type" : "shell"
+        },
+        {
+          "command" : "/opt/homebrew/bin/aerospace move-node-to-workspace W",
+          "key" : "W",
+          "label" : "Move → Web",
+          "type" : "shell"
+        },
+        {
+          "command" : "/opt/homebrew/bin/aerospace move-node-to-workspace C",
+          "key" : "C",
+          "label" : "Move → Code",
+          "type" : "shell"
+        },
+        {
+          "command" : "/opt/homebrew/bin/aerospace move-node-to-workspace S",
+          "key" : "S",
+          "label" : "Move → Slack",
+          "type" : "shell"
+        },
+        {
+          "command" : "/opt/homebrew/bin/aerospace layout floating tiling",
+          "key" : "f",
+          "label" : "Float toggle",
+          "type" : "shell"
+        },
+        {
+          "command" : "/opt/homebrew/bin/aerospace fullscreen",
+          "key" : "m",
+          "label" : "Fullscreen",
+          "type" : "shell"
+        },
+        {
+          "command" : "/opt/homebrew/bin/aerospace workspace --back-and-forth",
+          "key" : "tab",
+          "label" : "Back+Forth",
+          "type" : "shell"
+        },
+        {
+          "command" : "/opt/homebrew/bin/aerospace move-workspace-to-monitor --wrap-around next",
+          "key" : "n",
+          "label" : "Next monitor",
+          "type" : "shell"
+        },
+        {
+          "command" : "/opt/homebrew/bin/aerospace reload-config",
+          "key" : "r",
+          "label" : "Reload config",
+          "type" : "shell"
+        },
+        {
+          "command" : "/opt/homebrew/bin/aerospace flatten-workspace-tree",
+          "key" : "R",
+          "label" : "Reset layout",
+          "type" : "shell"
         }
       ],
       "key" : "w",
