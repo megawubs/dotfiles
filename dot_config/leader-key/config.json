@@ -317,15 +317,15 @@
         },
         {
           "key" : "f",
-          "label" : "float toggle",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace layout floating tiling"
-        },
-        {
-          "key" : "m",
           "label" : "fullscreen",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace fullscreen"
+        },
+        {
+          "key" : "m",
+          "label" : "float toggle",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace layout floating tiling"
         },
         {
           "key" : "n",
