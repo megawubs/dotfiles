@@ -319,7 +319,7 @@
           "key" : "f",
           "label" : "fullscreen",
           "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace fullscreen"
+          "value" : "/opt/homebrew/bin/aerospace trigger-binding --mode main alt-f"
         },
         {
           "key" : "m",
