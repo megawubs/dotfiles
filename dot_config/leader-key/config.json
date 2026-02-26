@@ -319,7 +319,7 @@
           "key" : "f",
           "label" : "fullscreen",
           "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace trigger-binding --mode main alt-f"
+          "value" : "/Users/bramwubs/.config/aerospace/fullscreen-toggle.sh"
         },
         {
           "key" : "m",
