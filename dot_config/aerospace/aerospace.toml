@@ -1,0 +1,122 @@
+# AeroSpace config — hyper leader, homerow workspaces (1-5 → h j k l ;)
+
+start-at-login = true
+automatically-unhide-macos-hidden-apps = true
+
+after-startup-command = ['exec-and-forget sketchybar']
+
+exec-on-workspace-change = ['/bin/bash', '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
+
+# Normalizations
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+[key-mapping]
+preset = 'qwerty'
+
+[gaps]
+inner.horizontal = 3
+inner.vertical   = 3
+outer.left       = 3
+outer.bottom     = 3
+outer.top        = [{ monitor."built-in" = 3 }, 36]
+outer.right      = 3
+
+# ── Main mode ────────────────────────────────────────────────────────────────
+# hyper = cmd+ctrl+alt+shift (KC_HYPR on Moonlander)
+[mode.main.binding]
+
+# Focus (hyper + hjkl)
+cmd-ctrl-alt-shift-h = 'focus left  --boundaries workspace'
+cmd-ctrl-alt-shift-j = 'focus down  --boundaries workspace'
+cmd-ctrl-alt-shift-k = 'focus up    --boundaries workspace'
+cmd-ctrl-alt-shift-l = 'focus right --boundaries workspace'
+
+# Leader key → workspace mode
+cmd-ctrl-alt-shift-space = ['mode workspace', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=workspace']
+
+# Fullscreen
+cmd-ctrl-alt-shift-f = 'fullscreen'
+
+# Back-and-forth between last two workspaces
+cmd-ctrl-alt-shift-tab = 'workspace-back-and-forth'
+
+# Service mode
+cmd-ctrl-alt-shift-semicolon = ['mode service', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=service']
+
+# ── Workspace mode (leader key) ───────────────────────────────────────────────
+[mode.workspace.binding]
+
+# Switch workspace (homerow → 1 2 3 4 5)
+h         = ['workspace 1', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+j         = ['workspace 2', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+k         = ['workspace 3', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+l         = ['workspace 4', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+semicolon = ['workspace 5', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+
+# Move window to workspace
+shift-h         = ['move-node-to-workspace 1', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+shift-j         = ['move-node-to-workspace 2', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+shift-k         = ['move-node-to-workspace 3', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+shift-l         = ['move-node-to-workspace 4', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+shift-semicolon = ['move-node-to-workspace 5', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+
+# Move window to workspace and follow focus
+alt-h         = ['move-node-to-workspace 1', 'workspace 1', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+alt-j         = ['move-node-to-workspace 2', 'workspace 2', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+alt-k         = ['move-node-to-workspace 3', 'workspace 3', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+alt-l         = ['move-node-to-workspace 4', 'workspace 4', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+alt-semicolon = ['move-node-to-workspace 5', 'workspace 5', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+
+# Other workspace actions
+r   = ['mode resize', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=resize']
+tab = ['workspace-back-and-forth', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+n   = ['move-workspace-to-monitor --wrap-around next', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+f   = ['fullscreen', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+a   = ['layout accordion horizontal', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+t   = ['layout tiles horizontal', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+m   = ['layout floating tiling', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+
+esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+
+# ── Resize mode ───────────────────────────────────────────────────────────────
+[mode.resize.binding]
+
+h = 'resize width +50'
+j = 'resize height +50'
+k = 'resize height -50'
+l = 'resize width -50'
+
+shift-h = 'resize width +200'
+shift-j = 'resize height +200'
+shift-k = 'resize height -200'
+shift-l = 'resize width -200'
+
+enter = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+esc   = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+
+# ── Service mode ──────────────────────────────────────────────────────────────
+[mode.service.binding]
+
+esc       = ['reload-config', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+r         = ['flatten-workspace-tree', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+f         = ['layout floating tiling', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+backspace = ['close-all-windows-but-current', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+
+h = ['join-with left',  'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+j = ['join-with down',  'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+k = ['join-with up',    'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+l = ['join-with right', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+
+# ── Window rules ──────────────────────────────────────────────────────────────
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
+run = 'layout tiling'
