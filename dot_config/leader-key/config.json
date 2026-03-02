@@ -263,57 +263,63 @@
       "actions" : [
         {
           "key" : "h",
-          "label" : "workspace 1 (h)",
+          "label" : "h",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace workspace 1"
         },
         {
           "key" : "j",
-          "label" : "workspace 2 (j)",
+          "label" : "j",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace workspace 2"
         },
         {
           "key" : "k",
-          "label" : "workspace 3 (k)",
+          "label" : "k",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace workspace 3"
         },
         {
           "key" : "l",
-          "label" : "workspace 4 (l)",
+          "label" : "l",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace workspace 4"
         },
         {
           "key" : ";",
-          "label" : "workspace 5 (;)",
+          "label" : ";",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace workspace 5"
         },
         {
           "key" : "H",
-          "label" : "move → 1 (h)",
+          "label" : "→ h",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 1 --focus-follows-window"
         },
         {
           "key" : "J",
-          "label" : "move → 2 (j)",
+          "label" : "→ j",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 2 --focus-follows-window"
         },
         {
           "key" : "K",
-          "label" : "move → 3 (k)",
+          "label" : "→ k",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 3 --focus-follows-window"
         },
         {
           "key" : "L",
-          "label" : "move → 4 (l)",
+          "label" : "→ l",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 4 --focus-follows-window"
+        },
+        {
+          "key" : ":",
+          "label" : "→ ;",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 5 --focus-follows-window"
         },
         {
           "key" : "f",
