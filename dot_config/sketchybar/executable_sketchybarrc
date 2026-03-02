@@ -1,0 +1,77 @@
+#!/bin/bash
+# SketchyBar config — Catppuccin Mocha, AeroSpace workspace pills
+# Requires: brew install --HEAD FelixKratz/formulae/sketchybar
+
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+
+# ── Catppuccin Mocha palette ──────────────────────────────────────────────────
+BASE=0xff1e1e2e
+SURFACE0=0xff313244
+TEXT=0xffcdd6f4
+SUBTEXT1=0xffbac2de
+MAUVE=0xffcba6f7
+BLUE=0xff89b4fa
+OVERLAY0=0xff6c7086
+
+# ── Bar ───────────────────────────────────────────────────────────────────────
+sketchybar --bar \
+  height=28 \
+  blur_radius=0 \
+  position=top \
+  sticky=on \
+  topmost=window \
+  padding_left=8 \
+  padding_right=8 \
+  color=$BASE
+
+# Register custom AeroSpace events
+sketchybar --add event aerospace_workspace_change
+sketchybar --add event aerospace_mode_changed
+
+# ── Defaults ──────────────────────────────────────────────────────────────────
+sketchybar --default \
+  icon.font="JetBrainsMono Nerd Font Mono:Bold:13.0" \
+  label.font="JetBrainsMono Nerd Font Mono:Bold:13.0" \
+  icon.color=$TEXT \
+  label.color=$TEXT \
+  padding_left=4 \
+  padding_right=4 \
+  label.padding_left=4 \
+  label.padding_right=4
+
+# ── AeroSpace workspace pills (1-5, labels: h j k l ;) ───────────────────────
+WORKSPACE_LABELS=("h" "j" "k" "l" ";")
+
+for i in 1 2 3 4 5; do
+  LABEL="${WORKSPACE_LABELS[$((i-1))]}"
+  sketchybar --add item "aerospace_$i" left \
+             --set "aerospace_$i" \
+               label="$LABEL" \
+               label.color=$SUBTEXT1 \
+               background.color=$SURFACE0 \
+               background.corner_radius=5 \
+               background.height=20 \
+               background.drawing=off \
+               padding_left=3 \
+               padding_right=3 \
+               script="$PLUGIN_DIR/aerospace.sh $i" \
+               click_script="/opt/homebrew/bin/aerospace workspace $i" \
+             --subscribe "aerospace_$i" aerospace_workspace_change
+done
+
+# ── AeroSpace mode indicator ──────────────────────────────────────────────────
+sketchybar --add item aerospace_mode right \
+           --set aerospace_mode \
+             label="" \
+             label.color=$MAUVE \
+             background.color=$SURFACE0 \
+             background.corner_radius=5 \
+             background.height=20 \
+             background.drawing=off \
+             padding_left=4 \
+             padding_right=4 \
+             script="$PLUGIN_DIR/aerospace_mode.sh" \
+           --subscribe aerospace_mode aerospace_mode_changed
+
+# ── Finalise ──────────────────────────────────────────────────────────────────
+sketchybar --update
