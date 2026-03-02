@@ -262,64 +262,64 @@
     {
       "actions" : [
         {
-          "key" : "t",
-          "label" : "workspace T",
+          "key" : "h",
+          "label" : "workspace 1 (h)",
           "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace T"
+          "value" : "/opt/homebrew/bin/aerospace workspace 1"
         },
         {
-          "key" : "w",
-          "label" : "workspace W",
+          "key" : "j",
+          "label" : "workspace 2 (j)",
           "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace W"
+          "value" : "/opt/homebrew/bin/aerospace workspace 2"
         },
         {
-          "key" : "c",
-          "label" : "workspace C",
+          "key" : "k",
+          "label" : "workspace 3 (k)",
           "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace C"
+          "value" : "/opt/homebrew/bin/aerospace workspace 3"
         },
         {
-          "key" : "s",
-          "label" : "workspace S",
+          "key" : "l",
+          "label" : "workspace 4 (l)",
           "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace S"
+          "value" : "/opt/homebrew/bin/aerospace workspace 4"
         },
         {
-          "key" : "e",
-          "label" : "workspace E",
+          "key" : ";",
+          "label" : "workspace 5 (;)",
           "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace E"
+          "value" : "/opt/homebrew/bin/aerospace workspace 5"
         },
         {
-          "key" : "T",
-          "label" : "move → T",
+          "key" : "H",
+          "label" : "move → 1 (h)",
           "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace T --focus-follows-window"
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 1 --focus-follows-window"
         },
         {
-          "key" : "W",
-          "label" : "move → W",
+          "key" : "J",
+          "label" : "move → 2 (j)",
           "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace W --focus-follows-window"
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 2 --focus-follows-window"
         },
         {
-          "key" : "C",
-          "label" : "move → C",
+          "key" : "K",
+          "label" : "move → 3 (k)",
           "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace C --focus-follows-window"
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 3 --focus-follows-window"
         },
         {
-          "key" : "S",
-          "label" : "move → S",
+          "key" : "L",
+          "label" : "move → 4 (l)",
           "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace S --focus-follows-window"
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 4 --focus-follows-window"
         },
         {
           "key" : "f",
           "label" : "fullscreen",
           "type" : "command",
-          "value" : "/Users/bramwubs/.config/aerospace/fullscreen-toggle.sh"
+          "value" : "/opt/homebrew/bin/aerospace fullscreen"
         },
         {
           "key" : "m",
