@@ -350,6 +350,110 @@
           "label" : "reset layout",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace flatten-workspace-tree"
+        },
+        {
+          "key" : "a",
+          "label" : "accordion",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace layout accordion horizontal"
+        },
+        {
+          "key" : "t",
+          "label" : "tiles",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace layout tiles horizontal"
+        },
+        {
+          "key" : "b",
+          "label" : "back & forth",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace-back-and-forth"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "h",
+              "label" : "width +50",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace resize width +50"
+            },
+            {
+              "key" : "j",
+              "label" : "height +50",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace resize height +50"
+            },
+            {
+              "key" : "k",
+              "label" : "height -50",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace resize height -50"
+            },
+            {
+              "key" : "l",
+              "label" : "width -50",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace resize width -50"
+            },
+            {
+              "key" : "H",
+              "label" : "width +200",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace resize width +200"
+            },
+            {
+              "key" : "J",
+              "label" : "height +200",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace resize height +200"
+            },
+            {
+              "key" : "K",
+              "label" : "height -200",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace resize height -200"
+            },
+            {
+              "key" : "L",
+              "label" : "width -200",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace resize width -200"
+            }
+          ],
+          "key" : "e",
+          "label" : "resize",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "h",
+              "label" : "← left",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with left"
+            },
+            {
+              "key" : "j",
+              "label" : "↓ down",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with down"
+            },
+            {
+              "key" : "k",
+              "label" : "↑ up",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with up"
+            },
+            {
+              "key" : "l",
+              "label" : "→ right",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with right"
+            }
+          ],
+          "key" : "g",
+          "label" : "join with",
+          "type" : "group"
         }
       ],
       "key" : "w",
