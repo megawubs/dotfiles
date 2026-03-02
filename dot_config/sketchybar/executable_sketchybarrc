@@ -93,13 +93,6 @@ sketchybar --add item battery right \
              label.color=$TEXT \
              script="$PLUGIN_DIR/battery.sh"
 
-# ── Wifi ──────────────────────────────────────────────────────────────────────
-sketchybar --add item wifi right \
-           --set wifi \
-             update_freq=30 \
-             label.color=$TEXT \
-             script="$PLUGIN_DIR/wifi.sh"
-
 # ── CPU ───────────────────────────────────────────────────────────────────────
 sketchybar --add item cpu right \
            --set cpu \
@@ -113,6 +106,12 @@ sketchybar --add item memory right \
              update_freq=10 \
              label.color=$TEXT \
              script="$PLUGIN_DIR/memory.sh"
+
+# ── Calendar ──────────────────────────────────────────────────────────────────
+sketchybar --add item calendar left \
+           --set calendar \
+             update_freq=30 \
+             script="$PLUGIN_DIR/calendar.sh"
 
 # ── Spotify ───────────────────────────────────────────────────────────────────
 sketchybar --add item spotify left \
