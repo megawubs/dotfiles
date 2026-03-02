@@ -73,5 +73,12 @@ sketchybar --add item aerospace_mode right \
              script="$PLUGIN_DIR/aerospace_mode.sh" \
            --subscribe aerospace_mode aerospace_mode_changed
 
+# ── Clock ─────────────────────────────────────────────────────────────────────
+sketchybar --add item clock right \
+           --set clock \
+             update_freq=10 \
+             label.color=$TEXT \
+             script="$PLUGIN_DIR/clock.sh"
+
 # ── Finalise ──────────────────────────────────────────────────────────────────
 sketchybar --update
