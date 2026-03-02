@@ -359,9 +359,15 @@
         },
         {
           "key" : "t",
-          "label" : "tiles",
+          "label" : "tiles →",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace layout tiles horizontal"
+        },
+        {
+          "key" : "v",
+          "label" : "tiles ↕",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace layout tiles vertical"
         },
         {
           "key" : "b",
