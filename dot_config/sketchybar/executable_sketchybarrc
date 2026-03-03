@@ -120,7 +120,7 @@ sketchybar --add item spotify left \
 # ── Calendar ──────────────────────────────────────────────────────────────────
 sketchybar --add item calendar left \
            --set calendar \
-             update_freq=30 \
+             update_freq=10 \
              icon="" \
              icon.font="JetBrainsMono Nerd Font Mono:Bold:16.0" \
              icon.color=$BLUE \
