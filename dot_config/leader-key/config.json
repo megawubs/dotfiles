@@ -218,6 +218,85 @@
     {
       "actions" : [
         {
+          "key" : "d",
+          "label" : "detach",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux detach-client"
+        },
+        {
+          "key" : "h",
+          "label" : "← pane",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux select-pane -L"
+        },
+        {
+          "key" : "j",
+          "label" : "↓ pane",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux select-pane -D"
+        },
+        {
+          "key" : "k",
+          "label" : "↑ pane",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux select-pane -U"
+        },
+        {
+          "key" : "l",
+          "label" : "→ pane",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux select-pane -R"
+        },
+        {
+          "key" : "n",
+          "label" : "new window",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux new-window"
+        },
+        {
+          "key" : "N",
+          "label" : "new session",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux new-session"
+        },
+        {
+          "key" : "s",
+          "label" : "split ─",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux split-window -v"
+        },
+        {
+          "key" : "v",
+          "label" : "split │",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux split-window -h"
+        },
+        {
+          "key" : "w",
+          "label" : "choose tree",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux choose-tree -Zw"
+        },
+        {
+          "key" : "x",
+          "label" : "kill pane",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux kill-pane"
+        },
+        {
+          "key" : "z",
+          "label" : "zoom",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux resize-pane -Z"
+        }
+      ],
+      "key" : "t",
+      "label" : "tmux",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
           "actions" : [
             {
               "key" : "a",
@@ -262,58 +341,10 @@
     {
       "actions" : [
         {
-          "key" : "h",
-          "label" : "h",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace 1"
-        },
-        {
-          "key" : "j",
-          "label" : "j",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace 2"
-        },
-        {
-          "key" : "k",
-          "label" : "k",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace 3"
-        },
-        {
-          "key" : "l",
-          "label" : "l",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace workspace 4"
-        },
-        {
           "key" : ";",
           "label" : ";",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace workspace 5"
-        },
-        {
-          "key" : "H",
-          "label" : "→ h",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 1 --focus-follows-window"
-        },
-        {
-          "key" : "J",
-          "label" : "→ j",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 2 --focus-follows-window"
-        },
-        {
-          "key" : "K",
-          "label" : "→ k",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 3 --focus-follows-window"
-        },
-        {
-          "key" : "L",
-          "label" : "→ l",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 4 --focus-follows-window"
         },
         {
           "key" : ":",
@@ -322,52 +353,10 @@
           "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 5 --focus-follows-window"
         },
         {
-          "key" : "f",
-          "label" : "fullscreen",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace fullscreen"
-        },
-        {
-          "key" : "m",
-          "label" : "float toggle",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace layout floating tiling"
-        },
-        {
-          "key" : "n",
-          "label" : "next monitor",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace move-workspace-to-monitor --wrap-around next"
-        },
-        {
-          "key" : "r",
-          "label" : "reload config",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace reload-config"
-        },
-        {
-          "key" : "R",
-          "label" : "reset layout",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace flatten-workspace-tree"
-        },
-        {
           "key" : "a",
           "label" : "accordion",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace layout accordion horizontal"
-        },
-        {
-          "key" : "t",
-          "label" : "tiles →",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace layout tiles horizontal"
-        },
-        {
-          "key" : "v",
-          "label" : "tiles ↕",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/aerospace layout tiles vertical"
         },
         {
           "key" : "b",
@@ -384,28 +373,16 @@
               "value" : "/opt/homebrew/bin/aerospace resize width +50"
             },
             {
-              "key" : "j",
-              "label" : "height +50",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace resize height +50"
-            },
-            {
-              "key" : "k",
-              "label" : "height -50",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace resize height -50"
-            },
-            {
-              "key" : "l",
-              "label" : "width -50",
-              "type" : "command",
-              "value" : "/opt/homebrew/bin/aerospace resize width -50"
-            },
-            {
               "key" : "H",
               "label" : "width +200",
               "type" : "command",
               "value" : "/opt/homebrew/bin/aerospace resize width +200"
+            },
+            {
+              "key" : "j",
+              "label" : "height +50",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace resize height +50"
             },
             {
               "key" : "J",
@@ -414,10 +391,22 @@
               "value" : "/opt/homebrew/bin/aerospace resize height +200"
             },
             {
+              "key" : "k",
+              "label" : "height -50",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace resize height -50"
+            },
+            {
               "key" : "K",
               "label" : "height -200",
               "type" : "command",
               "value" : "/opt/homebrew/bin/aerospace resize height -200"
+            },
+            {
+              "key" : "l",
+              "label" : "width -50",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace resize width -50"
             },
             {
               "key" : "L",
@@ -429,6 +418,12 @@
           "key" : "e",
           "label" : "resize",
           "type" : "group"
+        },
+        {
+          "key" : "f",
+          "label" : "fullscreen",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace fullscreen"
         },
         {
           "actions" : [
@@ -460,86 +455,96 @@
           "key" : "g",
           "label" : "join with",
           "type" : "group"
+        },
+        {
+          "key" : "h",
+          "label" : "h",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace 1"
+        },
+        {
+          "key" : "H",
+          "label" : "→ h",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 1 --focus-follows-window"
+        },
+        {
+          "key" : "j",
+          "label" : "j",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace 2"
+        },
+        {
+          "key" : "J",
+          "label" : "→ j",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 2 --focus-follows-window"
+        },
+        {
+          "key" : "k",
+          "label" : "k",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace 3"
+        },
+        {
+          "key" : "K",
+          "label" : "→ k",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 3 --focus-follows-window"
+        },
+        {
+          "key" : "l",
+          "label" : "l",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace 4"
+        },
+        {
+          "key" : "L",
+          "label" : "→ l",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 4 --focus-follows-window"
+        },
+        {
+          "key" : "m",
+          "label" : "float toggle",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace layout floating tiling"
+        },
+        {
+          "key" : "n",
+          "label" : "next monitor",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-workspace-to-monitor --wrap-around next"
+        },
+        {
+          "key" : "r",
+          "label" : "reload config",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace reload-config"
+        },
+        {
+          "key" : "R",
+          "label" : "reset layout",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace flatten-workspace-tree"
+        },
+        {
+          "key" : "t",
+          "label" : "tiles →",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace layout tiles horizontal"
+        },
+        {
+          "key" : "v",
+          "label" : "tiles ↕",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace layout tiles vertical"
         }
       ],
       "key" : "w",
       "label" : "🖥️",
       "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "n",
-          "label" : "new window",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/tmux new-window"
-        },
-        {
-          "key" : "v",
-          "label" : "split │",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/tmux split-window -h"
-        },
-        {
-          "key" : "s",
-          "label" : "split ─",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/tmux split-window -v"
-        },
-        {
-          "key" : "z",
-          "label" : "zoom",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/tmux resize-pane -Z"
-        },
-        {
-          "key" : "h",
-          "label" : "← pane",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/tmux select-pane -L"
-        },
-        {
-          "key" : "j",
-          "label" : "↓ pane",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/tmux select-pane -D"
-        },
-        {
-          "key" : "k",
-          "label" : "↑ pane",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/tmux select-pane -U"
-        },
-        {
-          "key" : "l",
-          "label" : "→ pane",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/tmux select-pane -R"
-        },
-        {
-          "key" : "x",
-          "label" : "kill pane",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/tmux kill-pane"
-        },
-        {
-          "key" : "N",
-          "label" : "new session",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/tmux new-session"
-        },
-        {
-          "key" : "d",
-          "label" : "detach",
-          "type" : "command",
-          "value" : "/opt/homebrew/bin/tmux detach-client"
-        }
-      ],
-      "key" : "t",
-      "label" : "tmux",
-      "type" : "group"
     }
   ],
   "type" : "group"
 }
-
