@@ -116,6 +116,15 @@ j = ['join-with down',  'mode main', 'exec-and-forget sketchybar --trigger aeros
 k = ['join-with up',    'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
 l = ['join-with right', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
 
+# ── Monitor assignments ───────────────────────────────────────────────────────
+# Layout: [mac/built-in] [BN650Y(2)/main] [BN650Y(1)/right]
+[workspace-to-monitor-force-assignment]
+    '1' = 'built-in'       # h → Mac (links)
+    '2' = 'built-in'       # j → Mac (links)
+    '3' = '^BN650Y \(2\)'  # k → Main (midden)
+    '4' = '^BN650Y \(1\)'  # l → Right
+    '5' = '^BN650Y \(1\)'  # ; → Right
+
 # ── Window rules ──────────────────────────────────────────────────────────────
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'
