@@ -465,7 +465,81 @@
       "key" : "w",
       "label" : "🖥️",
       "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "n",
+          "label" : "new window",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux new-window"
+        },
+        {
+          "key" : "v",
+          "label" : "split │",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux split-window -h"
+        },
+        {
+          "key" : "s",
+          "label" : "split ─",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux split-window -v"
+        },
+        {
+          "key" : "z",
+          "label" : "zoom",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux resize-pane -Z"
+        },
+        {
+          "key" : "h",
+          "label" : "← pane",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux select-pane -L"
+        },
+        {
+          "key" : "j",
+          "label" : "↓ pane",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux select-pane -D"
+        },
+        {
+          "key" : "k",
+          "label" : "↑ pane",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux select-pane -U"
+        },
+        {
+          "key" : "l",
+          "label" : "→ pane",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux select-pane -R"
+        },
+        {
+          "key" : "x",
+          "label" : "kill pane",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux kill-pane"
+        },
+        {
+          "key" : "N",
+          "label" : "new session",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux new-session"
+        },
+        {
+          "key" : "d",
+          "label" : "detach",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/tmux detach-client"
+        }
+      ],
+      "key" : "t",
+      "label" : "tmux",
+      "type" : "group"
     }
   ],
   "type" : "group"
 }
+
