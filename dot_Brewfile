@@ -85,6 +85,7 @@ brew "pre-commit"
 brew "pyenv"
 brew "python@3.11"
 brew "redis", restart_service: :changed
+brew "sox"
 brew "speedtest-cli"
 brew "spotify_player"
 brew "superfile"
