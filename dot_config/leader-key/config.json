@@ -457,6 +457,37 @@
           "type" : "group"
         },
         {
+          "actions" : [
+            {
+              "key" : "h",
+              "label" : "← left",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move left"
+            },
+            {
+              "key" : "j",
+              "label" : "↓ down",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move down"
+            },
+            {
+              "key" : "k",
+              "label" : "↑ up",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move up"
+            },
+            {
+              "key" : "l",
+              "label" : "→ right",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move right"
+            }
+          ],
+          "key" : "o",
+          "label" : "move",
+          "type" : "group"
+        },
+        {
           "key" : "h",
           "label" : "h",
           "type" : "command",

@@ -76,6 +76,12 @@ alt-k         = ['move-node-to-workspace 3', 'workspace 3', 'mode main', 'exec-a
 alt-l         = ['move-node-to-workspace 4', 'workspace 4', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
 alt-semicolon = ['move-node-to-workspace 5', 'workspace 5', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
 
+# Move window within workspace tree (to make it adjacent for join-with)
+ctrl-h = ['move left',  'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+ctrl-j = ['move down',  'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+ctrl-k = ['move up',    'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+ctrl-l = ['move right', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+
 # Other workspace actions
 r   = ['mode resize', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=resize']
 tab = ['workspace-back-and-forth', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
