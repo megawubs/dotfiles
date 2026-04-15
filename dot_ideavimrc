@@ -703,6 +703,8 @@ map <leader>tt <Action>(ActivateTerminalToolWindow)
 let g:WhichKeyDesc_tools_terminal = "<leader>tt Terminal"
 map <leader>tj <Action>(ActivateElectroJunToolWindowToolWindow)
 let g:WhichKeyDesc_tools_json_path = "<leader>tj Json Path Eval"
+map <leader>tq <Action>(Jdbc.OpenConsole.Any)
+let g:WhichKeyDesc_tools_query_console = "<leader>tq Query Console"
 
 """ Search
 let g:WhichKeyDesc_search = "<leader>f Search"
