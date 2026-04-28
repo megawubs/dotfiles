@@ -33,3 +33,9 @@ end
 
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/bramwubs/.lmstudio/bin
+
+# Pitlane embeddings
+set -gx PITLANE_EMBED_URL http://localhost:11434/api/embed
+set -gx PITLANE_EMBED_MODEL qwen3-embedding
+set -gx PITLANE_EMBED_BATCH_SIZE 32
+set -gx PITLANE_EMBED_TIMEOUT 300
