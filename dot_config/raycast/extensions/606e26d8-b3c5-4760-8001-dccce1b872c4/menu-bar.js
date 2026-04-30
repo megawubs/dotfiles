@@ -138,15 +138,12 @@ function print() { __p += __j.call(arguments, '') }
     return _output
   `);return t?JSON.parse(t):void 0}async function Fh(p,t,i=!1){return await ed(),(0,Za.runAppleScript)(`
     tell application "Arc"
-      set tabIndex to 1
-      repeat with aTab in every tab of first window
-        if id of aTab is "${p}" then
-          tell tab tabIndex of window 1 to ${t}
-          ${i?"activate":""}
-          return tabIndex
-        end if
-        set tabIndex to tabIndex + 1
-      end repeat
+      tell first window
+        try
+          tell (first tab whose id is "${p}") to ${t}
+        end try
+      end tell
+      ${i?"activate":""}
     end tell
   `)}async function U9(p){await Fh(typeof p=="string"?p:p.id,"select",!0)}async function M9(p){await Bh(p.id)}async function Bh(p){await ed(),await(0,Za.runAppleScript)(`
     tell application "Arc"

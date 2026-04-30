@@ -41,14 +41,11 @@ ${s}`)}let i=this.tokenResponseParser(await t.json());return Array.isArray(i.sco
     end if
   `)}async function pt(e,a,p=!1){return await at(),(0,bp.runAppleScript)(`
     tell application "Arc"
-      set tabIndex to 1
-      repeat with aTab in every tab of first window
-        if id of aTab is "${e}" then
-          tell tab tabIndex of window 1 to ${a}
-          ${p?"activate":""}
-          return tabIndex
-        end if
-        set tabIndex to tabIndex + 1
-      end repeat
+      tell first window
+        try
+          tell (first tab whose id is "${e}") to ${a}
+        end try
+      end tell
+      ${p?"activate":""}
     end tell
   `)}async function Jd(e){await pt(typeof e=="string"?e:e.id,"close")}var dt=async e=>{Jd(e.tabId)},tt=dt;
