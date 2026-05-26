@@ -22,7 +22,7 @@ brew "cocoapods"
 brew "freetds"
 brew "libavif"
 brew "gd"
-brew "php"
+brew "php", link: false
 brew "composer"
 brew "dnsmasq"
 brew "fizz"
