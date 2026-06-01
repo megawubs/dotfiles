@@ -94,6 +94,7 @@ brew "pre-commit"
 brew "pyenv"
 brew "python@3.11"
 brew "redis", restart_service: :changed
+brew "rtk"
 brew "sox"
 brew "speedtest-cli"
 brew "spotify_player"
