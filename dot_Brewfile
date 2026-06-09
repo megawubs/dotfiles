@@ -14,7 +14,7 @@ brew "aom"
 brew "pcre2"
 brew "chezmoi"
 brew "cmake"
-brew "ruby", link: true
+brew "ruby"
 brew "cocoapods"
 brew "freetds"
 brew "libtiff"
