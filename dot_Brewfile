@@ -10,125 +10,229 @@ tap "saulpw/vd"
 tap "shivammathur/php"
 tap "unhappychoice/tap"
 tap "withgraphite/tap"
+# Codec library for encoding and decoding AV1 video streams
 brew "aom"
+# Perl compatible regular expressions library with a new API
 brew "pcre2"
+# Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Cross-platform make
 brew "cmake"
+# Powerful, clean, object-oriented scripting language
 brew "ruby"
+# Dependency manager for Cocoa projects
 brew "cocoapods"
+# Libraries to talk to Microsoft SQL Server and Sybase databases
 brew "freetds"
+# TIFF library and utilities
 brew "libtiff"
+# Image format providing lossless and lossy compression for web images
 brew "webp"
+# New file format for still image compression
 brew "jpeg-xl"
+# Library for encoding and decoding .avif files
 brew "libavif"
+# Graphics library to dynamically manipulate images
 brew "gd"
+# General-purpose scripting language
 brew "php"
+# Dependency Manager for PHP
 brew "composer"
+# Lightweight DNS forwarder and DHCP server
 brew "dnsmasq"
+# C++14 implementation of the TLS-1.3 standard
 brew "fizz"
+# Modular, composable client/server abstractions framework
 brew "wangle"
+# Facebook's branch of Apache Thrift, including a new C++ server
 brew "fbthrift"
+# Thrift functions for querying information from a service
 brew "fb303"
+# Shared library for Watchman and Eden projects
 brew "edencommon"
+# Validating, recursive, caching DNS resolver
 brew "unbound"
+# GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# OpenType text shaping engine
 brew "harfbuzz"
+# Image processing and image analysis library
 brew "leptonica"
+# Subtitle renderer for the ASS/SSA subtitle format
 brew "libass"
+# Light HTTP/1.1 server library
 brew "libmicrohttpd"
+# Reliable Internet Stream Transport (RIST)
 brew "librist"
+# Framework for layout and rendering of i18n text
 brew "pango"
+# OCR (Optical Character Recognition) engine
 brew "tesseract"
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
+# Monitor a directory for changes and run a shell command
 brew "fswatch"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# Feature-rich command-line audio/video downloader
 brew "yt-dlp"
+# Command-line downloader for image-hosting site galleries and collections
 brew "gallery-dl"
+# Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
+# GitHub command-line tool
 brew "gh"
+# Interpreter for PostScript and PDF
 brew "ghostscript"
+# Distributed revision control system
 brew "git"
+# Open-source GitLab command-line tool
 brew "glab"
+# Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Post-modern modal text editor
 brew "helix"
+# Get events and tasks from the macOS calendar database
 brew "ical-buddy"
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
+# Library for reading RAW files from digital photo cameras
 brew "libraw"
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Feature-rich interactive Jira CLI
 brew "jira-cli"
+# Textual User Interface for interacting with Atlassian Jira from your shell
 brew "jiratui"
+# Development kit for the Java programming language
 brew "openjdk@21"
+# Load testing and performance measurement application
 brew "jmeter"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# JSON parser and validator with a CLI
 brew "jsonlint"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Terminal file manager
 brew "lf"
+# Provides library functionality for FIDO U2F & FIDO 2.0, including USB
 brew "libfido2"
+# Library to render SVG files using Cairo
 brew "librsvg"
+# Next-gen compiler infrastructure
 brew "llvm@12"
+# Powerful, lightweight programming language
 brew "lua"
+# Just-In-Time Compiler (JIT) for the Lua programming language
 brew "luajit"
+# Python cleanup script for macOS
 brew "mac-cleanup-py"
+# Keep your Mac's application settings in sync
 brew "mackup"
+# Web and API based SMTP testing
 brew "mailpit"
+# Drop-in replacement for MySQL
 brew "mariadb"
+# Mac App Store command-line interface
 brew "mas"
+# Ultra relevant, instant and typo-tolerant full-text search API
 brew "meilisearch"
+# QUIC transport protocol implementation
 brew "mvfst"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
+# Port scanning utility for large networks
 brew "nmap"
+# Open-source, cross-platform JavaScript runtime environment
 brew "node@18"
+# Open-source, cross-platform JavaScript runtime environment
 brew "node@22"
+# Package for scientific computing with Python
 brew "numpy"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# AI coding agent, built for the terminal
 brew "opencode"
+# Open Visual Inference And Optimization toolkit for AI inference
 brew "openvino"
+# Swiss-army knife of markup format conversion
 brew "pandoc"
+# General-purpose scripting language
 brew "php@8.1", restart_service: :changed
+# Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Package compiler and linker metadata toolkit
 brew "pkgconf"
+# PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Python version management
 brew "pyenv"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# Persistent key-value database, with built-in net interface
 brew "redis", restart_service: :changed
+# CLI proxy to minimize LLM token consumption
 brew "rtk"
+# SOund eXchange: universal sound sample translator
 brew "sox"
+# Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
+# Command driven spotify player
 brew "spotify_player"
+# Modern and pretty fancy file manager for the terminal
 brew "superfile"
+# Easiest, most secure way to use WireGuard and 2FA
 brew "tailscale"
+# Terminal multiplexer
 brew "tmux"
+# Manage complex tmux sessions easily
 brew "tmuxinator"
+# Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Tool for creating isolated virtual python environments
 brew "virtualenv"
+# Sends magic packets to wake up network-devices
 brew "wakeonlan"
+# Watch files and take action when they change
 brew "watchman"
+# Internet file retriever
 brew "wget"
+# Download YouTube videos from the command-line
 brew "youtube-dl"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
-brew "atlassian/acli/acli"
-brew "ejoffe/tap/spr"
-brew "eresende/pitlane-mcp/pitlane-mcp"
-brew "felixkratz/formulae/sketchybar"
-brew "oven-sh/bun/bun"
-brew "remotemobprogramming/brew/mob"
-brew "unhappychoice/tap/gitlogue"
-brew "withgraphite/tap/graphite"
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line interface for 1Password
 cask "1password-cli"
+# AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
+# Application launcher and productivity software
 cask "alfred"
+# Electronics prototyping platform
 cask "arduino-ide"
+# Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
+# E-books management software
 cask "calibre"
+# Anthropic's official Claude AI desktop app
 cask "claude"
+# Database version management tool
 cask "dbngin"
+# Voice and text chat software
 cask "discord"
+# App to build and share containerised applications and microservices
 cask "docker-desktop"
+# Calendar software
 cask "fantastical"
+# UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
 cask "font-0xproto-nerd-font"
 cask "font-3270-nerd-font"
@@ -198,43 +302,82 @@ cask "font-ubuntu-nerd-font"
 cask "font-ubuntu-sans-nerd-font"
 cask "font-victor-mono-nerd-font"
 cask "font-zed-mono-nerd-font"
+# Finder replacement and FTP, SFTP, WebDAV and Amazon s3 client
 cask "forklift"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Laravel and PHP development environment manager
 cask "herd"
+# Companion app for Home Assistant home automation software
 cask "home-assistant"
+# JetBrains tools manager
 cask "jetbrains-toolbox"
+# Keyboard customiser
 cask "karabiner-elements"
+# Open-source keystroke visualiser
 cask "keycastr"
+# ZSA keyboard firmware flasher
 cask "keymapp"
+# Use Vim in input fields and non input fields
 cask "kindavim"
+# GPU-based terminal emulator
 cask "kitty"
+# Application launcher
 cask "leader-key"
+# Free cross-platform office suite, fresh version
 cask "libreoffice"
+# Discover, download, and run local LLMs
 cask "lm-studio"
+# Screen and video recording software
 cask "loom"
+# Operating system maintenance and cleaning utility
 cask "maintenance"
+# Intercept, modify, replay, save HTTP/S traffic
 cask "mitmproxy"
 cask "mqtt-explorer"
+# Open-source music notation software
 cask "musescore"
+# Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Open-source software for live streaming and screen recording
 cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Utility to uninstall apps and remove leftover files from old/uninstalled apps
 cask "pearcleaner"
+# PHP IDE by JetBrains
 cask "phpstorm"
+# Remote pair programming
 cask "pop-app"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Emoji picker optimised for blind people
 cask "rocket"
+# Rust IDE
 cask "rustrover"
+# Instant messaging application focusing on security
 cask "signal"
+# Team communication and collaboration software
 cask "slack"
+# Music streaming service
 cask "spotify"
+# Video game digital distribution service
 cask "steam"
+# Sync and backup service to Synology NAS drives
 cask "synology-drive"
+# Tool to manage Synology NAS's across a LAN
 cask "synologyassistant"
+# Native GUI tool for relational databases
 cask "tableplus"
+# Messaging app with a focus on speed and security
 cask "telegram"
+# Music streaming service with high fidelity sound and hi-def video quality
 cask "tidal"
+# Native desktop client for WhatsApp
 cask "whatsapp"
+# Video communication and virtual meeting platform
 cask "zoom"
+# OpenJDK distribution from Azul
 cask "zulu@17"
