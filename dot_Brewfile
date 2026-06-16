@@ -1,4 +1,5 @@
 tap "atlassian/acli"
+tap "drcursor/hushscribe", "https://github.com/drcursor/HushScribe", trusted: true
 tap "ejoffe/tap"
 tap "eresende/pitlane-mcp", trusted: true
 tap "felixkratz/formulae"
@@ -313,6 +314,8 @@ cask "ghostty"
 cask "herd"
 # Companion app for Home Assistant home automation software
 cask "home-assistant"
+# Local meeting transcription and capture for Obsidian vaults
+cask "drcursor/hushscribe/hushscribe"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
 # Keyboard customiser
