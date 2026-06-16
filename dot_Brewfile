@@ -5,10 +5,11 @@ tap "felixkratz/formulae"
 tap "ngrok/ngrok"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
+tap "pasrom/meeting-transcriber"
 tap "remotemobprogramming/brew"
-tap "saulpw/vd"
 tap "shivammathur/php"
 tap "unhappychoice/tap"
+tap "visidata/vd"
 tap "withgraphite/tap"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
@@ -334,6 +335,8 @@ cask "lm-studio"
 cask "loom"
 # Operating system maintenance and cleaning utility
 cask "maintenance"
+# Auto-transcribe and summarize meetings
+cask "pasrom/meeting-transcriber/meeting-transcriber", trusted: true
 # Intercept, modify, replay, save HTTP/S traffic
 cask "mitmproxy"
 cask "mqtt-explorer"
