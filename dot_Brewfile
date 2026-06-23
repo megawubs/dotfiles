@@ -2,7 +2,7 @@ tap "atlassian/acli"
 tap "drcursor/hushscribe", "https://github.com/drcursor/HushScribe", trusted: true
 tap "ejoffe/tap"
 tap "eresende/pitlane-mcp", trusted: true
-tap "felixkratz/formulae"
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "ngrok/ngrok"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
@@ -10,7 +10,7 @@ tap "pasrom/meeting-transcriber"
 tap "remotemobprogramming/brew"
 tap "shivammathur/php"
 tap "unhappychoice/tap"
-tap "visidata/vd"
+tap "visidata/vd", "https://github.com/visidata/homebrew-vd.git"
 tap "withgraphite/tap"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
