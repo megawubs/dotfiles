@@ -31,26 +31,27 @@ outer.top        = [{ monitor."built-in" = 3 }, 36]
 outer.right      = 3
 
 # ── Main mode ────────────────────────────────────────────────────────────────
-# hyper = cmd+ctrl+alt+shift (KC_HYPR on Moonlander)
+# modifier = ctrl+alt — replaces the old hyper key
+# (bare alt leaks option-characters into apps; ctrl+alt does not)
 [mode.main.binding]
 
-# Focus (hyper + hjkl)
-cmd-ctrl-alt-shift-h = 'focus left  --boundaries workspace'
-cmd-ctrl-alt-shift-j = 'focus down  --boundaries workspace'
-cmd-ctrl-alt-shift-k = 'focus up    --boundaries workspace'
-cmd-ctrl-alt-shift-l = 'focus right --boundaries workspace'
+# Focus (ctrl+alt + hjkl)
+ctrl-alt-h = 'focus left  --boundaries workspace'
+ctrl-alt-j = 'focus down  --boundaries workspace'
+ctrl-alt-k = 'focus up    --boundaries workspace'
+ctrl-alt-l = 'focus right --boundaries workspace'
 
 # Leader key → workspace mode
-cmd-ctrl-alt-shift-space = ['mode workspace', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=workspace']
+ctrl-alt-space = ['mode workspace', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=workspace']
 
 # Fullscreen
-cmd-ctrl-alt-shift-f = 'fullscreen'
+ctrl-alt-f = 'fullscreen'
 
 # Back-and-forth between last two workspaces
-cmd-ctrl-alt-shift-tab = 'workspace-back-and-forth'
+ctrl-alt-tab = 'workspace-back-and-forth'
 
 # Service mode
-cmd-ctrl-alt-shift-semicolon = ['mode service', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=service']
+ctrl-alt-semicolon = ['mode service', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=service']
 
 # ── Workspace mode (leader key) ───────────────────────────────────────────────
 [mode.workspace.binding]
