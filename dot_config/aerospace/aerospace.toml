@@ -32,7 +32,7 @@ outer.right      = 3
 
 # ── Main mode ────────────────────────────────────────────────────────────────
 # modifier = ctrl+alt — replaces the old hyper key
-# (bare alt leaks option-characters into apps; ctrl+alt does not)
+# (bare alt is swallowed by terminals for shell word-editing; ctrl+alt works everywhere)
 [mode.main.binding]
 
 # Focus (ctrl+alt + hjkl)
