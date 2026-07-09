@@ -169,7 +169,7 @@ if.app-id = 'net.kovidgoyal.kitty'
 run = ['layout tiling', 'move-node-to-workspace 3']
 
 [[on-window-detected]]
-if.app-id = 'com.spotify.client'
+if.app-id = 'com.deezer.deezer-desktop'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
