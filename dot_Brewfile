@@ -14,10 +14,42 @@ tap "visidata/vd", "https://github.com/visidata/homebrew-vd.git"
 tap "withgraphite/tap"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
+# Package for scientific computing with Python
+brew "numpy", link: false
+# Music library manager and tagger
+brew "beets"
 # Perl compatible regular expressions library with a new API
 brew "pcre2"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# OpenType text shaping engine
+brew "harfbuzz"
+# TIFF library and utilities
+brew "libtiff"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
+# New file format for still image compression
+brew "jpeg-xl"
+# Image processing and image analysis library
+brew "leptonica"
+# Subtitle renderer for the ASS/SSA subtitle format
+brew "libass"
+# Light HTTP/1.1 server library
+brew "libmicrohttpd"
+# Reliable Internet Stream Transport (RIST)
+brew "librist"
+# Framework for layout and rendering of i18n text
+brew "pango"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# Core component of the AcoustID project (Audio fingerprinting)
+brew "chromaprint"
 # Cross-platform make
 brew "cmake"
 # Powerful, clean, object-oriented scripting language
@@ -26,12 +58,6 @@ brew "ruby"
 brew "cocoapods"
 # Libraries to talk to Microsoft SQL Server and Sybase databases
 brew "freetds"
-# TIFF library and utilities
-brew "libtiff"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
-# New file format for still image compression
-brew "jpeg-xl"
 # Library for encoding and decoding .avif files
 brew "libavif"
 # Graphics library to dynamically manipulate images
@@ -52,26 +78,8 @@ brew "fbthrift"
 brew "fb303"
 # Shared library for Watchman and Eden projects
 brew "edencommon"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
-# OpenType text shaping engine
-brew "harfbuzz"
-# Image processing and image analysis library
-brew "leptonica"
-# Subtitle renderer for the ASS/SSA subtitle format
-brew "libass"
-# Light HTTP/1.1 server library
-brew "libmicrohttpd"
-# Reliable Internet Stream Transport (RIST)
-brew "librist"
-# Framework for layout and rendering of i18n text
-brew "pango"
-# OCR (Optical Character Recognition) engine
-brew "tesseract"
-# Play, record, convert, and stream select audio and video codecs
-brew "ffmpeg"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Monitor a directory for changes and run a shell command
@@ -154,8 +162,6 @@ brew "nmap"
 brew "node@18"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node@22"
-# Package for scientific computing with Python
-brew "numpy"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # AI coding agent, built for the terminal
