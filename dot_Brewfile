@@ -11,7 +11,7 @@ tap "remotemobprogramming/brew"
 tap "shivammathur/php"
 tap "unhappychoice/tap"
 tap "visidata/vd", "https://github.com/visidata/homebrew-vd.git"
-tap "visigrid/tap", trusted: { casks: ["visigrid"] }
+tap "visigrid/tap"
 tap "withgraphite/tap"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
@@ -391,6 +391,8 @@ cask "tableplus"
 cask "telegram"
 # Music streaming service with high fidelity sound and hi-def video quality
 cask "tidal"
+# Fast, native spreadsheet with GPU-accelerated rendering
+cask "visigrid/tap/visigrid", trusted: true
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Video communication and virtual meeting platform
