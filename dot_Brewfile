@@ -11,6 +11,7 @@ tap "remotemobprogramming/brew"
 tap "shivammathur/php"
 tap "unhappychoice/tap"
 tap "visidata/vd", "https://github.com/visidata/homebrew-vd.git"
+tap "visigrid/tap", trusted: { casks: ["visigrid"] }
 tap "withgraphite/tap"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
