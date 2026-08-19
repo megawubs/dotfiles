@@ -232,8 +232,6 @@ cask "arduino-ide"
 cask "balenaetcher"
 # E-books management software
 cask "calibre"
-# Anthropic's official Claude AI desktop app
-cask "claude"
 # Database version management tool
 cask "dbngin"
 # Music player
