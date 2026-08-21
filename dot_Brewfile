@@ -363,6 +363,8 @@ cask "pearcleaner"
 cask "phpstorm"
 # Remote pair programming
 cask "pop-app"
+# Open-source application manager and system cleaner
+cask "puremac"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
