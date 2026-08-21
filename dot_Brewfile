@@ -389,6 +389,8 @@ cask "tableplus"
 cask "telegram"
 # Music streaming service with high fidelity sound and hi-def video quality
 cask "tidal"
+# Virtual machines UI using QEMU
+cask "utm"
 # Fast, native spreadsheet with GPU-accelerated rendering
 cask "visigrid/tap/visigrid", trusted: true
 # Native desktop client for WhatsApp
