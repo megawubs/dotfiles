@@ -2,6 +2,7 @@
     "require": {
         "laravel/sail": "^1.25",
         "beyondcode/expose": "^2.6",
-        "laravel/installer": "^5.12"
+        "laravel/installer": "^5.12",
+        "laravel/lsp": "^0.0.31"
     }
 }
