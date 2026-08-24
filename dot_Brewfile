@@ -232,6 +232,8 @@ cask "arduino-ide"
 cask "balenaetcher"
 # E-books management software
 cask "calibre"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Database version management tool
 cask "dbngin"
 # Music player
