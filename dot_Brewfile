@@ -13,6 +13,8 @@ tap "unhappychoice/tap"
 tap "visidata/vd", "https://github.com/visidata/homebrew-vd.git"
 tap "visigrid/tap"
 tap "withgraphite/tap"
+# Static checker for GitHub Actions workflow files
+brew "actionlint"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
 # Package for scientific computing with Python
