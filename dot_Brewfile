@@ -4,7 +4,7 @@ tap "ejoffe/tap"
 tap "eresende/pitlane-mcp", trusted: true
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
 tap "ngrok/ngrok"
-tap "nikitabobko/tap"
+tap "nikitabobko/tap", trusted: true
 tap "oven-sh/bun"
 tap "pasrom/meeting-transcriber"
 tap "remotemobprogramming/brew"
@@ -231,7 +231,8 @@ brew "felixkratz/formulae/sketchybar"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
-cask "aerospace"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "nikitabobko/tap/aerospace"
 # Application launcher and productivity software
 cask "alfred"
 # Electronics prototyping platform
