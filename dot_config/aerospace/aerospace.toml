@@ -43,7 +43,7 @@ cmd-ctrl-alt-shift-j = 'focus down'
 cmd-ctrl-alt-shift-k = 'focus up'
 cmd-ctrl-alt-shift-l = 'focus right'
 
-# Leader key → workspace mode
+# Leader key → workspace
 cmd-ctrl-alt-shift-space = ['mode workspace', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=workspace']
 
 # Fullscreen
