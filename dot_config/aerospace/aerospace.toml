@@ -51,11 +51,11 @@ run = 'layout tiling'
     cmd-alt-h = []
 
     alt-enter = 'exec-and-forget open -na Kitty'
-    alt-shift-enter = 'exec-and-forget open -a "Brave Browser"'
+    alt-shift-enter = 'exec-and-forget open -a "Zen"'
     alt-space = 'exec-and-forget open -a Raycast'
 
     alt-shift-f = 'exec-and-forget open -a Finder'
-    alt-shift-b = 'exec-and-forget open -a "Brave Browser"'
+    alt-shift-b = 'exec-and-forget open -a "Zen"'
 
     alt-w = 'close'
     alt-f = 'fullscreen'
@@ -106,7 +106,12 @@ run = 'layout tiling'
     alt-ctrl-s = 'move-node-to-workspace s --focus-follows-window'
 
 
-    alt-s      = 'workspace s'
+    alt-m      = 'workspace m'
+    alt-ctrl-m = 'move-node-to-workspace m --focus-follows-window'
+
+
+    alt-d      = 'workspace m'
+    alt-ctrl-d = 'move-node-to-workspace m --focus-follows-window'
 
     alt-shift-s = 'workspace S'
     alt-ctrl-shift-s = 'move-node-to-workspace S --focus-follows-window'
