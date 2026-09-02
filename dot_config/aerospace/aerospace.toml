@@ -92,7 +92,6 @@ t   = ['layout tiles horizontal', 'mode main', 'exec-and-forget sketchybar --tri
 m   = ['layout floating tiling', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
 
 esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-
 # ── Resize mode ───────────────────────────────────────────────────────────────
 [mode.resize.binding]
 
