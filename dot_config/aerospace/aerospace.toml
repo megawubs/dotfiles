@@ -10,8 +10,8 @@ exec-on-workspace-change = ['/bin/bash', '-c',
 ]
 
 # Normalizations
-# enable-normalization-flatten-containers = true
-# enable-normalization-opposite-orientation-for-nested-containers = true
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
 
 accordion-padding = 30
 default-root-container-layout = 'tiles'
@@ -23,22 +23,25 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 preset = 'qwerty'
 
 [gaps]
-inner.horizontal = 3
-inner.vertical   = 3
-outer.left       = 3
-outer.bottom     = 3
+inner.horizontal = 4
+inner.vertical   = 4
+outer.left       = 6
+outer.bottom     = 6
 outer.top        = [{ monitor."built-in" = 3 }, 36]
-outer.right      = 3
+outer.right      = 6
 
 # ── Main mode ────────────────────────────────────────────────────────────────
 # hyper = cmd+ctrl+alt+shift (KC_HYPR on Moonlander)
 [mode.main.binding]
 
+cmd-ctrl-alt-shift-slash = 'layout tiles horizontal vertical'
+cmd-ctrl-alt-shift-comma = 'layout accordion horizontal vertical'
 # Focus (hyper + hjkl)
-cmd-ctrl-alt-shift-h = 'focus left  --boundaries workspace'
-cmd-ctrl-alt-shift-j = 'focus down  --boundaries workspace'
-cmd-ctrl-alt-shift-k = 'focus up    --boundaries workspace'
-cmd-ctrl-alt-shift-l = 'focus right --boundaries workspace'
+
+cmd-ctrl-alt-shift-h = 'focus left'
+cmd-ctrl-alt-shift-j = 'focus down'
+cmd-ctrl-alt-shift-k = 'focus up'
+cmd-ctrl-alt-shift-l = 'focus right'
 
 # Leader key → workspace mode
 cmd-ctrl-alt-shift-space = ['mode workspace', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=workspace']
