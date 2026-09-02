@@ -50,12 +50,12 @@ run = 'layout tiling'
     cmd-h = []
     cmd-alt-h = []
 
-    alt-enter = 'exec-and-forget open -na Ghostty'
-    alt-shift-enter = 'exec-and-forget open -a "Brave Browser"'
+    alt-enter = 'exec-and-forget open -na Kitty'
+    alt-shift-enter = 'exec-and-forget open -a "Zen"'
     alt-space = 'exec-and-forget open -a Raycast'
 
     alt-shift-f = 'exec-and-forget open -a Finder'
-    alt-shift-b = 'exec-and-forget open -a "Brave Browser"'
+    alt-shift-b = 'exec-and-forget open -a "Zen"'
 
     alt-w = 'close'
     alt-f = 'fullscreen'
