@@ -102,8 +102,14 @@ run = 'layout tiling'
     alt-ctrl-shift-up    = 'move-workspace-to-monitor --wrap-around up'
     alt-ctrl-shift-down  = 'move-workspace-to-monitor --wrap-around down'
 
-    alt-s      = 'workspace S'
-    alt-ctrl-s = 'move-node-to-workspace S --focus-follows-window'
+    alt-s      = 'workspace s'
+    alt-ctrl-s = 'move-node-to-workspace s --focus-follows-window'
+
+
+    alt-s      = 'workspace s'
+
+    alt-shift-s = 'workspace S'
+    alt-ctrl-shift-s = 'move-node-to-workspace S --focus-follows-window'
 
     alt-esc = 'exec-and-forget pmset displaysleepnow'
     alt-shift-c = 'reload-config'
