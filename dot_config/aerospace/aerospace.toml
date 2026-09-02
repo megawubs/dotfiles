@@ -1,184 +1,137 @@
-# AeroSpace config — hyper leader, homerow workspaces (1-5 → h j k l ;)
+# Omarchy-like AeroSpace config
+# Super = Alt (Option)
+# Place this file at:  ~/.aerospace.toml
+# Install other files: 
+#   mkdir -p ~/.config/aerospace
+#   chmod +x ~/.config/aerospace/split-last.sh ~/.config/aerospace/bsp-watch.sh
+# Then: aerospace reload-config
 
+config-version = 2
 start-at-login = true
-automatically-unhide-macos-hidden-apps = true
+auto-reload-config = true
 
-after-startup-command = ['exec-and-forget sketchybar']
-
-exec-on-workspace-change = ['/bin/bash', '-c',
-  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+after-login-command = []
+after-startup-command = [
+    'layout tiles --root',
+    'exec-and-forget $HOME/.config/aerospace/bsp-watch.sh',
 ]
 
-# Normalizations
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-accordion-padding = 30
+accordion-padding = 0
 default-root-container-layout = 'tiles'
-default-root-container-orientation = 'auto'
+default-root-container-orientation = 'horizontal'
 
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focus-changed = []
+on-mode-changed = []
 
-[key-mapping]
-preset = 'qwerty'
+automatically-unhide-macos-hidden-apps = true
+focus-follows-mouse.enabled = false
+
+key-mapping.preset = 'qwerty'
+
+persistent-workspaces = ['1', '2', '3', '4', '5', 'S']
 
 [gaps]
-inner.horizontal = 4
-inner.vertical   = 4
-outer.left       = 6
-outer.bottom     = 6
-outer.top        = [{ monitor."built-in" = 3 }, 36]
-outer.right      = 6
+inner.horizontal = 8
+inner.vertical = 8
+outer.left = 8
+outer.bottom = 8
+outer.top = 8
+outer.right = 8
 
-# ── Main mode ────────────────────────────────────────────────────────────────
-# hyper = cmd+ctrl+alt+shift (KC_HYPR on Moonlander)
+[[on-window-detected]]
+check-further-callbacks = true
+run = 'layout tiling'
+
 [mode.main.binding]
+    cmd-h = []
+    cmd-alt-h = []
 
-cmd-ctrl-alt-shift-slash = 'layout tiles horizontal vertical'
-cmd-ctrl-alt-shift-comma = 'layout accordion horizontal vertical'
-# Focus (hyper + hjkl)
+    alt-enter = 'exec-and-forget open -na Ghostty'
+    alt-shift-enter = 'exec-and-forget open -a "Brave Browser"'
+    alt-space = 'exec-and-forget open -a Raycast'
 
-cmd-ctrl-alt-shift-h = 'focus left'
-cmd-ctrl-alt-shift-j = 'focus down'
-cmd-ctrl-alt-shift-k = 'focus up'
-cmd-ctrl-alt-shift-l = 'focus right'
+    alt-shift-f = 'exec-and-forget open -a Finder'
+    alt-shift-b = 'exec-and-forget open -a "Brave Browser"'
 
-# Leader key → workspace
-cmd-ctrl-alt-shift-space = ['mode workspace', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=workspace']
+    alt-w = 'close'
+    alt-f = 'fullscreen'
+    alt-j = 'exec-and-forget $HOME/.config/aerospace/omarchy-j.sh'
+    alt-slash = 'layout tiles --root'
 
-# Fullscreen
-cmd-ctrl-alt-shift-f = 'fullscreen'
+    alt-left  = 'focus left'
+    alt-down  = 'focus down'
+    alt-up    = 'focus up'
+    alt-right = 'focus right'
 
-# Back-and-forth between last two workspaces
-cmd-ctrl-alt-shift-tab = 'workspace-back-and-forth'
+    alt-shift-left  = 'move left'
+    alt-shift-down  = 'move down'
+    alt-shift-up    = 'move up'
+    alt-shift-right = 'move right'
 
-# Service mode
-cmd-ctrl-alt-shift-semicolon = ['mode service', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=service']
+    alt-minus = 'resize smart -50'
+    alt-equal = 'resize smart +50'
 
-# ── Workspace mode (leader key) ───────────────────────────────────────────────
-[mode.workspace.binding]
+    alt-1 = 'workspace 1'
+    alt-2 = 'workspace 2'
+    alt-3 = 'workspace 3'
+    alt-4 = 'workspace 4'
+    alt-5 = 'workspace 5'
 
-# Switch workspace (homerow → 1 2 3 4 5)
-h         = ['workspace 1', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-j         = ['workspace 2', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-k         = ['workspace 3', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-l         = ['workspace 4', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-semicolon = ['workspace 5', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+    alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
+    alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
+    alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
+    alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
+    alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
 
-# Move window to workspace
-shift-h         = ['move-node-to-workspace 1', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-shift-j         = ['move-node-to-workspace 2', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-shift-k         = ['move-node-to-workspace 3', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-shift-l         = ['move-node-to-workspace 4', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-shift-semicolon = ['move-node-to-workspace 5', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+    alt-ctrl-shift-1 = 'move-node-to-workspace 1'
+    alt-ctrl-shift-2 = 'move-node-to-workspace 2'
+    alt-ctrl-shift-3 = 'move-node-to-workspace 3'
+    alt-ctrl-shift-4 = 'move-node-to-workspace 4'
+    alt-ctrl-shift-5 = 'move-node-to-workspace 5'
 
-# Move window to workspace and follow focus
-alt-h         = ['move-node-to-workspace 1', 'workspace 1', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-alt-j         = ['move-node-to-workspace 2', 'workspace 2', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-alt-k         = ['move-node-to-workspace 3', 'workspace 3', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-alt-l         = ['move-node-to-workspace 4', 'workspace 4', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-alt-semicolon = ['move-node-to-workspace 5', 'workspace 5', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+    alt-tab       = 'workspace next --wrap-around'
+    alt-shift-tab = 'workspace prev --wrap-around'
+    alt-ctrl-tab  = 'workspace-back-and-forth'
 
-# Move window within workspace tree (to make it adjacent for join-with)
-ctrl-h = ['move left',  'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-ctrl-j = ['move down',  'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-ctrl-k = ['move up',    'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-ctrl-l = ['move right', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+    alt-ctrl-shift-left  = 'move-workspace-to-monitor --wrap-around left'
+    alt-ctrl-shift-right = 'move-workspace-to-monitor --wrap-around right'
+    alt-ctrl-shift-up    = 'move-workspace-to-monitor --wrap-around up'
+    alt-ctrl-shift-down  = 'move-workspace-to-monitor --wrap-around down'
 
-# Other workspace actions
-r   = ['mode resize', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=resize']
-tab = ['workspace-back-and-forth', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-n   = ['move-workspace-to-monitor --wrap-around next', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-f   = ['fullscreen', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-a   = ['layout accordion horizontal', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-t   = ['layout tiles horizontal', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-m   = ['layout floating tiling', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
+    alt-s      = 'workspace S'
+    alt-ctrl-s = 'move-node-to-workspace S --focus-follows-window'
 
-esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-# ── Resize mode ───────────────────────────────────────────────────────────────
+    alt-esc = 'exec-and-forget pmset displaysleepnow'
+    alt-shift-c = 'reload-config'
+
+    alt-r = 'mode resize'
+    alt-shift-semicolon = 'mode service'
+    alt-shift-r = ['flatten-workspace-tree', 'layout tiles --root']
+
 [mode.resize.binding]
+    h = 'resize width -50'
+    j = 'resize height +50'
+    k = 'resize height -50'
+    l = 'resize width +50'
+    left  = 'resize width -50'
+    down  = 'resize height +50'
+    up    = 'resize height -50'
+    right = 'resize width +50'
+    minus = 'resize smart -50'
+    equal = 'resize smart +50'
+    enter = 'mode main'
+    esc   = 'mode main'
 
-# h = 'resize width +50'
-# j = 'resize height +50'
-# k = 'resize height -50'
-# l = 'resize width -50'
-
-shift-h = 'resize width +200'
-shift-j = 'resize height +200'
-shift-k = 'resize height -200'
-shift-l = 'resize width -200'
-
-enter = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-esc   = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-
-# ── Service mode ──────────────────────────────────────────────────────────────
 [mode.service.binding]
-
-esc       = ['reload-config', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-r         = ['flatten-workspace-tree', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-f         = ['layout floating tiling', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-backspace = ['close-all-windows-but-current', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-
-h = ['join-with left',  'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-j = ['join-with down',  'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-k = ['join-with up',    'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-l = ['join-with right', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-
-# ── Monitor assignments ───────────────────────────────────────────────────────
-# Layout: [mac/built-in] [BN650Y(2)/main] [BN650Y(1)/right]
-[workspace-to-monitor-force-assignment]
-    '1' = 'built-in'       # h → Mac (links)
-    '2' = 'built-in'       # j → Mac (links)
-    '3' = '^BN650Y \(2\)'  # k → Main (midden)
-    '4' = '^BN650Y \(1\)'  # l → Right
-    '5' = '^BN650Y \(1\)'  # ; → Right
-
-# ── Window rules ──────────────────────────────────────────────────────────────
-[[on-window-detected]]
-if.app-id = 'com.jetbrains.PhpStorm'
-run = 'move-node-to-workspace 3'
-
-[[on-window-detected]]
-if.app-id = 'app.zen-browser.zen'
-run = 'move-node-to-workspace 3'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.finder'
-run = 'move-node-to-workspace 2'
-
-[[on-window-detected]]
-if.app-id = 'com.tinyspeck.slackmacgap'
-run = 'move-node-to-workspace 5'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
-run = 'move-node-to-workspace 5'
-
-[[on-window-detected]]
-if.app-id = 'org.whispersystems.signal-desktop'
-run = 'move-node-to-workspace 5'
-
-[[on-window-detected]]
-if.app-id = 'net.whatsapp.WhatsApp'
-run = 'move-node-to-workspace 5'
-
-[[on-window-detected]]
-if.app-id = 'com.hnc.Discord'
-run = 'move-node-to-workspace 5'
-
-[[on-window-detected]]
-if.app-id = 'net.kovidgoyal.kitty'
-run = ['layout tiling', 'move-node-to-workspace 3']
-
-[[on-window-detected]]
-if.app-id = 'com.deezer.deezer-desktop'
-run = 'move-node-to-workspace 1'
-
-[[on-window-detected]]
-if.app-id = 'com.flexibits.fantastical2.mac'
-run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.mail'
-run = 'move-node-to-workspace 3'
-
+    esc       = ['reload-config', 'mode main']
+    r         = ['flatten-workspace-tree', 'layout tiles --root', 'mode main']
+    t         = ['layout tiles --root', 'mode main']
+    backspace = ['close-all-windows-but-current', 'mode main']
+    alt-shift-h = ['join-with left', 'mode main']
+    alt-shift-j = ['join-with down', 'mode main']
+    alt-shift-k = ['join-with up', 'mode main']
+    alt-shift-l = ['join-with right', 'mode main']
