@@ -43,12 +43,6 @@ cmd-ctrl-alt-shift-j = 'focus down'
 cmd-ctrl-alt-shift-k = 'focus up'
 cmd-ctrl-alt-shift-l = 'focus right'
 
-# Move window within workspace tree (to make it adjacent for join-with)
-ctrl-h = ['move left',  'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-ctrl-j = ['move down',  'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-ctrl-k = ['move up',    'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-ctrl-l = ['move right', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=main']
-
 # Leader key → workspace mode
 cmd-ctrl-alt-shift-space = ['mode workspace', 'exec-and-forget sketchybar --trigger aerospace_mode_changed MODE=workspace']
 
