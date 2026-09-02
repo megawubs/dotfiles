@@ -2,7 +2,7 @@ tap "atlassian/acli"
 tap "drcursor/hushscribe", "https://github.com/drcursor/HushScribe", trusted: true
 tap "ejoffe/tap"
 tap "eresende/pitlane-mcp", trusted: true
-tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
 tap "ngrok/ngrok"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
@@ -225,6 +225,8 @@ brew "youtube-dl"
 brew "zoxide"
 # Token-efficient code intelligence MCP server
 brew "eresende/pitlane-mcp/pitlane-mcp"
+# Custom macOS statusbar with shell plugin, interaction and graph support
+brew "felixkratz/formulae/sketchybar"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
