@@ -32,7 +32,7 @@ focus-follows-mouse.enabled = false
 
 key-mapping.preset = 'qwerty'
 
-persistent-workspaces = ['1', '2', '3', '4', '5', 'S']
+persistent-workspaces = ['1', '2', '3', '4', '5', 'S', 's', 'm', 'd']
 
 [gaps]
 inner.horizontal = 8
