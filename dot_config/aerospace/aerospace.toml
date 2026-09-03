@@ -11,10 +11,10 @@ start-at-login = true
 auto-reload-config = true
 
 after-login-command = []
-after-startup-command = [
-    'layout tiles --root',
-    'exec-and-forget $HOME/.config/aerospace/bsp-watch.sh',
-]
+# after-startup-command = [
+#     'layout tiles --root',
+#     'exec-and-forget $HOME/.config/aerospace/bsp-watch.sh',
+# ]
 
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
