@@ -16,6 +16,10 @@ after-startup-command = [
     'exec-and-forget $HOME/.config/aerospace/bsp-watch.sh',
 ]
 
+exec-on-workspace-change = ['/bin/bash', '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
+
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
@@ -32,7 +36,7 @@ focus-follows-mouse.enabled = false
 
 key-mapping.preset = 'qwerty'
 
-persistent-workspaces = ['1', '2', '3', '4', '5', 'S', 's', 'm', 'd']
+persistent-workspaces = ['1', '2', '3', '4', '5', '6', '0']
 
 [gaps]
 inner.horizontal = 8
