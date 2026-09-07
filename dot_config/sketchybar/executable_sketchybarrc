@@ -42,7 +42,7 @@ sketchybar --default \
 # ── AeroSpace workspace pills (1-5, labels: h j k l ;) ───────────────────────
 WORKSPACE_LABELS=("h" "j" "k" "l" ";")
 
-for i in 1 2 3 4 5; do
+for i in 1 2 3 4 5 6 0; do
   LABEL="${WORKSPACE_LABELS[$((i-1))]}"
   sketchybar --add item "aerospace_$i" left \
              --set "aerospace_$i" \
