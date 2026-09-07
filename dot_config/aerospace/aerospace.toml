@@ -66,15 +66,15 @@ run = 'layout tiling'
     alt-o = 'exec-and-forget $HOME/.config/aerospace/omarchy-j.sh'
     alt-slash = 'layout tiles --root'
 
-    alt-h  = 'focus left --boundaries all-monitors-outer-frame'
-    alt-j  = 'focus down --boundaries all-monitors-outer-frame'
-    alt-k    = 'focus up --boundaries all-monitors-outer-frame'
-    alt-l = 'focus right --boundaries all-monitors-outer-frame'
+    alt-left  = 'focus left --boundaries all-monitors-outer-frame'
+    alt-right  = 'focus down --boundaries all-monitors-outer-frame'
+    alt-up    = 'focus up --boundaries all-monitors-outer-frame'
+    alt-down = 'focus right --boundaries all-monitors-outer-frame'
 
-    alt-shift-h  = 'move left --boundaries all-monitors-outer-frame'
-    alt-shift-j  = 'move down --boundaries all-monitors-outer-frame'
-    alt-shift-k    = 'move up --boundaries all-monitors-outer-frame'
-    alt-shift-l = 'move right --boundaries all-monitors-outer-frame'
+    alt-shift-left  = 'move left --boundaries all-monitors-outer-frame'
+    alt-shift-right  = 'move down --boundaries all-monitors-outer-frame'
+    alt-shift-up    = 'move up --boundaries all-monitors-outer-frame'
+    alt-shift-down = 'move right --boundaries all-monitors-outer-frame'
 
     alt-minus = 'resize smart -50'
     alt-equal = 'resize smart +50'
@@ -86,30 +86,40 @@ run = 'layout tiling'
     alt-5 = 'workspace 5'
     alt-6 = 'workspace 6'
     alt-7 = 'workspace 7'
-    alt-8 = 'workspace 9'
-    alt-9 = 'workspace 5'
-    alt-0 = 'workspace 5'
+    alt-8 = 'workspace 8'
+    alt-9 = 'workspace 9'
+    alt-0 = 'workspace 0'
 
     alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window '
     alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
     alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
     alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
     alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
+    alt-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
+    alt-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
+    alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
+    alt-shift-9 = 'move-node-to-workspace 8 --focus-follows-window'
+    alt-shift-0 = 'move-node-to-workspace 8 --focus-follows-window'
 
     alt-ctrl-shift-1 = 'move-node-to-workspace 1'
     alt-ctrl-shift-2 = 'move-node-to-workspace 2'
     alt-ctrl-shift-3 = 'move-node-to-workspace 3'
     alt-ctrl-shift-4 = 'move-node-to-workspace 4'
     alt-ctrl-shift-5 = 'move-node-to-workspace 5'
+    alt-ctrl-shift-6 = 'move-node-to-workspace 6'
+    alt-ctrl-shift-7 = 'move-node-to-workspace 7'
+    alt-ctrl-shift-8 = 'move-node-to-workspace 8'
+    alt-ctrl-shift-9 = 'move-node-to-workspace 9'
+    alt-ctrl-shift-0 = 'move-node-to-workspace 0'
 
     alt-tab       = 'workspace next --wrap-around'
     alt-shift-tab = 'workspace prev --wrap-around'
     alt-ctrl-tab  = 'workspace-back-and-forth'
 
-    alt-ctrl-shift-h  = 'move-workspace-to-monitor --wrap-around left'
-    alt-ctrl-shift-l = 'move-workspace-to-monitor --wrap-around right'
-    alt-ctrl-shift-k    = 'move-workspace-to-monitor --wrap-around up'
-    alt-ctrl-shift-j  = 'move-workspace-to-monitor --wrap-around down'
+    alt-ctrl-shift-left  = 'move-workspace-to-monitor --wrap-around left'
+    alt-ctrl-shift-right = 'move-workspace-to-monitor --wrap-around right'
+    alt-ctrl-shift-up    = 'move-workspace-to-monitor --wrap-around up'
+    alt-ctrl-shift-down  = 'move-workspace-to-monitor --wrap-around down'
 
     alt-esc = 'exec-and-forget pmset displaysleepnow'
     alt-shift-c = 'reload-config'
@@ -137,7 +147,7 @@ run = 'layout tiling'
     r         = ['flatten-workspace-tree', 'layout tiles --root', 'mode main']
     t         = ['layout tiles --root', 'mode main']
     backspace = ['close-all-windows-but-current', 'mode main']
-    alt-shift-h = ['join-with left', 'mode main']
-    alt-shift-j = ['join-with down', 'mode main']
-    alt-shift-k = ['join-with up', 'mode main']
-    alt-shift-l = ['join-with right', 'mode main']
+    alt-shift-left = ['join-with left', 'mode main']
+    alt-shift-right = ['join-with right', 'mode main']
+    alt-shift-down = ['join-with down', 'mode main']
+    alt-shift-up = ['join-with up', 'mode main']
