@@ -121,6 +121,11 @@ run = 'layout tiling'
     alt-ctrl-shift-up    = 'move-workspace-to-monitor --wrap-around up'
     alt-ctrl-shift-down  = 'move-workspace-to-monitor --wrap-around down'
 
+    alt-ctrl-shift-h = 'move-workspace-to-monitor --wrap-around left'
+    alt-ctrl-shift-l = 'move-workspace-to-monitor --wrap-around right'
+    alt-ctrl-shift-k = 'move-workspace-to-monitor --wrap-around up'
+    alt-ctrl-shift-j = 'move-workspace-to-monitor --wrap-around down'
+
     alt-esc = 'exec-and-forget pmset displaysleepnow'
     alt-shift-c = 'reload-config'
 
