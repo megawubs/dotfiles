@@ -170,14 +170,13 @@ run = 'layout tiling'
   '0' = '^233V5'
 
 [[on-window-detected]]
-if.app-id =  'com.apple.systempreferences',
-run = ['layout floating'],
+if.app-id = 'com.apple.systempreferences'
+run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id =  'com.1password.1password',
-run = ['layout floating'],
+if.app-id =  'com.1password.1password'
+run = ['layout floating']
 
-run = ['layout floating', 'move-node-to-workspace S'],
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
 run = 'move-node-to-workspace 1'
