@@ -156,3 +156,6 @@ run = 'layout tiling'
     alt-shift-right = ['join-with right', 'mode main']
     alt-shift-down = ['join-with down', 'mode main']
     alt-shift-up = ['join-with up', 'mode main']
+
+[workspace-to-monitor-force-assignment]
+  '1' = 'PHL 233V5'
