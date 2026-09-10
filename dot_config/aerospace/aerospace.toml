@@ -54,7 +54,7 @@ run = 'layout tiling'
     cmd-h = []
     cmd-alt-h = []
 
-    alt-enter = 'exec-and-forget kitty @ launch --type=os-window'
+    alt-enter = 'exec-and-forget kitty @ launch --type=os-window --cwd=current'
     alt-shift-enter = 'exec-and-forget open -a "Zen"'
     alt-space = 'exec-and-forget open -a Raycast'
 
