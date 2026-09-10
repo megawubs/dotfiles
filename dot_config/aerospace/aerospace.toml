@@ -171,8 +171,13 @@ run = 'layout tiling'
 
 [[on-window-detected]]
 if.app-id =  'com.apple.systempreferences',
-run = ['layout floating', 'move-node-to-workspace S'],
+run = ['layout floating'],
 
+[[on-window-detected]]
+if.app-id =  'com.1password.1password',
+run = ['layout floating'],
+
+run = ['layout floating', 'move-node-to-workspace S'],
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
 run = 'move-node-to-workspace 1'
@@ -188,6 +193,10 @@ run = 'move-node-to-workspace 2'
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.PhpStorm'
 run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'io.music-assistant.companion'
+run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
