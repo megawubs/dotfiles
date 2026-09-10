@@ -169,6 +169,9 @@ run = 'layout tiling'
   '9' = 'built-in'
   '0' = '^233V5'
 
+[[on-window-detected]]
+if.app-id =  'com.apple.systempreferences',
+run = ['layout floating', 'move-node-to-workspace S'],
 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
