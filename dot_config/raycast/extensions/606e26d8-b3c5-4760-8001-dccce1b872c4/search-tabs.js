@@ -142,9 +142,9 @@ function print() { __p += __j.call(arguments, '') }
             end if
             set _space_title to my escape_value(_space_title)
 
-            repeat with _tab in every tab of _space
-              set _tab_id to get id of _tab
+            set _space_tab_ids to id of every tab of _space
 
+            repeat with _tab_id in _space_tab_ids
               if not _first then
                 set _spaces to (_spaces & ",")
               end if
