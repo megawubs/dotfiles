@@ -63,7 +63,7 @@ run = 'layout tiling'
 
     alt-w = 'close'
     alt-f = 'fullscreen'
-    alt-j = 'exec-and-forget $HOME/.config/aerospace/omarchy-j.sh'
+    alt-s = 'exec-and-forget $HOME/.config/aerospace/omarchy-j.sh'
     alt-slash = 'layout tiles --root'
 
     alt-left  = 'focus left --boundaries all-monitors-outer-frame'
