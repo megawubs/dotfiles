@@ -195,6 +195,11 @@ run = ['layout floating']
 check-further-callbacks = false
 
 [[on-window-detected]]
+if = 'test %{app-bundle-id} = com.jetbrains.PhpStorm && test %{window-title} ~= "Push Commit"'
+run = ['layout floating']
+check-further-callbacks = false
+
+[[on-window-detected]]
 if.app-id = 'com.jetbrains.PhpStorm'
 run = 'move-node-to-workspace 3'
 
