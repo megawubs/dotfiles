@@ -200,7 +200,7 @@ run = ['layout floating']
 check-further-callbacks = false
 
 [[on-window-detected]]
-if = 'test %{app-bundle-id} = com.jetbrains.PhpStorm && test %{window-title} ~= "Unshelf"'
+if = 'test %{app-bundle-id} = com.jetbrains.PhpStorm && test %{window-title} ~= "Unshelve"'
 run = ['layout floating']
 check-further-callbacks = false
 
