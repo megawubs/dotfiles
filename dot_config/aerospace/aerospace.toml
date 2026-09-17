@@ -213,6 +213,9 @@ check-further-callbacks = false
 if.app-id = 'com.jetbrains.PhpStorm'
 run = 'move-node-to-workspace 3'
 
+[[on-window-detected]]
+if.app-id = 'com.apple.LocalAuthentication.UIAgent'
+run = ['layout', 'floating']
 
 [[on-window-detected]]
 if.app-id = 'io.music-assistant.companion'
