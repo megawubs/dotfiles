@@ -132,6 +132,7 @@ run = 'layout tiling'
     alt-r = 'mode resize'
     alt-shift-semicolon = 'mode service'
     alt-shift-r = ['flatten-workspace-tree', 'layout tiles --root']
+    alt-t = ['layout floating']
 
 [mode.resize.binding]
     h = 'resize width -50'
