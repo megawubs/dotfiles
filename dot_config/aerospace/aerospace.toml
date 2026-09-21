@@ -230,6 +230,21 @@ run = ['layout floating']
 check-further-callbacks = false
 
 [[on-window-detected]]
+if = 'test %{app-bundle-id} = com.jetbrains.PhpStorm && test %{window-title} ~= "Conflicts"'
+run = ['layout floating']
+check-further-callbacks = false
+
+[[on-window-detected]]
+if = 'test %{app-bundle-id} = com.jetbrains.PhpStorm && test %{window-title} ~= "Merge"'
+run = ['layout floating']
+check-further-callbacks = false
+
+[[on-window-detected]]
+if = 'test %{app-bundle-id} = com.jetbrains.PhpStorm && test %{window-title} ~= "Git Commit Message"'
+run = ['layout floating']
+check-further-callbacks = false
+
+[[on-window-detected]]
 if.app-id = 'com.jetbrains.PhpStorm'
 run = 'move-node-to-workspace 3'
 
