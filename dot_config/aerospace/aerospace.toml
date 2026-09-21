@@ -179,6 +179,10 @@ if.app-id =  'com.1password.1password'
 run = ['layout floating']
 
 [[on-window-detected]]
+if.app-id =  'me.proton.pass.electron'
+run = ['layout floating']
+
+[[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
 run = 'move-node-to-workspace 1'
 
