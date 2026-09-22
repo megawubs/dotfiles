@@ -158,18 +158,6 @@ run = 'layout tiling'
     alt-shift-down = ['join-with down', 'mode main']
     alt-shift-up = ['join-with up', 'mode main']
 
-[workspace-to-monitor-force-assignment]
-  '1' = '^233V5'
-  '2' = '^233V5'
-  '3' = '^233V5'
-  '4' = '^233V5'
-  '5' = '^233V5'
-  '6' = 'built-in'
-  '7' = 'built-in'
-  '8' = 'built-in'
-  '9' = 'built-in'
-  '0' = '^233V5'
-
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'
 run = ['layout floating']
