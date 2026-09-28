@@ -65,7 +65,7 @@ run = 'layout tiling'
     alt-f = 'fullscreen'
     alt-s = 'exec-and-forget $HOME/.config/aerospace/omarchy-j.sh'
     alt-slash = 'layout tiles --root'
-    alt-a = 'layout v_accordion'
+    alt-a = 'layout v_accordion --root'
 
     alt-h = 'focus left --boundaries all-monitors-outer-frame'
     alt-j = 'focus down --boundaries all-monitors-outer-frame'
