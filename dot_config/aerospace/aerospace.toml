@@ -13,7 +13,7 @@ auto-reload-config = true
 after-login-command = []
 after-startup-command = [
     'layout tiles --root',
-    'exec-and-forget $HOME/.config/aerospace/bsp-watch.sh',
+    ## 'exec-and-forget $HOME/.config/aerospace/bsp-watch.sh',
 ]
 
 exec-on-workspace-change = ['/bin/bash', '-c',
