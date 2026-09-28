@@ -12,7 +12,7 @@ auto-reload-config = true
 
 after-login-command = []
 after-startup-command = [
-    'layout tiles --root',
+    'layout v_accordion',
     ## 'exec-and-forget $HOME/.config/aerospace/bsp-watch.sh',
 ]
 
@@ -65,6 +65,7 @@ run = 'layout tiling'
     alt-f = 'fullscreen'
     alt-s = 'exec-and-forget $HOME/.config/aerospace/omarchy-j.sh'
     alt-slash = 'layout tiles --root'
+    alt-a = 'layout v_accordion'
 
     alt-h = 'focus left --boundaries all-monitors-outer-frame'
     alt-j = 'focus down --boundaries all-monitors-outer-frame'
