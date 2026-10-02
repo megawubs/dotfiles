@@ -36,7 +36,7 @@ focus-follows-mouse.enabled = false
 
 key-mapping.preset = 'qwerty'
 
-persistent-workspaces = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+persistent-workspaces = ['1', '2', '3', '4', '5']
 
 [gaps]
 inner.horizontal = 8
@@ -243,7 +243,7 @@ run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = 'io.music-assistant.companion'
-run = 'move-node-to-workspace 7'
+run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
@@ -251,17 +251,17 @@ run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
-run = 'move-node-to-workspace 0'
+run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'org.whispersystems.signal-desktop'
-run = 'move-node-to-workspace 0'
+run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'net.whatsapp.WhatsApp'
-run = 'move-node-to-workspace 0'
+run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
-run = 'move-node-to-workspace 0'
+run = 'move-node-to-workspace 3'
 
