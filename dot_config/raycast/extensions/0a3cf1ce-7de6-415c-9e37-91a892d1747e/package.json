@@ -583,6 +583,32 @@
       "title": "Get Entities",
       "description": "Get a list of all entity IDs and their friendly names from Home Assistant",
       "instructions": "Get basic entity information (ID and friendly name) from Home Assistant.\nIMPORTANT: This tool should be called ONLY ONCE per conversation.\nEntity list doesn't change during a conversation, so caching the results is recommended.\n\n@returns A list of all entities with their IDs and friendly names",
+      "output": {
+        "type": "object",
+        "properties": {
+          "entities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "entity_id": {
+                  "type": "string"
+                },
+                "friendly_name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "entity_id",
+                "friendly_name"
+              ]
+            }
+          }
+        },
+        "required": [
+          "entities"
+        ]
+      },
       "confirmation": false
     },
     {
@@ -603,6 +629,42 @@
         },
         "required": [
           "entity_ids"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "entities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "entity_id": {
+                  "type": "string"
+                },
+                "friendly_name": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "attributes": {
+                  "type": "object",
+                  "properties": {},
+                  "required": []
+                }
+              },
+              "required": [
+                "entity_id",
+                "friendly_name",
+                "state",
+                "attributes"
+              ]
+            }
+          }
+        },
+        "required": [
+          "entities"
         ]
       },
       "confirmation": false
