@@ -219,11 +219,15 @@
               "lch",
               "p3"
             ]
+          },
+          "color": {
+            "type": "string"
           }
         },
         "required": [
           "input",
-          "format"
+          "format",
+          "color"
         ]
       },
       "confirmation": false
@@ -251,8 +255,37 @@
       },
       "output": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "color": {
+            "type": "string"
+          },
+          "names": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "hex": {
+                  "type": "string"
+                },
+                "distance": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "name",
+                "hex",
+                "distance"
+              ]
+            }
+          }
+        },
+        "required": [
+          "color",
+          "names"
+        ]
       },
       "confirmation": false
     },
@@ -272,6 +305,10 @@
               "favorites"
             ]
           },
+          "group": {
+            "type": "string",
+            "description": "Only return colors in this group or its subgroups. Nested groups are written with slashes, for example \"Work/Calendar\"."
+          },
           "limit": {
             "type": "number",
             "description": "Maximum number of colors to return. Defaults to 20 and must be between 1 and 100."
@@ -288,10 +325,45 @@
               "all",
               "favorites"
             ]
+          },
+          "totalCount": {
+            "type": "number"
+          },
+          "colors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "isFavorite": {
+                  "type": "boolean"
+                },
+                "group": {
+                  "type": "string"
+                },
+                "savedAt": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "color",
+                "title",
+                "isFavorite",
+                "group",
+                "savedAt"
+              ]
+            }
           }
         },
         "required": [
-          "filter"
+          "filter",
+          "totalCount",
+          "colors"
         ]
       },
       "confirmation": false
@@ -314,6 +386,32 @@
         },
         "required": [
           "colors"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "savedCount": {
+            "type": "number"
+          },
+          "colors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "favorite": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "savedCount",
+          "colors",
+          "favorite",
+          "message"
         ]
       },
       "confirmation": true
@@ -340,6 +438,15 @@
       "output": {
         "type": "object",
         "properties": {
+          "foreground": {
+            "type": "string"
+          },
+          "background": {
+            "type": "string"
+          },
+          "ratio": {
+            "type": "number"
+          },
           "passes": {
             "type": "object",
             "properties": {
@@ -369,6 +476,9 @@
           }
         },
         "required": [
+          "foreground",
+          "background",
+          "ratio",
           "passes"
         ]
       },
@@ -392,12 +502,35 @@
       "output": {
         "type": "object",
         "properties": {
+          "baseColor": {
+            "type": "string"
+          },
           "colorSpace": {
             "type": "string"
+          },
+          "scale": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "number"
+                },
+                "color": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "label",
+                "color"
+              ]
+            }
           }
         },
         "required": [
-          "colorSpace"
+          "baseColor",
+          "colorSpace",
+          "scale"
         ]
       },
       "confirmation": false
