@@ -41,3 +41,6 @@ set -gx PITLANE_EMBED_BATCH_SIZE 32
 set -gx PITLANE_EMBED_TIMEOUT 300
 set -gx REWORK_TOKEN op://env/3h6iun2o5vv4rpkuy6o73d2eg4/credential
 set -gx REWORK_COMPANY_ID op://env/dna2fdqcf5ixty3kfrxzwoiqge/credential
+
+# opencode
+fish_add_path /Users/bramwubs/.opencode/bin
