@@ -388,6 +388,8 @@ cask "rustrover"
 cask "signal"
 # Team communication and collaboration software
 cask "slack"
+# Parametric 3D CAD modeller
+cask "solidcraft"
 # Music streaming service
 cask "spotify"
 # Video game digital distribution service
