@@ -31,9 +31,6 @@ else if test -f /Users/bramwubs/miniconda3/bin/conda
 end
 # <<< conda initialize <<<
 
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/bramwubs/.lmstudio/bin
-
 set -gx REWORK_TOKEN op://env/3h6iun2o5vv4rpkuy6o73d2eg4/credential
 set -gx REWORK_COMPANY_ID op://env/dna2fdqcf5ixty3kfrxzwoiqge/credential
 

@@ -346,8 +346,6 @@ cask "kitty"
 cask "leader-key"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
-# Discover, download, and run local LLMs
-cask "lm-studio"
 # Screen and video recording software
 cask "loom"
 # Operating system maintenance and cleaning utility
