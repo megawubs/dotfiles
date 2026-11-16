@@ -218,6 +218,8 @@ brew "wakeonlan"
 brew "watchman"
 # Internet file retriever
 brew "wget"
+# Port of OpenAI's Whisper model in C/C++
+brew "whisper.cpp"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # Shell extension to navigate your filesystem faster
