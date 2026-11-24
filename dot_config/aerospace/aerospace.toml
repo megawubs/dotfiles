@@ -115,6 +115,13 @@ run = 'layout tiling'
     alt-shift-down = ['join-with down', 'mode main']
     alt-shift-up = ['join-with up', 'mode main']
 
+# Mail's zoeksuggesties zijn een los venster zonder titel; laat dat zweven
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+if.window-title-regex-substring = '^(Naamloos|Untitled)?$'
+run = 'layout floating'
+check-further-callbacks = false
+
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'
 run = ['layout floating']
