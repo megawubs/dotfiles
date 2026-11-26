@@ -1,5 +1,5 @@
 #!/bin/bash
-# SketchyBar config — Catppuccin Mocha, AeroSpace workspace pills
+# SketchyBar config — Catppuccin Mocha
 # Requires: brew install --HEAD FelixKratz/formulae/sketchybar
 
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
@@ -24,10 +24,6 @@ sketchybar --bar \
   padding_right=8 \
   color=$BASE
 
-# Register custom AeroSpace events
-sketchybar --add event aerospace_workspace_change
-sketchybar --add event aerospace_mode_changed
-
 # ── Defaults ──────────────────────────────────────────────────────────────────
 sketchybar --default \
   icon.font="JetBrainsMono Nerd Font Mono:Bold:13.0" \
@@ -38,40 +34,6 @@ sketchybar --default \
   padding_right=4 \
   label.padding_left=4 \
   label.padding_right=4
-
-# ── AeroSpace workspace pills (1-5, labels: h j k l ;) ───────────────────────
-# WORKSPACE_LABELS=("h" "j" "k" "l" ";")
-
-for i in 1 2 3 4 5; do
-  LABEL="${WORKSPACE_LABELS[$((i-1))]}"
-  sketchybar --add item "aerospace_$i" left \
-             --set "aerospace_$i" \
-               label="$i" \
-               label.color=$SUBTEXT1 \
-               background.color=$SURFACE0 \
-               background.corner_radius=5 \
-               background.height=20 \
-               background.drawing=off \
-               padding_left=3 \
-               padding_right=3 \
-               script="$PLUGIN_DIR/aerospace.sh $i" \
-               click_script="/opt/homebrew/bin/aerospace workspace $i" \
-             --subscribe "aerospace_$i" aerospace_workspace_change
-done
-
-# ── AeroSpace mode indicator ──────────────────────────────────────────────────
-sketchybar --add item aerospace_mode right \
-           --set aerospace_mode \
-             label="" \
-             label.color=$MAUVE \
-             background.color=$SURFACE0 \
-             background.corner_radius=5 \
-             background.height=20 \
-             background.drawing=off \
-             padding_left=4 \
-             padding_right=4 \
-             script="$PLUGIN_DIR/aerospace_mode.sh" \
-           --subscribe aerospace_mode aerospace_mode_changed
 
 # ── Clock + Date ──────────────────────────────────────────────────────────────
 sketchybar --add item clock right \
